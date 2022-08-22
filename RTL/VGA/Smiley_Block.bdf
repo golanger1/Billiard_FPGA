@@ -184,7 +184,7 @@ agreement for further details.
 	(input)
 	(rect 80 512 248 528)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Y_direction" (rect 5 0 59 17)(font "Intel Clear" ))
+	(text "Y_direction" (rect 5 0 58 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -443,14 +443,14 @@ agreement for further details.
 		(pt 232 32)
 		(output)
 		(text "topLeftX[10..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "topLeftX[10..0]" (rect 150 27 223 39)(font "Arial" ))
+		(text "topLeftX[10..0]" (rect 150 27 211 39)(font "Arial" ))
 		(line (pt 232 32)(pt 216 32)(line_width 3))
 	)
 	(port
 		(pt 232 48)
 		(output)
 		(text "topLeftY[10..0]" (rect 0 0 75 12)(font "Arial" ))
-		(text "topLeftY[10..0]" (rect 148 43 223 55)(font "Arial" ))
+		(text "topLeftY[10..0]" (rect 148 43 211 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(parameter
@@ -474,14 +474,19 @@ agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"MAX_Y_SPEED"
-		"220"
+		"INITIAL_Y_ACCEL"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MIN_Y_SPEED"
+		"8"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 216 160))
 	)
-	(annotation_block (parameter)(rect 584 272 841 386))
+	(annotation_block (parameter)(rect 584 272 841 405))
 )
 (connector
 	(text "clk" (rect 880 392 894 409)(font "Intel Clear" ))

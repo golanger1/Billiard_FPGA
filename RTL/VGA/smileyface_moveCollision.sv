@@ -11,10 +11,10 @@ module	smileyface_moveCollision	(
 					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-					input	logic	Y_direction,  //change the direction in Y to up  
+					input	logic	Y_direction,  //change the direction in Y to up   //omer 22.08 : need to add all directions.
 					input	logic	toggleX, 	//toggle the X direction 
 					input logic collision,  //collision if smiley hits an object
-					input	logic	[3:0] HitEdgeCode, //one bit per edge 
+					input	logic	[3:0] HitEdgeCode, 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
 					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside 
@@ -24,12 +24,23 @@ module	smileyface_moveCollision	(
 
 // a module used to generate the  ball trajectory.  
 
-parameter int INITIAL_X = 280;
+/*
+parameter int INITIAL_X = 280; // omer 22.08 :
 parameter int INITIAL_Y = 185;
 parameter int INITIAL_X_SPEED = 40;
 parameter int INITIAL_Y_SPEED = 20;
 parameter int MAX_Y_SPEED = 230;
 const int  Y_ACCEL = -1;
+*/
+
+// omer 22.08 : fit smiley to whiteBall
+parameter int INITIAL_X = 100; 
+parameter int INITIAL_Y = 220;
+parameter int INITIAL_X_SPEED = 0;
+parameter int INITIAL_Y_SPEED = 0;
+parameter int INITIAL_Y_ACCEL = 0;
+// parameter int INITIAL_X_ACCEL = 0;
+parameter int MIN_Y_SPEED = 8; //is this necessary? was MAX_.. = 230
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -38,10 +49,15 @@ const int	FIXED_POINT_MULTIPLIER	=	64;
 const int	x_FRAME_SIZE	=	639 * FIXED_POINT_MULTIPLIER; // note it must be 2^n 
 const int	y_FRAME_SIZE	=	479 * FIXED_POINT_MULTIPLIER;
 const int	bracketOffset =	30;
-const int   OBJECT_WIDTH_X = 64;
+const int   OBJECT_WIDTH_X = 32; //ball pixel width? changed from 64
+const int   OBJECT_HEIGHT_Y = 32; //ball pixel height? created
+
 
 int Xspeed, topLeftX_FixedPoint; // local parameters 
 int Yspeed, topLeftY_FixedPoint;
+int  Yaccel; //fraction - needs to be opposite to movement
+// int  X_ACCEL; //fraction - needs to be opposite to movement
+
 
 
 
@@ -52,6 +68,7 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) begin 
 		Yspeed	<= INITIAL_Y_SPEED;
+		Yaccel <= INITIAL_Y_ACCEL;
 		topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
 	end 
 	else begin
@@ -62,26 +79,33 @@ begin
 	
 		if ((collision && HitEdgeCode [2] == 1 ))  // hit top border of brick  
 				if (Yspeed < 0) // while moving up
-						Yspeed <= -Yspeed ; 
+						Yspeed <= -Yspeed ;
+						Yaccel <= -Yaccel;
 			
 			if ((collision && HitEdgeCode [0] == 1 ))// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
 				if (Yspeed > 0 )//  while moving down
 						Yspeed <= -Yspeed ; 
+						Yaccel <= -Yaccel;
+
 
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
 		
 				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
-				
-				if (Yspeed < MAX_Y_SPEED ) //  limit the spped while going down 
-						Yspeed <= Yspeed  - Y_ACCEL ; // deAccelerate : slow the speed down every clock tick 
-		
+
+				if (Yspeed > MIN_Y_SPEED || Yspeed < -MIN_Y_SPEED) //  limit the speed while going down 
+						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
+						
+				else
+					Yspeed <= 0;
 								
 				if (Y_direction) begin // button was pushed to go upwards 
 						if (Yspeed > 0 ) // while moving down
 								Yspeed <= -Yspeed  ;  // change speed to go up 
-				end ; 
+				end ;
+				
+				
 
 
 		end
