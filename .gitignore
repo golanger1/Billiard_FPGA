@@ -1,0 +1,4 @@
+
+*.flock
+
+db/Lab1Demo.db_info
