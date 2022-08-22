@@ -13,40 +13,20 @@ module	back_ground_draw	(
 					output	logic		bordersDrawReq 
 );
 
-const int	xFrameSize	=	635;
-const int	yFrameSize	=	475;
-const int	bracketOffset =	30;
-// const int   COLOR_MARTIX_SIZE  = 16*8 ; // 128 
+const int	xFrameSize	=	639;
+const int	yFrameSize	=	479;
+const int	bracketOffset = 35;
 
 logic [2:0] redBits;
 logic [2:0] greenBits;
 logic [1:0] blueBits;
-//logic [10:0] shift_pixelX;
 
 
 localparam logic [2:0] DARK_COLOR = 3'b111 ;// bitmap of a dark color
 localparam logic [2:0] LIGHT_COLOR = 3'b000 ;// bitmap of a light color
-
- 
-localparam  int RED_TOP_Y  = 156 ;
-localparam  int RED_LEFT_X  = 256 ;
-localparam  int GREEN_RIGHT_X  = 32 ;
-localparam  int BLUE_BOTTOM_Y  = 300 ;
-localparam  int BLUE_RIGHT_X  = 200 ;
- 
-parameter  logic [10:0] COLOR_MATRIX_TOP_Y  = 100 ; 
-parameter  logic [10:0] COLOR_MATRIX_LEFT_X = 100 ;
-
  
 
 // this is a block to generate the background 
-//it has four sub modules : 
-
-	// 1. draw the yellow borders
-	// 2. draw four lines with "bracketOffset" offset from the border 
-	// 3.  draw red rectangle at the bottom right,  green on the left, and blue on top left 
-	// 4. draw a matrix of 16*16 rectangles with all the colors, each rectsangle 8*8 pixels  	
-
  
  
 always_ff@(posedge clk or negedge resetN)
@@ -58,31 +38,31 @@ begin
 	end 
 	else begin
 
-	// defaults 
+	// defaults, green background and no draw request.
 		greenBits <= 3'b110 ; 
 		redBits <= 3'b010 ;
-		blueBits <= 2'b01;
+		blueBits <= 2'b00;
 		bordersDrawReq <= 	1'b0 ; 
 
 					
-	// draw the black borders 
+	// draw the black borders of the screen
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
 			begin 
-				redBits <= LIGHT_COLOR ;	
+				redBits 	 <= LIGHT_COLOR ;	
 				greenBits <= LIGHT_COLOR ;	
-				blueBits <= LIGHT_COLOR ;	// 3rd bit will be truncated
+				blueBits  <= LIGHT_COLOR ;	// 3rd bit will be truncated
 			end
 		// draw  four lines with "bracketOffset" offset from the border 
 		
-		// draw the black borders
+		// draw the black borders 
 		if (        pixelX == bracketOffset ||
 						pixelY == bracketOffset ||
 						pixelX == (xFrameSize-bracketOffset) || 
 						pixelY == (yFrameSize-bracketOffset)) 
 			begin 
-					redBits <= 3'b011 ;	
-					greenBits <= LIGHT_COLOR  ;	
-					blueBits <= 2'b01 ;
+					redBits 	 <= LIGHT_COLOR ;	
+					greenBits <= LIGHT_COLOR ;	
+					blueBits  <= LIGHT_COLOR ;
 					bordersDrawReq <= 	1'b1 ; // pulse if drawing the boarders 
 			end
 	
@@ -93,14 +73,15 @@ begin
 	// draw brown borders 
 	//-------------------------------------------------------------------------------------
 		
-		if ( ((pixelY >= 0) && (pixelY <= bracketOffset) ) ||
-		( (pixelY >= yFrameSize-bracketOffset) && (pixelY <= yFrameSize) ) ||
-		( (pixelX >= 0) && (pixelX >= bracketOffset) ) ||
-		( (pixelX >= xFrameSize-bracketOffset) && (pixelX <= yFrameSize) ) ) // rectangles on part of the screen 
+		if ( ((pixelY > 0) && (pixelY < bracketOffset) ) ||
+		( (pixelY > yFrameSize-bracketOffset) && (pixelY < yFrameSize) ) ||
+		( (pixelX > 0) && (pixelX > bracketOffset) ) ||
+		( (pixelX > xFrameSize-bracketOffset) && (pixelX < yFrameSize) ) ) 
 				begin 
-					redBits <= 3'b011 ;	
-					greenBits <= LIGHT_COLOR  ;	
-					blueBits <= 2'b01 ; 
+					redBits 	 <= 3'b011 ;	
+					greenBits <= 3'b001 ;	
+					blueBits  <= 2'b01  ; 
+				end
 
 
 		
