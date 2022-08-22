@@ -1,0 +1,84 @@
+Quartus Prime Archive log --	C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/LabProject_220822.qarlog
+
+Archive:	C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/LabProject_220822.qar
+Date:		Mon Aug 22 22:14:03 2022
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/DE10_Standard_Audio.sdc
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Lab1Demo.qpf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Lab1Demo.qsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Number_position.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Number_position.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Number_position.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Number_position_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/AUDIO/AUDIO.bdf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/AUDIO/SinTable.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/AUDIO/TOP_AUDIO.bdf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/AUDIO/ToneDecoder.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/AUDIO/addr_counter.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/AUDIO/prescaler.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/KEYBOARD/HexSS.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/KEYBOARD/KEYBOARD_INTERFACE.qxp
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/KEYBOARD/random.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/KEYBOARD/simple_up_counter.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/Seg7/SEG7.SV
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/HART_DISPLAY.bdf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/HartsMatrixBitMap.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/NumbersBitMap.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/Smiley_Block.bdf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/TOP_VGA_DEMO_KBD.bdf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/VGA_Controller.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/back_ground_draw.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/back_ground_drawSquare.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/game_controller.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/objects_mux.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/red_ballBitMap.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyBitMap.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/square_Hart_object.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/square_object.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/valX.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/valX.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/valX.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/valX_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/valX_inst.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/white_ballBitMap.sv
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/audio_codec_controller/audio_codec_controller.qxp
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/numberPosition.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/numberPosition.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/numberPosition.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/numberPosition_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_loca.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_loca.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_loca.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_loca_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_location.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_location.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_location.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/X_location_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Y_location.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Y_location.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Y_location.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Y_location_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/assignment_defaults.qdf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/audio_codec_controller.qxp
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider.cmp
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider.sip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider.spd
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider/clock_divider_0002.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider/clock_divider_0002.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/clock_divider_sim/clock_divider.vo
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/constraints/DE10_Standard_Audio.sdc
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/constraints/pin.tcl
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/matrix_top_XY.bsf
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/matrix_top_XY.qip
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/matrix_top_XY.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/matrix_top_XY_bb.v
+C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/output_files/Chain1.cdf
+	======= Total: 73 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -48,15 +48,15 @@ agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "Y_direction" (rect 0 0 44 12)(font "Arial" ))
-		(text "Y_direction" (rect 21 75 65 87)(font "Arial" ))
+		(text "chargeUp" (rect 0 0 38 12)(font "Arial" ))
+		(text "chargeUp" (rect 21 75 59 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "toggleX" (rect 0 0 28 12)(font "Arial" ))
-		(text "toggleX" (rect 21 91 49 103)(font "Arial" ))
+		(text "releaseBall" (rect 0 0 41 12)(font "Arial" ))
+		(text "releaseBall" (rect 21 91 62 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
@@ -113,8 +113,13 @@ agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
+		"INITIAL_X_ACCEL"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"MIN_Y_SPEED"
-		"8"
+		"2"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing

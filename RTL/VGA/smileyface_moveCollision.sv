@@ -11,9 +11,12 @@ module	smileyface_moveCollision	(
 					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-					input	logic	Y_direction,  //change the direction in Y to up   //omer 22.08 : need to add all directions.
-					input	logic	toggleX, 	//toggle the X direction 
-					input logic collision,  //collision if smiley hits an object
+					input	logic	chargeUp,  //charge YspeedCounter with negative speed
+//					input	logic	chargeDown,  //charge YspeedCounter with positive speed
+//					input	logic	chargeLeft,  //charge XspeedCounter with negative speed
+//					input	logic	chargeRight,  //charge XspeedCounter with positive speed
+					input	logic	releaseBall, 	//release the white ball 
+					input logic collision,  //collision if ball hits an object
 					input	logic	[3:0] HitEdgeCode, 
 
 					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
@@ -39,8 +42,8 @@ parameter int INITIAL_Y = 220;
 parameter int INITIAL_X_SPEED = 0;
 parameter int INITIAL_Y_SPEED = 0;
 parameter int INITIAL_Y_ACCEL = 0;
-// parameter int INITIAL_X_ACCEL = 0;
-parameter int MIN_Y_SPEED = 8; //is this necessary? was MAX_.. = 230
+parameter int INITIAL_X_ACCEL = 0;
+parameter int MIN_Y_SPEED = 2; //is this necessary? was MAX_.. = 230
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
@@ -52,11 +55,12 @@ const int	bracketOffset =	30;
 const int   OBJECT_WIDTH_X = 32; //ball pixel width? changed from 64
 const int   OBJECT_HEIGHT_Y = 32; //ball pixel height? created
 
-
 int Xspeed, topLeftX_FixedPoint; // local parameters 
 int Yspeed, topLeftY_FixedPoint;
 int  Yaccel; //friction - needs to be opposite to movement
-// int  X_ACCEL; //friction - needs to be opposite to movement
+int  Xaccel; //friction - needs to be opposite to movement
+int XShotSpeed;
+int YShotSpeed;
 
 
 
@@ -82,12 +86,13 @@ begin
 						Yspeed <= -Yspeed ;
 						Yaccel <= -Yaccel;
 			
-			if ((collision && HitEdgeCode [0] == 1 ))// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
+		if ((collision && HitEdgeCode [0] == 1 ))// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
 				if (Yspeed > 0 )//  while moving down
 						Yspeed <= -Yspeed ; 
 						Yaccel <= -Yaccel;
 
 
+			
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
@@ -110,7 +115,7 @@ begin
 				else
 					Yspeed <= 0;
 								
-				if (Y_direction) begin // button was pushed to go upwards 
+				if (chargeUp) begin // button was pushed to go upwards 
 						if (Yspeed > 0 ) // while moving down
 								Yspeed <= -Yspeed  ;  // change speed to go up 
 				end ;
@@ -136,7 +141,7 @@ begin
 	
 				
 	//  an edge input is tested here as it is a very short instance   
-	if (toggleX)  
+	if (releaseBall)  
 	
 				Xspeed <= -Xspeed; 
 				

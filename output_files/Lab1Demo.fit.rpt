@@ -1,5 +1,5 @@
 Fitter report for Lab1Demo
-Mon Aug 22 21:09:44 2022
+Mon Aug 22 22:12:51 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Aug 22 21:09:44 2022       ;
+; Fitter Status                   ; Successful - Mon Aug 22 22:12:51 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
@@ -158,14 +158,14 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.11        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.7%      ;
-;     Processor 3            ;   4.2%      ;
-;     Processor 4            ;   4.0%      ;
+;     Processor 2            ;   4.1%      ;
+;     Processor 3            ;   3.7%      ;
+;     Processor 4            ;   3.5%      ;
 +----------------------------+-------------+
 
 
@@ -3030,7 +3030,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "numKey[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "numKey[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sound_on" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
@@ -3043,7 +3043,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
-Info (11888): Total time spent on timing analysis during the Fitter is 2.57 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.59 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3060,10 +3060,10 @@ Warning (169064): Following 7 pins have no output enable or a GND or VCC output 
     Info (169065): Pin AUDOUT[0] has a permanently enabled output enable
 Info (144001): Generated suppressed messages file C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/output_files/Lab1Demo.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 200 warnings
-    Info: Peak virtual memory: 6749 megabytes
-    Info: Processing ended: Mon Aug 22 21:09:44 2022
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:01:34
+    Info: Peak virtual memory: 6737 megabytes
+    Info: Processing ended: Mon Aug 22 22:12:52 2022
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:01:35
 
 
 +----------------------------+

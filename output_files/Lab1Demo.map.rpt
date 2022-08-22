@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1Demo
-Mon Aug 22 21:09:02 2022
+Mon Aug 22 22:12:04 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 22 21:09:01 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Aug 22 22:12:04 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
@@ -1607,6 +1607,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INITIAL_X_SPEED ; 0     ; Signed Integer                                                      ;
 ; INITIAL_Y_SPEED ; 1000  ; Signed Integer                                                      ;
 ; INITIAL_Y_ACCEL ; 0     ; Signed Integer                                                      ;
+; INITIAL_X_ACCEL ; 0     ; Signed Integer                                                      ;
 ; MIN_Y_SPEED     ; 8     ; Signed Integer                                                      ;
 +-----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -1737,7 +1738,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1747,7 +1748,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Aug 22 21:08:39 2022
+    Info: Processing started: Mon Aug 22 22:11:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/white_ballbitmap.sv
@@ -1912,13 +1913,13 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "hit_colors" into its bus
 Info (12128): Elaborating entity "square_object" for hierarchy "Smiley_Block:inst1|square_object:inst6"
 Info (12128): Elaborating entity "smileyface_moveCollision" for hierarchy "Smiley_Block:inst1|smileyface_moveCollision:inst"
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(49): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 49
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(50): object "y_FRAME_SIZE" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 50
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(51): object "bracketOffset" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 51
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(52): object "OBJECT_WIDTH_X" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 52
-Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(53): object "OBJECT_HEIGHT_Y" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(164): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 164
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(165): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 165
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(52): object "x_FRAME_SIZE" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 52
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(53): object "y_FRAME_SIZE" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 53
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(54): object "bracketOffset" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 54
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(55): object "OBJECT_WIDTH_X" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 55
+Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(56): object "OBJECT_HEIGHT_Y" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(169): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 169
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(170): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 170
 Info (12128): Elaborating entity "KEYBOARD_INTERFACE" for hierarchy "KEYBOARD_INTERFACE:inst19"
 Info (12128): Elaborating entity "game_controller" for hierarchy "game_controller:inst20"
 Warning (10036): Verilog HDL or VHDL warning at game_controller.sv(25): object "collision_BallWall" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/game_controller.sv Line: 25
@@ -1986,7 +1987,7 @@ Info (12133): Instantiated megafunction "Number_position:inst2|lpm_constant:LPM_
     Info (12134): Parameter "WIDTHAD" = "1"
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 485
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.08.22.21:08:51 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.08.22.22:11:52 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2437,9 +2438,9 @@ Info (21057): Implemented 2125 device resources after synthesis - the final reso
     Info (21064): Implemented 2 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4906 megabytes
-    Info: Processing ended: Mon Aug 22 21:09:02 2022
-    Info: Elapsed time: 00:00:23
+    Info: Peak virtual memory: 4901 megabytes
+    Info: Processing ended: Mon Aug 22 22:12:04 2022
+    Info: Elapsed time: 00:00:24
     Info: Total CPU time (on all processors): 00:00:40
 
 

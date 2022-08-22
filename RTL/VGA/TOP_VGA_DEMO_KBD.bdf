@@ -39,7 +39,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -152 56 24 72)
+	(rect -160 -160 16 -144)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "CLOCK_50" (rect 9 0 64 12)(font "Arial" ))
 	(pt 176 8)
@@ -253,7 +253,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 64 -8 224 136)
+	(rect 56 -224 216 -80)
 	(text "clock_divider" (rect 42 -1 129 15)(font "Arial" (font_size 10)))
 	(text "inst12" (rect 8 128 36 145)(font "Intel Clear" ))
 	(port
@@ -313,7 +313,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect -24 88 24 120)
+	(rect -32 -128 16 -96)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst3" (rect 3 21 25 38)(font "Intel Clear" ))
 	(port
@@ -950,15 +950,15 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "Y_direction" (rect 0 0 67 19)(font "Intel Clear" (font_size 8)))
-		(text "Y_direction" (rect 21 107 88 126)(font "Intel Clear" (font_size 8)))
+		(text "chargeUp" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeUp" (rect 21 107 77 126)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "toggleX" (rect 0 0 44 19)(font "Intel Clear" (font_size 8)))
-		(text "toggleX" (rect 21 123 65 142)(font "Intel Clear" (font_size 8)))
+		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
+		(text "releaseBall" (rect 21 123 85 142)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 128)(pt 16 128))
 	)
 	(port
@@ -1006,15 +1006,6 @@ agreement for further details.
 		(rectangle (rect 16 16 216 176))
 	)
 	(annotation_block (parameter)(rect 600 32 794 127))
-)
-(connector
-	(pt 64 104)
-	(pt 24 104)
-)
-(connector
-	(text "resetN" (rect -78 88 -48 105)(font "Intel Clear" ))
-	(pt -80 104)
-	(pt -24 104)
 )
 (connector
 	(text "clk" (rect 472 392 486 409)(font "Intel Clear" ))
@@ -1247,11 +1238,6 @@ agreement for further details.
 	(pt -440 776)
 )
 (connector
-	(text "clk" (rect 248 48 262 65)(font "Intel Clear" ))
-	(pt 224 64)
-	(pt 296 64)
-)
-(connector
 	(text "clk" (rect -288 696 -274 713)(font "Intel Clear" ))
 	(pt -440 712)
 	(pt -240 712)
@@ -1362,10 +1348,6 @@ agreement for further details.
 	(pt -192 208)
 )
 (connector
-	(pt 64 64)
-	(pt 24 64)
-)
-(connector
 	(text "pixelX[10..0]" (rect 514 160 574 172)(font "Arial" ))
 	(pt 480 176)
 	(pt 584 176)
@@ -1409,16 +1391,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "Y_direction" (rect 363 240 416 257)(font "Intel Clear" ))
-	(pt 120 256)
-	(pt 584 256)
-)
-(connector
-	(text "toggleX" (rect 370 256 407 273)(font "Intel Clear" ))
-	(pt 248 272)
-	(pt 584 272)
-)
-(connector
 	(text "resetN" (rect 544 840 574 857)(font "Intel Clear" ))
 	(pt 584 856)
 	(pt 536 856)
@@ -1432,14 +1404,42 @@ agreement for further details.
 	(pt 584 824)
 	(pt 536 824)
 )
+(connector
+	(pt 56 -112)
+	(pt 16 -112)
+)
+(connector
+	(text "resetN" (rect -86 -128 -56 -111)(font "Intel Clear" ))
+	(pt -88 -112)
+	(pt -32 -112)
+)
+(connector
+	(text "clk" (rect 240 -168 254 -151)(font "Intel Clear" ))
+	(pt 216 -152)
+	(pt 288 -152)
+)
+(connector
+	(pt 56 -152)
+	(pt 16 -152)
+)
+(connector
+	(text "chargeUp" (rect 363 240 407 257)(font "Intel Clear" ))
+	(pt 120 256)
+	(pt 584 256)
+)
+(connector
+	(text "releaseBall" (rect 370 256 425 273)(font "Intel Clear" ))
+	(pt 248 272)
+	(pt 584 272)
+)
 (junction (pt 552 944))
 (junction (pt 1328 1248))
 (text "Output to 7Seg" (rect 912 928 1002 947)(font "Intel Clear" (font_size 8)))
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021" (rect -568 -72 -209 -53)(font "Intel Clear" (font_size 8)))
-(text "25 MHz Clock genrtaor" (rect 88 -40 222 -21)(font "Intel Clear" (font_size 8)))
+(text "25 MHz Clock genrtaor" (rect 80 -256 214 -237)(font "Intel Clear" (font_size 8)))
 (text "\"Enter\"  is toggleX" (rect 136 152 261 172)(font "Intel Clear" (font_size 10)))
 (text "KEY \"8\"  is Y_direction" (rect 136 176 289 196)(font "Intel Clear" (font_size 10)))
-(text "The heyboard interface" (rect -352 160 -210 179)(font "Intel Clear" (font_size 8)(bold)))
+(text "The heyboard interface" (rect -360 -48 -218 -29)(font "Intel Clear" (font_size 8)(bold)))
 (text "The background" (rect -480 424 -380 443)(font "Intel Clear" (font_size 8)(bold)))
 (text "Smileyface moving and drawing" (rect 464 0 659 19)(font "Intel Clear" (font_size 8)(bold)))
 (text "Sound Unit" (rect 400 776 470 795)(font "Intel Clear" (font_size 8)(bold)))
@@ -1449,6 +1449,6 @@ agreement for further details.
 (text "Update the game_controller" (rect 360 576 560 596)(font "Intel Clear" (font_size 10)(bold)))
 (rectangle (rect 328 768 1256 984)(color 0 0 0)(line_width 3))
 (rectangle (rect 448 -16 984 352)(color 0 0 0)(line_width 3))
-(rectangle (rect -368 144 288 384)(color 0 0 0)(line_width 3))
+(rectangle (rect -368 -48 288 384)(color 0 0 0)(line_width 3))
 (rectangle (rect -504 408 296 832)(color 0 0 0)(line_width 3))
 (rectangle (rect -584 1000 968 1352)(color 0 0 0)(line_width 3))

@@ -166,9 +166,9 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 80 528 248 544)
+	(rect 80 512 248 528)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "toggleX" (rect 5 0 42 17)(font "Intel Clear" ))
+	(text "chargeUp" (rect 5 0 50 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -182,9 +182,9 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 80 512 248 528)
+	(rect 80 528 248 544)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Y_direction" (rect 5 0 58 17)(font "Intel Clear" ))
+	(text "releaseBall" (rect 5 0 61 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -414,15 +414,15 @@ agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "Y_direction" (rect 0 0 55 12)(font "Arial" ))
-		(text "Y_direction" (rect 21 75 76 87)(font "Arial" ))
+		(text "chargeUp" (rect 0 0 47 12)(font "Arial" ))
+		(text "chargeUp" (rect 21 75 68 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "toggleX" (rect 0 0 35 12)(font "Arial" ))
-		(text "toggleX" (rect 21 91 56 103)(font "Arial" ))
+		(text "releaseBall" (rect 0 0 53 12)(font "Arial" ))
+		(text "releaseBall" (rect 21 91 74 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
@@ -475,6 +475,11 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"INITIAL_Y_ACCEL"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"INITIAL_X_ACCEL"
 		"0"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
@@ -586,19 +591,9 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "toggleX" (rect 369 520 406 537)(font "Intel Clear" ))
-	(pt 248 536)
-	(pt 584 536)
-)
-(connector
 	(pt 1544 408)
 	(pt 1576 408)
 	(bus)
-)
-(connector
-	(text "Y_direction" (rect 373 504 426 521)(font "Intel Clear" ))
-	(pt 584 520)
-	(pt 248 520)
 )
 (connector
 	(pt 560 568)
@@ -627,5 +622,15 @@ agreement for further details.
 	(pt 328 360)
 	(pt 424 360)
 	(bus)
+)
+(connector
+	(text "chargeUp" (rect 373 504 417 521)(font "Intel Clear" ))
+	(pt 584 520)
+	(pt 248 520)
+)
+(connector
+	(text "releaseBall" (rect 369 520 424 537)(font "Intel Clear" ))
+	(pt 248 536)
+	(pt 584 536)
 )
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021" (rect 168 24 527 43)(font "Intel Clear" (font_size 8)))
