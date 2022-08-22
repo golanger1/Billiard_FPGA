@@ -21,7 +21,10 @@ module	game_controller	(
 // drawing_request_2      -->  number/box 
 
 
-assign collision = ( drawing_request_Ball &&  drawing_request_1 );// any collision 
+assign collision = ( drawing_request_Ball &&  drawing_request_1 );// any collision ADD!!!
+assign collision_BallWall = ( drawing_request_Ball &&  drawing_request_1 ); //now white&wall
+//assign collision_BallBall = ( drawing_request_Ball &&  drawing_request_1 ); // not exist yet
+//assign collision_BallHole = ( drawing_request_Ball &&  drawing_request_1 ); // not exist yet
 						 						
 						
 // add colision between number and smiley definition and code as and where needed 

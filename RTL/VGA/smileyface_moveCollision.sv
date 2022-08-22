@@ -55,8 +55,8 @@ const int   OBJECT_HEIGHT_Y = 32; //ball pixel height? created
 
 int Xspeed, topLeftX_FixedPoint; // local parameters 
 int Yspeed, topLeftY_FixedPoint;
-int  Yaccel; //fraction - needs to be opposite to movement
-// int  X_ACCEL; //fraction - needs to be opposite to movement
+int  Yaccel; //friction - needs to be opposite to movement
+// int  X_ACCEL; //friction - needs to be opposite to movement
 
 
 
@@ -91,12 +91,22 @@ begin
 		// perform  position and speed integral only 30 times per second 
 		
 		if (startOfFrame == 1'b1) begin 
-		
+				
 				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
 
-				if (Yspeed > MIN_Y_SPEED || Yspeed < -MIN_Y_SPEED) //  limit the speed while going down 
+				
+				if (Yspeed > MIN_Y_SPEED) //  limit the speed while going down 
+					begin
+						Yaccel <= -1;
 						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
-						
+					end
+
+				else if (Yspeed < -MIN_Y_SPEED) //  limit the speed while going down 
+					begin
+						Yaccel <= 1;
+						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
+					end
+				
 				else
 					Yspeed <= 0;
 								
@@ -133,12 +143,12 @@ begin
 	// collisions with the sides 			
 				if (collision && HitEdgeCode [3] == 1) begin  
 					if (Xspeed < 0 ) // while moving left
-							Xspeed <= -Xspeed ; // positive move right 
+							Xspeed <= -Xspeed; // positive move right 
 				end
 			
 				if (collision && HitEdgeCode [1] == 1 ) begin  // hit right border of brick  
 					if (Xspeed > 0 ) //  while moving right
-							Xspeed <= -Xspeed  ;  // negative move left    
+							Xspeed <= -Xspeed;  // negative move left    
 				end	
 		   
 			

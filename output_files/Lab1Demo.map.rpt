@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1Demo
-Mon Aug 22 19:04:24 2022
+Mon Aug 22 21:09:02 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -63,13 +63,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 22 19:04:24 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Aug 22 21:09:01 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1109                                        ;
+; Total registers                 ; 1103                                        ;
 ; Total pins                      ; 61                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 128                                         ;
@@ -195,11 +195,11 @@ agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                              ; Library       ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------------+
+; RTL/VGA/white_ballBitMap.sv                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/white_ballBitMap.sv                                        ;               ;
 ; RTL/KEYBOARD/KEYBOARD_INTERFACE.qxp                                ; yes             ; User File                                    ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/KEYBOARD/KEYBOARD_INTERFACE.qxp                                ;               ;
 ; RTL/VGA/TOP_VGA_DEMO_KBD.bdf                                       ; yes             ; User Block Diagram/Schematic File            ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/TOP_VGA_DEMO_KBD.bdf                                       ;               ;
 ; RTL/VGA/Smiley_Block.bdf                                           ; yes             ; User Block Diagram/Schematic File            ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/Smiley_Block.bdf                                           ;               ;
 ; RTL/VGA/smileyface_moveCollision.sv                                ; yes             ; User SystemVerilog HDL File                  ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv                                ;               ;
-; RTL/VGA/smileyBitMap.sv                                            ; yes             ; User SystemVerilog HDL File                  ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyBitMap.sv                                            ;               ;
 ; RTL/VGA/square_object.sv                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/square_object.sv                                           ;               ;
 ; RTL/VGA/game_controller.sv                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/game_controller.sv                                         ;               ;
 ; RTL/VGA/back_ground_draw.sv                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/back_ground_draw.sv                                        ;               ;
@@ -244,16 +244,16 @@ agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                             ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1341                                                                                              ;
+; Estimate of Logic utilization (ALMs needed) ; 1136                                                                                              ;
 ;                                             ;                                                                                                   ;
-; Combinational ALUT usage for logic          ; 1944                                                                                              ;
-;     -- 7 input functions                    ; 44                                                                                                ;
-;     -- 6 input functions                    ; 610                                                                                               ;
-;     -- 5 input functions                    ; 288                                                                                               ;
-;     -- 4 input functions                    ; 233                                                                                               ;
-;     -- <=3 input functions                  ; 769                                                                                               ;
+; Combinational ALUT usage for logic          ; 1711                                                                                              ;
+;     -- 7 input functions                    ; 31                                                                                                ;
+;     -- 6 input functions                    ; 447                                                                                               ;
+;     -- 5 input functions                    ; 270                                                                                               ;
+;     -- 4 input functions                    ; 201                                                                                               ;
+;     -- <=3 input functions                  ; 762                                                                                               ;
 ;                                             ;                                                                                                   ;
-; Dedicated logic registers                   ; 1109                                                                                              ;
+; Dedicated logic registers                   ; 1103                                                                                              ;
 ;                                             ;                                                                                                   ;
 ; I/O pins                                    ; 61                                                                                                ;
 ; Total MLAB memory bits                      ; 0                                                                                                 ;
@@ -265,9 +265,9 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                                 ;
 ;                                             ;                                                                                                   ;
 ; Maximum fan-out node                        ; clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 590                                                                                               ;
-; Total fan-out                               ; 12011                                                                                             ;
-; Average fan-out                             ; 3.76                                                                                              ;
+; Maximum fan-out                             ; 584                                                                                               ;
+; Total fan-out                               ; 10747                                                                                             ;
+; Average fan-out                             ; 3.64                                                                                              ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -276,8 +276,8 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                          ; Entity Name                       ; Library Name  ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------+
-; |TOP_VGA_DEMO_KBD                                                                                                                       ; 1944 (2)            ; 1109 (0)                  ; 128               ; 0          ; 61   ; 0            ; |TOP_VGA_DEMO_KBD                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_KBD                  ; work          ;
-;    |AUDIO:inst18|                                                                                                                       ; 537 (0)             ; 601 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18                                                                                                                                                                                                                                                                                                                               ; AUDIO                             ; work          ;
+; |TOP_VGA_DEMO_KBD                                                                                                                       ; 1711 (2)            ; 1103 (0)                  ; 128               ; 0          ; 61   ; 0            ; |TOP_VGA_DEMO_KBD                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_KBD                  ; work          ;
+;    |AUDIO:inst18|                                                                                                                       ; 534 (0)             ; 601 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18                                                                                                                                                                                                                                                                                                                               ; AUDIO                             ; work          ;
 ;       |ToneDecoder:inst4|                                                                                                               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|ToneDecoder:inst4                                                                                                                                                                                                                                                                                                             ; ToneDecoder                       ; work          ;
 ;       |addr_counter:inst9|                                                                                                              ; 11 (11)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|addr_counter:inst9                                                                                                                                                                                                                                                                                                            ; addr_counter                      ; work          ;
 ;       |audio_codec_controller:inst2|                                                                                                    ; 432 (1)             ; 552 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2                                                                                                                                                                                                                                                                                                  ; audio_codec_controller            ; work          ;
@@ -362,16 +362,16 @@ agreement for further details.
 ;                      |mux_5r7:wrfull_eq_comp_lsb_mux|                                                                                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|dac2serial:dac2serial_right_inst|dac_synchronizer:dac_synchronizer_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_p9m1:auto_generated|mux_5r7:wrfull_eq_comp_lsb_mux                                                                                                              ; mux_5r7                           ; work          ;
 ;                      |mux_5r7:wrfull_eq_comp_msb_mux|                                                                                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|dac2serial:dac2serial_right_inst|dac_synchronizer:dac_synchronizer_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_p9m1:auto_generated|mux_5r7:wrfull_eq_comp_msb_mux                                                                                                              ; mux_5r7                           ; work          ;
 ;          |i2c:i2c_inst|                                                                                                                 ; 31 (31)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|i2c:i2c_inst                                                                                                                                                                                                                                                                                     ; i2c                               ; work          ;
-;       |prescaler:inst3|                                                                                                                 ; 47 (47)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|prescaler:inst3                                                                                                                                                                                                                                                                                                               ; prescaler                         ; work          ;
+;       |prescaler:inst3|                                                                                                                 ; 44 (44)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|prescaler:inst3                                                                                                                                                                                                                                                                                                               ; prescaler                         ; work          ;
 ;       |sintable:inst1|                                                                                                                  ; 40 (40)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|sintable:inst1                                                                                                                                                                                                                                                                                                                ; sintable                          ; work          ;
-;    |HART_DISPLAY:inst5|                                                                                                                 ; 402 (0)             ; 59 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5                                                                                                                                                                                                                                                                                                                         ; HART_DISPLAY                      ; work          ;
-;       |HartsMatrixBitMap:inst6|                                                                                                         ; 326 (326)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|HartsMatrixBitMap:inst6                                                                                                                                                                                                                                                                                                 ; HartsMatrixBitMap                 ; work          ;
+;    |HART_DISPLAY:inst5|                                                                                                                 ; 404 (0)             ; 59 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5                                                                                                                                                                                                                                                                                                                         ; HART_DISPLAY                      ; work          ;
+;       |HartsMatrixBitMap:inst6|                                                                                                         ; 329 (329)           ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|HartsMatrixBitMap:inst6                                                                                                                                                                                                                                                                                                 ; HartsMatrixBitMap                 ; work          ;
 ;       |matrix_top_XY:inst|                                                                                                              ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst                                                                                                                                                                                                                                                                                                      ; matrix_top_XY                     ; work          ;
 ;          |lpm_constant:LPM_CONSTANT_component|                                                                                          ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component                                                                                                                                                                                                                                                                  ; lpm_constant                      ; work          ;
 ;             |lpm_constant_gj8:ag|                                                                                                       ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag                                                                                                                                                                                                                                              ; lpm_constant_gj8                  ; work          ;
 ;                |sld_mod_ram_rom:mgl_prim1|                                                                                              ; 19 (10)             ; 32 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1                                                                                                                                                                                                                    ; sld_mod_ram_rom                   ; work          ;
 ;                   |sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|                                                              ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr                                                                                                                                                             ; sld_rom_sr                        ; work          ;
-;       |square_object:inst11|                                                                                                            ; 57 (57)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|square_object:inst11                                                                                                                                                                                                                                                                                                    ; square_object                     ; work          ;
+;       |square_object:inst11|                                                                                                            ; 56 (56)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|square_object:inst11                                                                                                                                                                                                                                                                                                    ; square_object                     ; work          ;
 ;    |KEYBOARD_INTERFACE:inst19|                                                                                                          ; 82 (0)              ; 60 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19                                                                                                                                                                                                                                                                                                                  ; KEYBOARD_INTERFACE                ; work          ;
 ;       |KBDINTF:inst|                                                                                                                    ; 56 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst                                                                                                                                                                                                                                                                                                     ; KBDINTF                           ; work          ;
 ;          |bitrec:inst4|                                                                                                                 ; 32 (32)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_INTERFACE:inst19|KBDINTF:inst|bitrec:inst4                                                                                                                                                                                                                                                                                        ; bitrec                            ; work          ;
@@ -386,12 +386,12 @@ agreement for further details.
 ;             |sld_mod_ram_rom:mgl_prim1|                                                                                                 ; 26 (12)             ; 33 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1                                                                                                                                                                                                                                    ; sld_mod_ram_rom                   ; work          ;
 ;                |sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|                                                                    ; 14 (14)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr                                                                                                                                                                                ; sld_rom_sr                        ; work          ;
 ;    |SEG7:inst10|                                                                                                                        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|SEG7:inst10                                                                                                                                                                                                                                                                                                                                ; SEG7                              ; work          ;
-;    |Smiley_Block:inst1|                                                                                                                 ; 630 (0)             ; 183 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1                                                                                                                                                                                                                                                                                                                         ; Smiley_Block                      ; work          ;
-;       |smileyBitMap:inst1|                                                                                                              ; 275 (275)           ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyBitMap:inst1                                                                                                                                                                                                                                                                                                      ; smileyBitMap                      ; work          ;
-;       |smileyface_moveCollision:inst|                                                                                                   ; 289 (289)           ; 159 (159)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst                                                                                                                                                                                                                                                                                           ; smileyface_moveCollision          ; work          ;
-;       |square_object:inst6|                                                                                                             ; 66 (66)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|square_object:inst6                                                                                                                                                                                                                                                                                                     ; square_object                     ; work          ;
-;    |VGA_Controller:inst|                                                                                                                ; 77 (77)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|VGA_Controller:inst                                                                                                                                                                                                                                                                                                                        ; VGA_Controller                    ; work          ;
-;    |back_ground_draw:inst4|                                                                                                             ; 63 (63)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4                                                                                                                                                                                                                                                                                                                     ; back_ground_draw                  ; work          ;
+;    |Smiley_Block:inst1|                                                                                                                 ; 408 (0)             ; 177 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1                                                                                                                                                                                                                                                                                                                         ; Smiley_Block                      ; work          ;
+;       |smileyface_moveCollision:inst|                                                                                                   ; 288 (288)           ; 160 (160)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst                                                                                                                                                                                                                                                                                           ; smileyface_moveCollision          ; work          ;
+;       |square_object:inst6|                                                                                                             ; 76 (76)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|square_object:inst6                                                                                                                                                                                                                                                                                                     ; square_object                     ; work          ;
+;       |white_ballBitMap:inst2|                                                                                                          ; 44 (44)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|white_ballBitMap:inst2                                                                                                                                                                                                                                                                                                  ; white_ballBitMap                  ; work          ;
+;    |VGA_Controller:inst|                                                                                                                ; 72 (72)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|VGA_Controller:inst                                                                                                                                                                                                                                                                                                                        ; VGA_Controller                    ; work          ;
+;    |back_ground_draw:inst4|                                                                                                             ; 58 (58)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4                                                                                                                                                                                                                                                                                                                     ; back_ground_draw                  ; work          ;
 ;    |clock_divider:inst12|                                                                                                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12                                                                                                                                                                                                                                                                                                                       ; clock_divider                     ; clock_divider ;
 ;       |clock_divider_0002:clock_divider_inst|                                                                                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12|clock_divider_0002:clock_divider_inst                                                                                                                                                                                                                                                                                 ; clock_divider_0002                ; clock_divider ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                         ; altera_pll                        ; work          ;
@@ -434,14 +434,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+------------------------------------------------------------+----------------------------------------+
-; Register name                                              ; Reason for Removal                     ;
-+------------------------------------------------------------+----------------------------------------+
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Yaccel[0] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1                      ;                                        ;
-+------------------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                       ;
++--------------------------------------------------------+-----------------------------------------------------------------+
+; Register name                                          ; Reason for Removal                                              ;
++--------------------------------------------------------+-----------------------------------------------------------------+
+; Smiley_Block:inst1|white_ballBitMap:inst2|RGBout[1..6] ; Merged with Smiley_Block:inst1|white_ballBitMap:inst2|RGBout[7] ;
+; Total Number of Removed Registers = 6                  ;                                                                 ;
++--------------------------------------------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -449,12 +449,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1109  ;
-; Number of registers using Synchronous Clear  ; 258   ;
-; Number of registers using Synchronous Load   ; 61    ;
-; Number of registers using Asynchronous Clear ; 637   ;
+; Total registers                              ; 1103  ;
+; Number of registers using Synchronous Clear  ; 254   ;
+; Number of registers using Synchronous Load   ; 93    ;
+; Number of registers using Asynchronous Clear ; 632   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 541   ;
+; Number of registers using Clock Enable       ; 537   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -475,20 +475,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; back_ground_draw:inst4|blueBits[1]                                                                                                                                                                                                                                                                                              ; 1       ;
 ; back_ground_draw:inst4|blueBits[0]                                                                                                                                                                                                                                                                                              ; 1       ;
 ; VGA_Controller:inst|oVGA_HS_d                                                                                                                                                                                                                                                                                                   ; 1       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[8]                                                                                                                                                                                                                                                         ; 2       ;
 ; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[10]                                                                                                                                                                                                                                                        ; 2       ;
 ; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[9]                                                                                                                                                                                                                                                         ; 2       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[6]                                                                                                                                                                                                                                                         ; 2       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[10]                                                                                                                                                                                                                                                        ; 2       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[9]                                                                                                                                                                                                                                                         ; 2       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[14]                                                                                                                                                                                                                                                        ; 2       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[8]                                                                                                                                                                                                                                                         ; 2       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[12]                                                                                                                                                                                                                                                        ; 2       ;
 ; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[13]                                                                                                                                                                                                                                                        ; 2       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[11]                                                                                                                                                                                                                                                        ; 2       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[4]                                                                                                                                                                                                                                                                      ; 6       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[2]                                                                                                                                                                                                                                                                      ; 6       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[5]                                                                                                                                                                                                                                                                      ; 3       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[4]                                                                                                                                                                                                                                                                      ; 3       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[3]                                                                                                                                                                                                                                                                      ; 3       ;
-; Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[2]                                                                                                                                                                                                                                                                      ; 3       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftY_FixedPoint[12]                                                                                                                                                                                                                                                        ; 2       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|topLeftX_FixedPoint[11]                                                                                                                                                                                                                                                        ; 2       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[9]                                                                                                                                                                                                                                                                      ; 6       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[8]                                                                                                                                                                                                                                                                      ; 6       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[7]                                                                                                                                                                                                                                                                      ; 6       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[6]                                                                                                                                                                                                                                                                      ; 6       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[5]                                                                                                                                                                                                                                                                      ; 6       ;
+; Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[3]                                                                                                                                                                                                                                                                      ; 7       ;
 ; AUDIO:inst18|audio_codec_controller:inst2|i2c:i2c_inst|I2C_clk_0                                                                                                                                                                                                                                                                ; 2       ;
 ; AUDIO:inst18|audio_codec_controller:inst2|i2c:i2c_inst|I2C_clk_en                                                                                                                                                                                                                                                               ; 2       ;
 ; AUDIO:inst18|audio_codec_controller:inst2|dac2serial:dac2serial_left_inst|dac_synchronizer:dac_synchronizer_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_p9m1:auto_generated|rdemp_eq_comp_lsb_aeb                                                                                                             ; 2       ;
@@ -537,19 +537,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[2]                                                  ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[1]                                                                  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux:inst16|RGBOut[1]                                                                                                                                                                   ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[25]                                                                                                                                    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyBitMap:inst1|HitEdgeCode[1]                                                                                                                                           ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[10]                                                 ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[0]                                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux:inst16|RGBOut[6]                                                                                                                                                                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[20]                                                                                                                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|white_ballBitMap:inst2|HitEdgeCode[3]                                                                                                                                       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[2] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|word_counter[0]                    ;
-; 5:1                ; 29 bits   ; 87 LEs        ; 29 LEs               ; 58 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[20]                                                                                                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yaccel[23]                                                                                                                                    ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[16]                                                                                                                                    ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]      ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[1]                         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                         ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4|blueBits[0]                                                                                                                                                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Xspeed[5]                                                                                                                                     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[4]                                                                                                                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|Smiley_Block:inst1|smileyface_moveCollision:inst|Yspeed[8]                                                                                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1577,10 +1577,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+---------------------------------------+
 ; Parameter Name  ; Value ; Type                                  ;
 +-----------------+-------+---------------------------------------+
-; initial_x       ; 280   ; Untyped                               ;
-; initial_x_speed ; 60    ; Untyped                               ;
-; initial_y       ; 185   ; Untyped                               ;
-; initial_y_speed ; 20    ; Untyped                               ;
+; initial_x       ; 100   ; Untyped                               ;
+; initial_x_speed ; 0     ; Untyped                               ;
+; initial_y       ; 220   ; Untyped                               ;
+; initial_y_speed ; 1000  ; Untyped                               ;
 +-----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1590,7 +1590,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+-----------------------------------------------------------+
 ; Parameter Name  ; Value ; Type                                                      ;
 +-----------------+-------+-----------------------------------------------------------+
-; OBJECT_WIDTH_X  ; 64    ; Signed Integer                                            ;
+; OBJECT_WIDTH_X  ; 32    ; Signed Integer                                            ;
 ; OBJECT_HEIGHT_Y ; 32    ; Signed Integer                                            ;
 ; OBJECT_COLOR    ; 00    ; Unsigned Binary                                           ;
 +-----------------+-------+-----------------------------------------------------------+
@@ -1602,10 +1602,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name  ; Value ; Type                                                                ;
 +-----------------+-------+---------------------------------------------------------------------+
-; INITIAL_X       ; 280   ; Signed Integer                                                      ;
-; INITIAL_Y       ; 185   ; Signed Integer                                                      ;
-; INITIAL_X_SPEED ; 60    ; Signed Integer                                                      ;
-; INITIAL_Y_SPEED ; 20    ; Signed Integer                                                      ;
+; INITIAL_X       ; 100   ; Signed Integer                                                      ;
+; INITIAL_Y       ; 220   ; Signed Integer                                                      ;
+; INITIAL_X_SPEED ; 0     ; Signed Integer                                                      ;
+; INITIAL_Y_SPEED ; 1000  ; Signed Integer                                                      ;
 ; INITIAL_Y_ACCEL ; 0     ; Signed Integer                                                      ;
 ; MIN_Y_SPEED     ; 8     ; Signed Integer                                                      ;
 +-----------------+-------+---------------------------------------------------------------------+
@@ -1695,39 +1695,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------+---------------+
 ; Type                                ; Count         ;
 +-------------------------------------+---------------+
-; arriav_ff                           ; 383           ;
-;     CLR                             ; 91            ;
+; arriav_ff                           ; 377           ;
+;     CLR                             ; 57            ;
 ;     CLR SCLR                        ; 43            ;
+;     CLR SLD                         ; 32            ;
 ;     ENA                             ; 54            ;
 ;     ENA CLR                         ; 96            ;
-;     ENA CLR SCLR                    ; 48            ;
-;     ENA SCLR                        ; 29            ;
+;     ENA CLR SCLR                    ; 45            ;
+;     ENA SCLR                        ; 28            ;
 ;     ENA SLD                         ; 22            ;
-; arriav_lcell_comb                   ; 1324          ;
-;     arith                           ; 340           ;
+; arriav_lcell_comb                   ; 1091          ;
+;     arith                           ; 342           ;
 ;         0 data inputs               ; 4             ;
-;         1 data inputs               ; 201           ;
-;         2 data inputs               ; 97            ;
+;         1 data inputs               ; 203           ;
+;         2 data inputs               ; 98            ;
 ;         4 data inputs               ; 9             ;
-;         5 data inputs               ; 29            ;
-;     extend                          ; 37            ;
-;         7 data inputs               ; 37            ;
-;     normal                          ; 947           ;
+;         5 data inputs               ; 28            ;
+;     extend                          ; 24            ;
+;         7 data inputs               ; 24            ;
+;     normal                          ; 725           ;
 ;         0 data inputs               ; 2             ;
-;         1 data inputs               ; 31            ;
-;         2 data inputs               ; 30            ;
-;         3 data inputs               ; 86            ;
-;         4 data inputs               ; 137           ;
-;         5 data inputs               ; 162           ;
-;         6 data inputs               ; 499           ;
+;         1 data inputs               ; 27            ;
+;         2 data inputs               ; 29            ;
+;         3 data inputs               ; 81            ;
+;         4 data inputs               ; 105           ;
+;         5 data inputs               ; 145           ;
+;         6 data inputs               ; 336           ;
 ; blackbox                            ; 2             ;
 ;         udio_codec_controller:inst2 ; 1             ;
 ;     KEYBOARD_INTERFACE:inst19       ; 1             ;
 ; boundary_port                       ; 115           ;
 ; generic_pll                         ; 1             ;
 ;                                     ;               ;
-; Max LUT depth                       ; 7.20          ;
-; Average LUT depth                   ; 3.71          ;
+; Max LUT depth                       ; 7.80          ;
+; Average LUT depth                   ; 3.73          ;
 +-------------------------------------+---------------+
 
 
@@ -1736,7 +1737,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1746,9 +1747,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Aug 22 19:04:00 2022
+    Info: Processing started: Mon Aug 22 21:08:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/white_ballbitmap.sv
+    Info (12023): Found entity 1: white_ballBitMap File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/white_ballBitMap.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/red_ballbitmap.sv
+    Info (12023): Found entity 1: red_ballBitMap File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/red_ballBitMap.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard/keyboard_interface.qxp
     Info (12023): Found entity 1: KEYBOARD_INTERFACE File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/KEYBOARD/KEYBOARD_INTERFACE.qxp Line: -1
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/top_vga_demo_kbd.bdf
@@ -1821,6 +1826,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file number_
     Info (12023): Found entity 1: Number_position File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/Number_position.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file matrix_top_xy.v
     Info (12023): Found entity 1: matrix_top_XY File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/matrix_top_XY.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at game_controller.sv(25): created implicit net for "collision_BallWall" File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/game_controller.sv Line: 25
 Info (12127): Elaborating entity "TOP_VGA_DEMO_KBD" for the top level hierarchy
 Info (12128): Elaborating entity "back_ground_draw" for hierarchy "back_ground_draw:inst4"
 Warning (10036): Verilog HDL or VHDL warning at back_ground_draw.sv(19): object "COLOR_MARTIX_SIZE" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 19
@@ -1901,7 +1907,7 @@ Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(77): trunca
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(90): truncated value with size 11 to match size of target (1) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/VGA_Controller.sv Line: 90
 Info (12128): Elaborating entity "objects_mux" for hierarchy "objects_mux:inst16"
 Info (12128): Elaborating entity "Smiley_Block" for hierarchy "Smiley_Block:inst1"
-Info (12128): Elaborating entity "smileyBitMap" for hierarchy "Smiley_Block:inst1|smileyBitMap:inst1"
+Info (12128): Elaborating entity "white_ballBitMap" for hierarchy "Smiley_Block:inst1|white_ballBitMap:inst2"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "hit_colors" into its bus
 Info (12128): Elaborating entity "square_object" for hierarchy "Smiley_Block:inst1|square_object:inst6"
@@ -1911,10 +1917,11 @@ Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(50):
 Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(51): object "bracketOffset" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 51
 Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(52): object "OBJECT_WIDTH_X" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 52
 Warning (10036): Verilog HDL or VHDL warning at smileyface_moveCollision.sv(53): object "OBJECT_HEIGHT_Y" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(154): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 154
-Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(155): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 155
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(164): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 164
+Warning (10230): Verilog HDL assignment warning at smileyface_moveCollision.sv(165): truncated value with size 32 to match size of target (11) File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv Line: 165
 Info (12128): Elaborating entity "KEYBOARD_INTERFACE" for hierarchy "KEYBOARD_INTERFACE:inst19"
 Info (12128): Elaborating entity "game_controller" for hierarchy "game_controller:inst20"
+Warning (10036): Verilog HDL or VHDL warning at game_controller.sv(25): object "collision_BallWall" assigned a value but never read File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/RTL/VGA/game_controller.sv Line: 25
 Info (12128): Elaborating entity "HART_DISPLAY" for hierarchy "HART_DISPLAY:inst5"
 Info (12128): Elaborating entity "HartsMatrixBitMap" for hierarchy "HART_DISPLAY:inst5|HartsMatrixBitMap:inst6"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
@@ -1979,7 +1986,7 @@ Info (12133): Instantiated megafunction "Number_position:inst2|lpm_constant:LPM_
     Info (12134): Parameter "WIDTHAD" = "1"
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 485
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.08.22.19:04:13 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.08.22.21:08:51 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2422,18 +2429,18 @@ Info (35003): Optimize away 274 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "AUDIO:inst18|audio_codec_controller:inst2|adc2parallel:adc2parallel_right_inst|synch_fifo:adc_synch_fifo_inst|dcfifo:dcfifo_component|dcfifo_8il1:auto_generated|altdpram:fiforam|lpm_decode:wdecoder|decode_mpf:auto_generated|w_anode317w[3]" File: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/audio_codec_controller.qxp Line: -1
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 2358 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2125 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 49 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 2289 logic cells
+    Info (21061): Implemented 2056 logic cells
     Info (21064): Implemented 2 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4904 megabytes
-    Info: Processing ended: Mon Aug 22 19:04:24 2022
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:42
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4906 megabytes
+    Info: Processing ended: Mon Aug 22 21:09:02 2022
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +------------------------------------------+
