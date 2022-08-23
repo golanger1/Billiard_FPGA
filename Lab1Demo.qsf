@@ -245,6 +245,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tck
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/black_hole_hits_draw.sv
 set_global_assignment -name BDF_FILE RTL/VGA/black_hole_block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/black_hole_hitsBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/black_hole_graphicBitMap.sv
