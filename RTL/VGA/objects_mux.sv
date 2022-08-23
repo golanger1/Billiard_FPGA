@@ -41,10 +41,10 @@ begin
 		 // add logic for box here 
 		 
 		 
-				else if (HartDrawingRequest == 1'b1)
-						RGBOut <= hartRGB;
-						else 
-							RGBOut <= backGroundRGB ; // last priority 
+		else if (HartDrawingRequest == 1'b1)
+			RGBOut <= hartRGB;
+		else 
+			RGBOut <= backGroundRGB ; // last priority 
 		end ; 
 	end
 

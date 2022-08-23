@@ -15,7 +15,7 @@ module	back_ground_draw	(
 
 const int	xFrameSize	=	639;
 const int	yFrameSize	=	479;
-const int	bracketOffset = 35;
+const int	bracketOffset = 30;
 
 logic [2:0] redBits;
 logic [2:0] greenBits;
@@ -45,24 +45,31 @@ begin
 		bordersDrawReq <= 	1'b0 ; 
 
 					
-	// draw the black borders of the screen
+	/*
+		// draw the black borders of the screen
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
 			begin 
 				redBits 	 <= LIGHT_COLOR ;	
 				greenBits <= LIGHT_COLOR ;	
 				blueBits  <= LIGHT_COLOR ;	// 3rd bit will be truncated
-			end
+			end*/
 		// draw  four lines with "bracketOffset" offset from the border 
 		
-		// draw the black borders 
+		// draw the black borders, send bordersDrawReq.
 		if (        pixelX == bracketOffset ||
 						pixelY == bracketOffset ||
 						pixelX == (xFrameSize-bracketOffset) || 
 						pixelY == (yFrameSize-bracketOffset)) 
 			begin 
+			/*
+					redBits 	 <= 3'b011 ;	
+					greenBits <= 3'b001 ;	
+					blueBits  <= 2'b01  ;
+					*/
 					redBits 	 <= LIGHT_COLOR ;	
 					greenBits <= LIGHT_COLOR ;	
 					blueBits  <= LIGHT_COLOR ;
+					
 					bordersDrawReq <= 	1'b1 ; // pulse if drawing the boarders 
 			end
 	
@@ -73,15 +80,24 @@ begin
 	// draw brown borders 
 	//-------------------------------------------------------------------------------------
 		
-		if ( ((pixelY > 0) && (pixelY < bracketOffset) ) ||
-		( (pixelY > yFrameSize-bracketOffset) && (pixelY < yFrameSize) ) ||
-		( (pixelX > 0) && (pixelX > bracketOffset) ) ||
-		( (pixelX > xFrameSize-bracketOffset) && (pixelX < yFrameSize) ) ) 
+		if ( ( (pixelY > 0) && (pixelY < bracketOffset) ) ||
+		( (pixelY > (yFrameSize - bracketOffset)) && (pixelY < yFrameSize) ) ||
+		( (pixelX > 0) && (pixelX < bracketOffset) ) ||
+		( (pixelX > (xFrameSize - bracketOffset)) && (pixelX < xFrameSize) ) ) 
 				begin 
 					redBits 	 <= 3'b011 ;	
 					greenBits <= 3'b001 ;	
-					blueBits  <= 2'b01  ; 
+					blueBits  <= 2'b00  ; 
+					bordersDrawReq <= 	1'b1 ; // pulse if drawing the boarders 
 				end
+				
+		// draw the white borders of the screen
+		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
+			begin 
+				redBits 	 <= DARK_COLOR ;	
+				greenBits <= DARK_COLOR ;	
+				blueBits  <= DARK_COLOR ;	// 3rd bit will be truncated
+			end
 
 
 		
