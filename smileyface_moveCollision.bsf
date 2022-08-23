@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 192)
+	(rect 16 16 248 224)
 	(text "smileyface_moveCollision" (rect 5 0 108 12)(font "Arial" ))
-	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(text "inst" (rect 8 192 20 204)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -55,23 +55,44 @@ agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "releaseBall" (rect 0 0 41 12)(font "Arial" ))
-		(text "releaseBall" (rect 21 91 62 103)(font "Arial" ))
+		(text "chargeDown" (rect 0 0 49 12)(font "Arial" ))
+		(text "chargeDown" (rect 21 91 70 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "collision" (rect 0 0 28 12)(font "Arial" ))
-		(text "collision" (rect 21 107 49 119)(font "Arial" ))
+		(text "chargeLeft" (rect 0 0 43 12)(font "Arial" ))
+		(text "chargeLeft" (rect 21 107 64 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 0 128)
 		(input)
+		(text "chargeRight" (rect 0 0 48 12)(font "Arial" ))
+		(text "chargeRight" (rect 21 123 69 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "releaseBall" (rect 0 0 41 12)(font "Arial" ))
+		(text "releaseBall" (rect 21 139 62 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "collision" (rect 0 0 28 12)(font "Arial" ))
+		(text "collision" (rect 21 155 49 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
 		(text "HitEdgeCode[3..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "HitEdgeCode[3..0]" (rect 21 123 94 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
+		(text "HitEdgeCode[3..0]" (rect 21 171 94 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
 		(pt 232 32)
@@ -122,8 +143,23 @@ agreement for further details.
 		"2"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MIN_X_SPEED"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_Y_SHOT_SPEED"
+		"800"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_X_SHOT_SPEED"
+		"800"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 216 160)(line_width 1))
+		(rectangle (rect 16 16 216 192)(line_width 1))
 	)
 	(annotation_block (parameter)(rect 248 -64 348 16))
 )

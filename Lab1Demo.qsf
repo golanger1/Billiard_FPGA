@@ -245,9 +245,16 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tck
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/singleKeyDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/lpf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/keyPad_decoder.sv
+set_global_assignment -name BDF_FILE RTL/KEYBOARD/KEYBOARD_INTERFACE.bdf
+set_global_assignment -name BDF_FILE RTL/KEYBOARD/KEYBOARD_DECODER.bdf
+set_global_assignment -name BDF_FILE RTL/KEYBOARD/KBDINTF.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/byterec.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/bitrec.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/white_ballBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/red_ballBitMap.sv
-set_global_assignment -name QXP_FILE RTL/KEYBOARD/KEYBOARD_INTERFACE.qxp
 set_global_assignment -name BDF_FILE RTL/VGA/TOP_VGA_DEMO_KBD.bdf
 set_global_assignment -name BDF_FILE RTL/VGA/Smiley_Block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/smileyface_moveCollision.sv
@@ -265,9 +272,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/NumbersBitMap.sv
 set_global_assignment -name QIP_FILE RTL/VGA/valX.qip
 set_global_assignment -name TCL_SCRIPT_FILE constraints/pin.tcl
 set_global_assignment -name SDC_FILE constraints/DE10_Standard_Audio.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/random.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/simple_up_counter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/KEYBOARD/HexSS.sv
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_global_assignment -name QIP_FILE RTL/numberPosition.qip
 set_global_assignment -name QIP_FILE clock_divider.qip
