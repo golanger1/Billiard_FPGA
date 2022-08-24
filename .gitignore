@@ -10,3 +10,5 @@ pictures/white_ball - Copy.bin
 output_files/
 
 db/
+
+incremental_db/compiled_partitions/
