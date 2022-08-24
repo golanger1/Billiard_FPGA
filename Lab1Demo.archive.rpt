@@ -1,5 +1,5 @@
 Archive Project report for Lab1Demo
-Mon Aug 22 22:14:03 2022
+Wed Aug 24 18:20:54 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ agreement for further details.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Mon Aug 22 22:14:03 2022 ;
+; Archive Project Status ; Successful - Wed Aug 24 18:20:54 2022 ;
 ; Revision Name          ; Lab1Demo                              ;
 ; Top-level Entity Name  ; TOP_VGA_DEMO_KBD                      ;
 ; Family                 ; Cyclone V                             ;
@@ -50,18 +50,18 @@ Info: File Set 'Source control' contains:
     Info: Project source and settings files
     Info: Automatically detected source files
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/
+Info (13213): Using common directory C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/LabProject_220822.qar'
+Info: Generated archive 'C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/billiard_FPGA.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'Lab1Demo.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/17.0/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Mon Aug 22 22:14:03 2022
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Wed Aug 24 18:20:54 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -101,10 +101,14 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/AUDIO/ToneDecoder.sv                              ;
 ; RTL/AUDIO/TOP_AUDIO.bdf                               ;
 ; RTL/audio_codec_controller/audio_codec_controller.qxp ;
-; RTL/KEYBOARD/HexSS.sv                                 ;
-; RTL/KEYBOARD/KEYBOARD_INTERFACE.qxp                   ;
-; RTL/KEYBOARD/random.sv                                ;
-; RTL/KEYBOARD/simple_up_counter.sv                     ;
+; RTL/KEYBOARD/bitrec.sv                                ;
+; RTL/KEYBOARD/byterec.sv                               ;
+; RTL/KEYBOARD/KBDINTF.bdf                              ;
+; RTL/KEYBOARD/KEYBOARD_DECODER.bdf                     ;
+; RTL/KEYBOARD/KEYBOARD_INTERFACE.bdf                   ;
+; RTL/KEYBOARD/keyPad_decoder.sv                        ;
+; RTL/KEYBOARD/lpf.sv                                   ;
+; RTL/KEYBOARD/singleKeyDecoder.sv                      ;
 ; RTL/numberPosition.bsf                                ;
 ; RTL/numberPosition.qip                                ;
 ; RTL/numberPosition.v                                  ;
@@ -112,6 +116,11 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; RTL/Seg7/SEG7.SV                                      ;
 ; RTL/VGA/back_ground_draw.sv                           ;
 ; RTL/VGA/back_ground_drawSquare.sv                     ;
+; RTL/VGA/black_hole_block.bdf                          ;
+; RTL/VGA/black_hole_graphic_draw.sv                    ;
+; RTL/VGA/black_hole_graphicBitMap.sv                   ;
+; RTL/VGA/black_hole_hits_draw.sv                       ;
+; RTL/VGA/black_hole_hitsBitMap.sv                      ;
 ; RTL/VGA/game_controller.sv                            ;
 ; RTL/VGA/HART_DISPLAY.bdf                              ;
 ; RTL/VGA/HartsMatrixBitMap.sv                          ;

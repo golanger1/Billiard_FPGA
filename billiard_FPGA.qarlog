@@ -1,0 +1,93 @@
+Quartus Prime Archive log --	C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/billiard_FPGA.qarlog
+
+Archive:	C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/billiard_FPGA.qar
+Date:		Wed Aug 24 18:20:53 2022
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/DE10_Standard_Audio.sdc
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Lab1Demo.qpf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Lab1Demo.qsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Number_position.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Number_position.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Number_position.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Number_position_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/AUDIO.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/SinTable.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/TOP_AUDIO.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/ToneDecoder.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/addr_counter.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/prescaler.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/KBDINTF.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/KEYBOARD_DECODER.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/KEYBOARD_INTERFACE.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/bitrec.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/byterec.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/keyPad_decoder.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/lpf.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/singleKeyDecoder.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/Seg7/SEG7.SV
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/HART_DISPLAY.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/HartsMatrixBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/NumbersBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/Smiley_Block.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/TOP_VGA_DEMO_KBD.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/VGA_Controller.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_drawSquare.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/black_hole_block.bdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/black_hole_graphicBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/black_hole_graphic_draw.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/black_hole_hitsBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/black_hole_hits_draw.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/game_controller.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/objects_mux.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/red_ballBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/smileyBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/smileyface_moveCollision.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/square_Hart_object.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/square_object.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/valX.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/valX.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/valX.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/valX_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/valX_inst.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/white_ballBitMap.sv
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/audio_codec_controller/audio_codec_controller.qxp
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/numberPosition.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/numberPosition.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/numberPosition.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/numberPosition_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_loca.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_loca.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_loca.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_loca_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_location.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_location.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_location.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/X_location_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Y_location.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Y_location.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Y_location.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/Y_location_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/assignment_defaults.qdf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/audio_codec_controller.qxp
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider.cmp
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider.sip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider.spd
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider/clock_divider_0002.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider/clock_divider_0002.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/clock_divider_sim/clock_divider.vo
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/constraints/DE10_Standard_Audio.sdc
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/constraints/pin.tcl
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.bsf
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.qip
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY_bb.v
+C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/output_files/Chain1.cdf
+	======= Total: 82 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

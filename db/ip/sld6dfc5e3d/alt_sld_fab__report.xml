@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
+<<<<<<< HEAD
  date="2022.08.23.19:05:04"
  outputDirectory="C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/ip/sld6dfc5e3d/">
+=======
+ date="2022.08.23.18:45:07"
+ outputDirectory="C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/db/ip/sld6dfc5e3d/">
+>>>>>>> white_ball_movement_no_collisions
  <perimeter>
   <parameter
      name="AUTO_DEVICE_FAMILY"
