@@ -10,10 +10,13 @@ module	game_controller	(
 			input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
 			input	logic	drawing_request_Ball,
 			input	logic	drawing_request_1,
+			//input	logic	drawing_request_hole_1,
        // add input from box of numbers here 
 			
 			output logic collision, // active in case of collision between two objects
+			//output logic disable_Ball1,
 			output logic SingleHitPulse // critical code, generating A single pulse in a frame 
+			
 );
 
 // drawing_request_Ball   -->  smiley
@@ -21,7 +24,10 @@ module	game_controller	(
 // drawing_request_2      -->  number/box 
 
 
-assign collision = ( drawing_request_Ball &&  drawing_request_1 );// any collision 
+assign collision = ( drawing_request_Ball &&  drawing_request_1 );// any collision ADD!!!
+assign collision_BallWall = ( drawing_request_Ball &&  drawing_request_1 ); //now white&wall
+//assign collision_BallHole = ( drawing_request_Ball &&  drawing_request_hole_1 );
+//assign collision_BallBall = ( drawing_request_Ball &&  drawing_request_1 ); // not exist yet
 						 						
 						
 // add colision between number and smiley definition and code as and where needed 
@@ -33,22 +39,27 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN)
 	begin 
+		//disable_Ball1 = 1'b0;
 		flag	<= 1'b0;
 		SingleHitPulse <= 1'b0 ; 
 	end 
 	else begin 
 
-			SingleHitPulse <= 1'b0 ; // default 
-			if(startOfFrame) 
-				flag <= 1'b0 ; // reset for next time 
+		SingleHitPulse <= 1'b0 ; // default 
+		if(startOfFrame) 
+			flag <= 1'b0 ; // reset for next time 
 				
 //		change the section below  to collision between number and smiley
 
 
-if ( collision  && (flag == 1'b0)) begin 
+		if ( collision  && (flag == 1'b0)) begin 
 			flag	<= 1'b1; // to enter only once 
 			SingleHitPulse <= 1'b1 ; 
 		end ; 
+		
+		/*if ( collision_BallHole_1 && (flag == 1'b0) ) begin
+			disable_Ball1 = 1'b1;
+		end*/
 	end 
 end
 

@@ -11,11 +11,15 @@ module	objects_mux	(
 //		--------	Clock Input	 	
 					input		logic	clk,
 					input		logic	resetN,
-		   // smiley 
-					input		logic	smileyDrawingRequest, // two set of inputs per unit
-					input		logic	[7:0] smileyRGB, 
+		   // white ball 
+					input		logic	WBallDrawingRequest, // two set of inputs per unit
+					input		logic	[7:0] WBallRGB, 
 					     
-		  // add the box here 
+		  // holes
+					input		logic Hole_1_DrawingRequest,
+					input		logic	[7:0] Hole_1_RGB,
+					input		logic Hole_2_DrawingRequest,
+					input		logic	[7:0] Hole_2_RGB,
 			  
 			  
 		  ////////////////////////
@@ -34,17 +38,20 @@ begin
 	end
 	
 	else begin
-		if (smileyDrawingRequest == 1'b1 )   
-			RGBOut <= smileyRGB;  //first priority 
+		if ( WBallDrawingRequest == 1'b1 )   
+			RGBOut <= WBallRGB;  //first priority 
 		 
 		 
-		 // add logic for box here 
+		 else if ( Hole_2_DrawingRequest == 1'b1 )   
+			RGBOut <= Hole_2_RGB;  //second priority
 		 
+		 else if ( Hole_1_DrawingRequest == 1'b1 )   
+			RGBOut <= Hole_1_RGB;  //second priority
 		 
-				else if (HartDrawingRequest == 1'b1)
-						RGBOut <= hartRGB;
-						else 
-							RGBOut <= backGroundRGB ; // last priority 
+		else if ( HartDrawingRequest == 1'b1)
+			RGBOut <= hartRGB;
+		else 
+			RGBOut <= backGroundRGB ; // last priority 
 		end ; 
 	end
 
