@@ -179,8 +179,8 @@ begin
 end
 
 //get a better (64 times) resolution using integer   
-assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER + 16;   // note it must be 2^n 
-assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER + 16;    
+assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER + 24;   // note it must be 2^n 
+assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER + 24;    
 
 
 endmodule

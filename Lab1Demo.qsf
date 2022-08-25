@@ -245,7 +245,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tck
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/holes_mux.sv
+set_global_assignment -name BDF_FILE RTL/VGA/all_holes_block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/hit_ballBitMap.sv
 set_global_assignment -name BDF_FILE RTL/VGA/HitBall_Block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/hit_ball_moveCollision.sv
@@ -300,3 +301,4 @@ set_global_assignment -name QIP_FILE X_location.qip
 set_global_assignment -name QIP_FILE Y_location.qip
 set_global_assignment -name QIP_FILE Number_position.qip
 set_global_assignment -name QIP_FILE matrix_top_XY.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

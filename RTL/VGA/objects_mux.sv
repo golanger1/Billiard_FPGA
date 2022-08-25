@@ -41,11 +41,10 @@ begin
 		if ( WBallDrawingRequest == 1'b1 )   
 			RGBOut <= WBallRGB;  //first priority 
 		 
-		 
-		 else if ( Hole_2_DrawingRequest == 1'b1 )   
+		else if ( Hole_2_DrawingRequest == 1'b1 )   
 			RGBOut <= Hole_2_RGB;  //second priority
-		 
-		 else if ( Hole_1_DrawingRequest == 1'b1 )   
+			
+		else if ( Hole_1_DrawingRequest == 1'b1 )   
 			RGBOut <= Hole_1_RGB;  //second priority
 		 
 		else if ( HartDrawingRequest == 1'b1)

@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at back_ground_drawSquare.sv(50): always construct contains both blocking and non-blocking assignments File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_drawSquare.sv Line: 50
-Warning (10268): Verilog HDL information at back_ground_draw.sv(32): always construct contains both blocking and non-blocking assignments File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 32

@@ -12,3 +12,9 @@ output_files/
 db/
 
 incremental_db/compiled_partitions/
+
+*.rpt
+
+*.summary
+
+*.smsg
