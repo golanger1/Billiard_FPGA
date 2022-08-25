@@ -10,6 +10,8 @@ module	game_controller	(
 			input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
 			input	logic	drawing_request_Ball,
 			input	logic	drawing_request_1,
+			input	logic	drawing_request_2,
+
 			//input	logic	drawing_request_hole_1,
        // add input from box of numbers here 
 			
@@ -24,8 +26,8 @@ module	game_controller	(
 // drawing_request_2      -->  number/box 
 
 
-assign collision = ( drawing_request_Ball &&  drawing_request_1 );// any collision ADD!!!
-assign collision_BallWall = ( drawing_request_Ball &&  drawing_request_1 ); //now white&wall
+assign collision = ( (drawing_request_Ball &&  drawing_request_1) || (drawing_request_1 && drawing_request_2) || (drawing_request_Ball &&  drawing_request_2));// any collision ADD!!!
+assign collision_BallWall = ( (drawing_request_Ball &&  drawing_request_1) || (drawing_request_1 && drawing_request_2)); //now white&wall
 //assign collision_BallHole = ( drawing_request_Ball &&  drawing_request_hole_1 );
 //assign collision_BallBall = ( drawing_request_Ball &&  drawing_request_1 ); // not exist yet
 						 						

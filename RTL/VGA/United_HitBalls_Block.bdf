@@ -1,0 +1,695 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(global
+	(rect 648 -16 936 24)
+	(parameter)
+	(text "PARAM" (rect 3 -1 46 13)(font "Arial" (font_size 8)))
+	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
+	(text "initial_x_speed" (rect 3 16 86 30)(font "Arial" (font_size 8)))
+	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
+	(text "D\"0\"" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(drawing
+		(line (pt 138 40)(pt 138 0))
+	)
+)
+(global
+	(rect 648 32 936 72)
+	(parameter)
+	(text "PARAM" (rect 3 -1 46 13)(font "Arial" (font_size 8)))
+	(text "DEFAULT VALUE" (rect 141 0 229 12)(font "Arial" ))
+	(text "initial_y_speed" (rect 3 16 86 30)(font "Arial" (font_size 8)))
+	(text " NAME" (rect 108 0 142 12)(font "Arial" ))
+	(text "D\"0\"" (rect 141 16 148 30)(font "Arial" (font_size 8)))
+	(drawing
+		(line (pt 138 40)(pt 138 0))
+	)
+)
+(pin
+	(input)
+	(rect 144 192 320 208)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "pixelX[10..0]" (rect 9 0 69 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 144 216 320 232)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "pixelY[10..0]" (rect 9 0 71 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 144 280 320 296)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "startOfFrame" (rect 9 0 76 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 144 296 320 312)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "collision" (rect 9 0 47 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 96 312 272 328)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "HitEdgeCode[2..1][3..0]" (rect 9 0 125 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 152 248 320 264)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 152 264 320 280)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "resetN" (rect 5 0 39 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 1680 400 1856 416)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "HitEgeCode[2..1][3..0]" (rect 90 0 200 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1736 368 1912 384)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "hitBallDR" (rect 90 0 136 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1704 384 1880 400)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "hitBallRGB[7..0]" (rect 90 0 169 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 1192 328 1472 472)
+	(text "hit_ballBitMap" (rect 5 0 72 12)(font "Arial" ))
+	(text "inst6" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "offsetX[2..1][10..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "offsetX[2..1][10..0]" (rect 21 59 115 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "offsetY[2..1][10..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "offsetY[2..1][10..0]" (rect 21 75 117 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "InsideRectangle[2..1]" (rect 0 0 105 12)(font "Arial" ))
+		(text "InsideRectangle[2..1]" (rect 21 91 126 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "hitBalls_color[2..1][7..0]" (rect 0 0 116 12)(font "Arial" ))
+		(text "hitBalls_color[2..1][7..0]" (rect 21 107 137 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "hitBall_DR" (rect 0 0 51 12)(font "Arial" ))
+		(text "hitBall_DR" (rect 216 27 259 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "RGBout[7..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "RGBout[7..0]" (rect 205 43 259 55)(font "Arial" ))
+		(line (pt 280 48)(pt 264 48)(line_width 3))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "HitEdgeCode[2..1][3..0]" (rect 0 0 116 12)(font "Arial" ))
+		(text "HitEdgeCode[2..1][3..0]" (rect 161 59 259 71)(font "Arial" ))
+		(line (pt 280 64)(pt 264 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 128))
+	)
+)
+(symbol
+	(rect 296 496 584 656)
+	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "hitBall1" (rect 8 139 45 156)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
+		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "collision" (rect 21 107 68 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "HitEdgeCode[3..0]" (rect 21 123 129 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetX[10..0]" (rect 139 27 267 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetY[10..0]" (rect 139 43 267 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_DR       " (rect 180 59 267 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"initial_x"
+		"500"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y"
+		"220"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_x_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"hitball_id"
+		"1"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(parameter
+		"hitball_color"
+		"e0"
+		""
+		(type "PARAMETER_UNSIGNED_HEX")	)
+	(drawing
+		(rectangle (rect 16 16 272 144))
+	)
+	(annotation_block (parameter)(rect 296 352 503 485))
+)
+(symbol
+	(rect 296 824 584 984)
+	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "hitBall2" (rect 8 139 45 156)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
+		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "collision" (rect 21 107 68 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "HitEdgeCode[3..0]" (rect 21 123 129 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetX[10..0]" (rect 139 27 267 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetY[10..0]" (rect 139 43 267 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_DR       " (rect 180 59 267 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(parameter
+		"initial_x"
+		"300"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y"
+		"220"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_x_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"hitball_id"
+		"2"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(parameter
+		"hitball_color"
+		"0e"
+		""
+		(type "PARAMETER_UNSIGNED_HEX")	)
+	(drawing
+		(rectangle (rect 16 16 272 144))
+	)
+	(annotation_block (parameter)(rect 296 680 503 813))
+)
+(connector
+	(text "clk" (rect 208 544 222 561)(font "Intel Clear" ))
+	(pt 296 560)
+	(pt 160 560)
+)
+(connector
+	(text "resetN" (rect 200 560 233 572)(font "Arial" ))
+	(pt 296 576)
+	(pt 160 576)
+)
+(connector
+	(text "startOfFrame" (rect 184 576 247 593)(font "Intel Clear" ))
+	(pt 296 592)
+	(pt 160 592)
+)
+(connector
+	(text "collision      " (rect 200 592 253 609)(font "Intel Clear" ))
+	(pt 296 608)
+	(pt 160 608)
+)
+(connector
+	(text "pixelX[10..0]" (rect 210 512 269 529)(font "Intel Clear" ))
+	(pt 160 528)
+	(pt 296 528)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect 210 528 269 545)(font "Intel Clear" ))
+	(pt 160 544)
+	(pt 296 544)
+	(bus)
+)
+(connector
+	(text "clk" (rect 1104 344 1118 361)(font "Intel Clear" ))
+	(pt 1088 360)
+	(pt 1192 360)
+)
+(connector
+	(text "resetN" (rect 1104 360 1137 372)(font "Arial" ))
+	(pt 1088 376)
+	(pt 1192 376)
+)
+(connector
+	(pt 1728 376)
+	(pt 1728 360)
+)
+(connector
+	(pt 1736 376)
+	(pt 1728 376)
+)
+(connector
+	(pt 1696 392)
+	(pt 1696 376)
+	(bus)
+)
+(connector
+	(pt 1704 392)
+	(pt 1696 392)
+	(bus)
+)
+(connector
+	(pt 1672 408)
+	(pt 1672 392)
+	(bus)
+)
+(connector
+	(pt 1680 408)
+	(pt 1672 408)
+	(bus)
+)
+(connector
+	(text "hitBalls_DR_VEC [1]        " (rect 594 544 710 561)(font "Intel Clear" ))
+	(pt 584 560)
+	(pt 704 560)
+)
+(connector
+	(text "clk" (rect 208 872 222 889)(font "Intel Clear" ))
+	(pt 296 888)
+	(pt 160 888)
+)
+(connector
+	(text "resetN" (rect 200 888 233 900)(font "Arial" ))
+	(pt 296 904)
+	(pt 160 904)
+)
+(connector
+	(text "startOfFrame" (rect 184 904 247 921)(font "Intel Clear" ))
+	(pt 296 920)
+	(pt 160 920)
+)
+(connector
+	(text "collision      " (rect 200 920 253 937)(font "Intel Clear" ))
+	(pt 296 936)
+	(pt 160 936)
+)
+(connector
+	(text "pixelX[10..0]" (rect 210 840 269 857)(font "Intel Clear" ))
+	(pt 160 856)
+	(pt 296 856)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect 210 856 269 873)(font "Intel Clear" ))
+	(pt 160 872)
+	(pt 296 872)
+	(bus)
+)
+(connector
+	(text "hitBalls_DR_VEC [2]        " (rect 594 872 710 889)(font "Intel Clear" ))
+	(pt 584 888)
+	(pt 704 888)
+)
+(connector
+	(text "hitBalls_DR_VEC [2..1]        " (rect 1104 408 1231 425)(font "Intel Clear" ))
+	(pt 1072 424)
+	(pt 1192 424)
+	(bus)
+)
+(connector
+	(text "hitBall_OffsetX[2..1][10..0]" (rect 1093 376 1220 393)(font "Intel Clear" ))
+	(pt 1072 392)
+	(pt 1192 392)
+	(bus)
+)
+(connector
+	(text "hitBall_OffsetY[2..1][10..0]" (rect 1090 392 1217 409)(font "Intel Clear" ))
+	(pt 1072 408)
+	(pt 1192 408)
+	(bus)
+)
+(connector
+	(text "hitBall_OffsetX[1][10..0]" (rect 594 504 710 521)(font "Intel Clear" ))
+	(pt 584 528)
+	(pt 704 528)
+	(bus)
+)
+(connector
+	(text "hitBall_OffsetY[1][10..0]" (rect 599 528 715 545)(font "Intel Clear" ))
+	(pt 584 544)
+	(pt 704 544)
+	(bus)
+)
+(connector
+	(text "hitBall_OffsetX[2][10..0]" (rect 594 832 710 849)(font "Intel Clear" ))
+	(pt 584 856)
+	(pt 704 856)
+	(bus)
+)
+(connector
+	(text "hitBall_OffsetY[2][10..0]" (rect 599 856 715 873)(font "Intel Clear" ))
+	(pt 584 872)
+	(pt 704 872)
+	(bus)
+)
+(connector
+	(text "hitBalls_color [2..1][7..0]        " (rect 1104 424 1238 441)(font "Intel Clear" ))
+	(pt 1072 440)
+	(pt 1192 440)
+	(bus)
+)
+(connector
+	(pt 1728 360)
+	(pt 1472 360)
+)
+(connector
+	(text "smileyRGB[7..0]" (rect 1441 360 1517 377)(font "Intel Clear" ))
+	(pt 1472 376)
+	(pt 1696 376)
+	(bus)
+)
+(connector
+	(pt 1472 392)
+	(pt 1672 392)
+	(bus)
+)
+(connector
+	(text "HitEdgeCode[1][3..0]            " (rect 185 608 311 625)(font "Intel Clear" ))
+	(pt 296 624)
+	(pt 160 624)
+	(bus)
+)
+(connector
+	(text "HitEdgeCode[2][3..0]            " (rect 185 936 311 953)(font "Intel Clear" ))
+	(pt 296 952)
+	(pt 160 952)
+	(bus)
+)
+(connector
+	(text "pixelX[10..0]" (rect 322 184 381 201)(font "Intel Clear" ))
+	(pt 320 200)
+	(pt 408 200)
+	(bus)
+)
+(connector
+	(text "pixelY[10..0]" (rect 322 208 381 225)(font "Intel Clear" ))
+	(pt 320 224)
+	(pt 408 224)
+	(bus)
+)
+(text "// (c) Technion IIT, Department of Electrical Engineering 2021" (rect 168 24 527 43)(font "Intel Clear" (font_size 8)))

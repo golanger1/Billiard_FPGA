@@ -137,13 +137,13 @@ begin
 			
 				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
 				
-				if ( (Yspeed > 0 && Yaccel > 0 ) || (Yspeed < 0 && Yaccel < 0) )
-					begin
-						Yaccel <= -Yaccel;
-					end
+			//	if ( (Yspeed > 0 && Yaccel > 0 ) || (Yspeed < 0 && Yaccel < 0) )
+			//		begin
+			//			Yaccel <= -Yaccel;
+			//		end
 
 				
-				if ( (Yspeed > MIN_Y_SPEED && Yspeed + Yaccel > 0 ) || (Yspeed < -MIN_Y_SPEED && Yspeed + Yaccel < 0) ) //  limit the speed while going down 
+				if ( (Yspeed > MIN_Y_SPEED && Yspeed + Yaccel > 0 ) || (Yspeed < -MIN_X_SPEED && Yspeed + Yaccel < 0) ) //  limit the speed while going down 
 					begin
 						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
 					end
@@ -156,9 +156,6 @@ begin
 								
 			end;
 				
-				
-
-
 		end
 	end 
 
@@ -204,19 +201,19 @@ begin
 				
 	// collisions with the sides 			
 				if (collision && HitEdgeCode [3] == 1) 
-					begin  
 						if (Xspeed < 0 ) // while moving left
+							begin
 								Xspeed <= -Xspeed; // positive move right 
 								Xaccel <= -Xaccel;
-
-					end
+							end
 			
 				if (collision && HitEdgeCode [1] == 1 ) 
-					begin  // hit right border of brick  
+					// hit right border of brick  
 						if (Xspeed > 0 ) //  while moving right
+							begin
 								Xspeed <= -Xspeed;  // negative move left  
 								Xaccel <= -Xaccel;
-					end	
+							end	
 		   
 			
 		if (startOfFrame == 1'b1) 
@@ -224,10 +221,10 @@ begin
 		
 				topLeftX_FixedPoint  <= topLeftX_FixedPoint + Xspeed; // position interpolation 
 
-				if ( (Xspeed > 0 && Xaccel > 0 ) || (Xspeed < 0 && Xaccel < 0) )
-					begin
-						Xaccel <= -Xaccel;
-					end
+			//	if ( (Xspeed > 0 && Xaccel > 0 ) || (Xspeed < 0 && Xaccel < 0) )
+			//		begin
+			//			Xaccel <= -Xaccel;
+			//		end
 				
 				if ( (Xspeed > MIN_X_SPEED && Xspeed + Xaccel > 0 ) || (Xspeed < -MIN_X_SPEED && Xspeed + Xaccel < 0) ) //  limit the speed while going left or right 
 					begin

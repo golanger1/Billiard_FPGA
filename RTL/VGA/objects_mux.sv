@@ -14,8 +14,10 @@ module	objects_mux	(
 		   // white ball 
 					input		logic	WBallDrawingRequest, // two set of inputs per unit
 					input		logic	[7:0] WBallRGB, 
-					     
-		  // holes
+		   // hit balls 
+					input		logic	hitBallDrawingRequest, // two set of inputs per unit
+					input		logic	[7:0] hitBallRGB, 
+			// holes
 					input		logic Hole_1_DrawingRequest,
 					input		logic	[7:0] Hole_1_RGB,
 					input		logic Hole_2_DrawingRequest,
@@ -40,13 +42,15 @@ begin
 	else begin
 		if ( WBallDrawingRequest == 1'b1 )   
 			RGBOut <= WBallRGB;  //first priority 
-		 
+		
+		else if ( hitBallDrawingRequest == 1'b1 )   
+			RGBOut <= hitBallRGB;  //decond priority 
 		 
 		 else if ( Hole_2_DrawingRequest == 1'b1 )   
-			RGBOut <= Hole_2_RGB;  //second priority
+			RGBOut <= Hole_2_RGB;  //3rd priority
 		 
 		 else if ( Hole_1_DrawingRequest == 1'b1 )   
-			RGBOut <= Hole_1_RGB;  //second priority
+			RGBOut <= Hole_1_RGB;  //4th priority
 		 
 		else if ( HartDrawingRequest == 1'b1)
 			RGBOut <= hartRGB;
