@@ -22,7 +22,7 @@ agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 240 144)
-	(text "black_hole_block" (rect 5 0 107 19)(font "Intel Clear" (font_size 8)))
+	(text "all_holes_block" (rect 5 0 95 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
@@ -76,8 +76,8 @@ agreement for further details.
 	(port
 		(pt 224 64)
 		(output)
-		(text "GHoleRGB[7..0]" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
-		(text "GHoleRGB[7..0]" (rect 110 59 203 78)(font "Intel Clear" (font_size 8)))
+		(text "HoleRGB[7..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
+		(text "HoleRGB[7..0]" (rect 120 59 203 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(port
@@ -94,23 +94,7 @@ agreement for further details.
 		(text "HHoleRGB[7..0]" (rect 110 91 203 110)(font "Intel Clear" (font_size 8)))
 		(line (pt 224 96)(pt 208 96)(line_width 3))
 	)
-	(parameter
-		"initial_x"
-		"0"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(parameter
-		"initial_y"
-		"0"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(parameter
-		"HOLE_ID"
-		"0"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 208 112))
 	)
-	(annotation_block (parameter)(rect 240 -64 340 16))
 )

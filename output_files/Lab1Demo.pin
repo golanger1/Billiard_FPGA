@@ -121,8 +121,13 @@ VCCPD3A                      : AA10      : power  :                   : 3.3V    
 GND                          : AA11      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 3B        :                
+<<<<<<< HEAD
 BG_RGB[3]                    : AA14      : output : 3.3-V LVTTL       :         : 3B        : N              
 BG_RGB[5]                    : AA15      : output : 3.3-V LVTTL       :         : 3B        : N              
+=======
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 3B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 3B        :                
+>>>>>>> add_more_holes_with_hole_id
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA16      :        :                   :         : 4A        :                
 VCCIO4A                      : AA17      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
@@ -302,7 +307,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG12      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 3B        :                
 GND                          : AG14      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG15      :        :                   :         : 3B        :                
+BG_RGB[3]                    : AG15      : output : 3.3-V LVTTL       :         : 3B        : N              
 HEX0[3]                      : AG16      : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX0[2]                      : AG17      : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX0[5]                      : AG18      : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -324,15 +329,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH4       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH5       :        :                   :         : 3A        :                
 GND                          : AH6       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH7       :        :                   :         : 3B        :                
+BG_RGB[5]                    : AH7       : output : 3.3-V LVTTL       :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH9       :        :                   :         : 3B        :                
 BG_RGB[2]                    : AH10      : output : 3.3-V LVTTL       :         : 3B        : N              
 GND                          : AH11      : gnd    :                   :         :           :                
 BG_RGB[1]                    : AH12      : output : 3.3-V LVTTL       :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH13      :        :                   :         : 3B        :                
+<<<<<<< HEAD
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH14      :        :                   :         : 3B        :                
 BG_RGB[7]                    : AH15      : output : 3.3-V LVTTL       :         : 3B        : N              
+=======
+BG_RGB[1]                    : AH14      : output : 3.3-V LVTTL       :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH15      :        :                   :         : 3B        :                
+>>>>>>> add_more_holes_with_hole_id
 VCCIO4A                      : AH16      : power  :                   : 3.3V    : 4A        :                
 HEX0[4]                      : AH17      : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX0[6]                      : AH18      : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -356,10 +366,17 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AJ5       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ6       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ7       :        :                   :         : 3B        :                
 VCCIO3B                      : AJ8       : power  :                   : 3.3V    : 3B        :                
+<<<<<<< HEAD
 boardersDrawReq              : AJ9       : output : 3.3-V LVTTL       :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ11      :        :                   :         : 3B        :                
 BG_RGB[0]                    : AJ12      : output : 3.3-V LVTTL       :         : 3B        : N              
+=======
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ9       :        :                   :         : 3B        :                
+BG_RGB[7]                    : AJ10      : output : 3.3-V LVTTL       :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ11      :        :                   :         : 3B        :                
+BG_RGB[2]                    : AJ12      : output : 3.3-V LVTTL       :         : 3B        : N              
+>>>>>>> add_more_holes_with_hole_id
 VCCIO3B                      : AJ13      : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ14      :        :                   :         : 3B        :                
 VREFB3BN0                    : AJ15      : power  :                   :         : 3B        :                
@@ -387,10 +404,17 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AK7       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK8       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK9       :        :                   :         : 3B        :                
 VCCIO3B                      : AK10      : power  :                   : 3.3V    : 3B        :                
+<<<<<<< HEAD
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK11      :        :                   :         : 3B        :                
 BG_RGB[4]                    : AK12      : output : 3.3-V LVTTL       :         : 3B        : N              
 BG_RGB[6]                    : AK13      : output : 3.3-V LVTTL       :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK14      :        :                   :         : 3B        :                
+=======
+BG_RGB[0]                    : AK11      : output : 3.3-V LVTTL       :         : 3B        : N              
+BG_RGB[6]                    : AK12      : output : 3.3-V LVTTL       :         : 3B        : N              
+BG_RGB[4]                    : AK13      : output : 3.3-V LVTTL       :         : 3B        : N              
+boardersDrawReq              : AK14      : output : 3.3-V LVTTL       :         : 3B        : N              
+>>>>>>> add_more_holes_with_hole_id
 GND                          : AK15      : gnd    :                   :         :           :                
 OVGA[23]                     : AK16      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VREFB4AN0                    : AK17      : power  :                   :         : 4A        :                

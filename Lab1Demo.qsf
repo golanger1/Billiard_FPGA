@@ -243,6 +243,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
 set_global_assignment -name BDF_FILE RTL/VGA/United_HitBalls_Block.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/holes_mux.sv
+set_global_assignment -name BDF_FILE RTL/VGA/all_holes_block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/hit_ballBitMap.sv
 set_global_assignment -name BDF_FILE RTL/VGA/HitBall_Block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/hit_ball_moveCollision.sv

@@ -1232,14 +1232,14 @@ agreement for further details.
 		(pt 240 32)
 		(output)
 		(text "collision" (rect 0 0 38 12)(font "Arial" ))
-		(text "collision" (rect 187 27 219 39)(font "Arial" ))
+		(text "collision" (rect 187 27 225 39)(font "Arial" ))
 		(line (pt 240 32)(pt 224 32))
 	)
 	(port
 		(pt 240 48)
 		(output)
 		(text "SingleHitPulse" (rect 0 0 70 12)(font "Arial" ))
-		(text "SingleHitPulse" (rect 160 43 219 55)(font "Arial" ))
+		(text "SingleHitPulse" (rect 160 43 230 55)(font "Arial" ))
 		(line (pt 240 48)(pt 224 48))
 	)
 	(drawing
@@ -1313,6 +1313,14 @@ agreement for further details.
 		(text "hitBallRGB[7..0]" (rect 245 43 339 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 360 48)(pt 344 48)(line_width 3))
 	)
+	(drawing
+		(rectangle (rect 16 16 208 112))
+	)
+)
+(symbol
+	(rect -256 512 -40 624)
+	(text "back_ground_draw" (rect 5 0 95 12)(font "Arial" ))
+	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
 	(port
 		(pt 360 64)
 		(output)
