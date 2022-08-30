@@ -114,16 +114,6 @@ agreement for further details.
 		"0"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"hitball_id"
-		"X"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(parameter
-		"hitball_color"
-		"XX"
-		""
-		(type "PARAMETER_UNSIGNED_HEX")	)
 	(drawing
 		(rectangle (rect 16 16 272 144))
 	)

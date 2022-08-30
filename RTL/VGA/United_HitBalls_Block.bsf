@@ -21,7 +21,7 @@ agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 336 176)
+	(rect 16 16 376 176)
 	(text "United_HitBalls_Block" (rect 5 0 137 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 139 24 156)(font "Intel Clear" ))
 	(port
@@ -74,25 +74,25 @@ agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
-		(pt 320 32)
+		(pt 360 32)
 		(output)
 		(text "hitBallDR" (rect 0 0 55 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBallDR" (rect 244 27 299 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 320 32)(pt 304 32))
+		(text "hitBallDR" (rect 284 27 339 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 360 32)(pt 344 32))
 	)
 	(port
-		(pt 320 48)
+		(pt 360 48)
 		(output)
 		(text "hitBallRGB[7..0]" (rect 0 0 94 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBallRGB[7..0]" (rect 205 43 299 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 320 48)(pt 304 48)(line_width 3))
+		(text "hitBallRGB[7..0]" (rect 245 43 339 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 360 48)(pt 344 48)(line_width 3))
 	)
 	(port
-		(pt 320 64)
+		(pt 360 64)
 		(output)
-		(text "HitEgeCode[2..1][3..0]" (rect 0 0 130 19)(font "Intel Clear" (font_size 8)))
-		(text "HitEgeCode[2..1][3..0]" (rect 169 59 299 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 320 64)(pt 304 64)(line_width 3))
+		(text "HitEdgeCodeOUT[2..1][3..0]" (rect 0 0 166 19)(font "Intel Clear" (font_size 8)))
+		(text "HitEdgeCodeOUT[2..1][3..0]" (rect 173 59 339 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 360 64)(pt 344 64)(line_width 3))
 	)
 	(parameter
 		"initial_x_speed"
@@ -105,7 +105,7 @@ agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 304 144))
+		(rectangle (rect 16 16 344 144))
 	)
-	(annotation_block (parameter)(rect 336 -64 436 16))
+	(annotation_block (parameter)(rect 376 -64 476 16))
 )

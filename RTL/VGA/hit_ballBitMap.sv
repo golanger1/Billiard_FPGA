@@ -12,7 +12,7 @@
 					input logic	[2:1] [10:0] offsetX,// offset from top left  position 
 					input logic	[2:1][10:0] offsetY, 
 					input	logic	InsideRectangle[2:1], //input that the pixel is within a bracket
-					input	logic	hitBalls_color [2:1][7:0],        
+					//input	logic	hitBalls_color [2:1][7:0],        
  
 					output	logic	hitBall_DR, //output that the pixel should be dispalyed 
 					output	logic	[7:0] RGBout,  //rgb value from the bitmap 
@@ -26,7 +26,9 @@ logic [7:0] hitBallColor;
 // generating the bitmap 
  
 
-localparam logic [7:0] TRANSPARENT_ENCODING = 8'hff ;// RGB value in the bitmap representing a transparent pixel  
+localparam logic [7:0] TRANSPARENT_ENCODING = 8'hff ;// RGB value in the bitmap representing a transparent pixel
+localparam logic [7:0] GENERIC_COLOR_ENCODING = 8'hC0 ;// RGB value in the bitmap representing a transparent pixel
+  
 logic[0:31][0:31][7:0] object_colors = {
 	{8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff},
 	{8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'h00,8'h00,8'h00,8'h00,8'h00,8'h00,8'h00,8'h00,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff,8'hff},
@@ -84,45 +86,60 @@ begin
 		HitEdgeCode <= 4'h0; 
 	end 
 	else 
-	begin 
-		RGBout <= TRANSPARENT_ENCODING ; // default  
-		HitEdgeCode <= 4'h0;
-		
-		if (InsideRectangle[1])
-			begin
-				if(object_colors[offsetY][offsetX] == 8'hC0 || object_colors[offsetY][offsetX] == 8'h00)
-					begin
-						HitEdgeCode[1] <= hit_colors[offsetY >> 3][offsetX >> 3 ]; // get hitting edge from the colors table
-						if(object_colors[offsetY][offsetX] == 8'hC0)
+		begin 
+			RGBout <= TRANSPARENT_ENCODING ; // default  
+			HitEdgeCode <= 4'h0;
+			
+
+
+			
+
+
+			if (InsideRectangle[2]) //   2 - GreenBall
+				begin
+					if(object_colors[offsetY[2]][offsetX[2]] == GENERIC_COLOR_ENCODING || object_colors[offsetY[2]][offsetX[2]] == 8'h00)
 						begin
-							notZero = 1'b1;
-							RGBout <= 8'h03;
+							HitEdgeCode[2] <= hit_colors[offsetY[2] >> 3][offsetX[2] >> 3 ]; // get hitting edge from the colors table
+							if(object_colors[offsetY[2]][offsetX[2]] == GENERIC_COLOR_ENCODING)
+								begin
+									notZero = 1'b1;
+									RGBout <= 8'h1C;
+								end
+							else
+								begin
+									RGBout <= 8'h00;
+								end						
 						end
-					end
-			end
-		if (InsideRectangle[2])
-			begin
-				if(object_colors[offsetY][offsetX] == 8'hC0 || object_colors[offsetY][offsetX] == 8'h00)
-					begin
-						HitEdgeCode[2] <= hit_colors[offsetY >> 3][offsetX >> 3 ]; // get hitting edge from the colors table
-						if(object_colors[offsetY][offsetX] == 8'hC0)
+				end
+				
+			if (InsideRectangle[1]) //   1 - BlueBall
+				begin
+					if(object_colors[offsetY[1]][offsetX[1]] == GENERIC_COLOR_ENCODING || object_colors[offsetY[1]][offsetX[1]] == 8'h00)
 						begin
-							notZero = 1'b1;
-							RGBout <= 8'h1C;
+							HitEdgeCode[1] <= hit_colors[offsetY[1] >> 3][offsetX[1] >> 3 ]; // get hitting edge from the colors table
+							if(object_colors[offsetY[1]][offsetX[1]] == GENERIC_COLOR_ENCODING)
+								begin
+									notZero = 1'b1;
+									RGBout <= 8'h03;
+								end
+							else
+								begin
+									RGBout <= 8'h00;
+								end
 						end
-					end
-			end
-		if (notZero == 1'b0)
-			begin
-				RGBout <= object_colors[offsetY][offsetX];
-			end
-	 
+				end
+				
+			if (notZero == 1'b0)
+				begin
+					RGBout <= TRANSPARENT_ENCODING; // originally: object_colors[offsetY][offsetX];
+				end
 		 
-	end 
+			 
+		end 
 end 
  
 //////////--------------------------------------------------------------------------------------------------------------= 
 // decide if to draw the pixel or not 
-assign drawingRequest = (RGBout != TRANSPARENT_ENCODING ) ? 1'b1 : 1'b0 ; // get optional transparent command from the bitmpap   
+assign hitBall_DR = (RGBout != TRANSPARENT_ENCODING ) ? 1'b1 : 1'b0 ; // get optional transparent command from the bitmpap   
  
 endmodule 
