@@ -6,7 +6,7 @@
 // updaed Eyal Lev Feb 2021
 
 
-module	smileyface_moveCollision	(	
+module	whiteBall_moveCollision	(	
  
 					input	logic	clk,
 					input	logic	resetN,

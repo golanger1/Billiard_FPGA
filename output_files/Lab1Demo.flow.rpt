@@ -1,5 +1,5 @@
 Flow report for Lab1Demo
-Tue Aug 30 12:42:54 2022
+Wed Aug 31 23:00:25 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Aug 30 12:42:42 2022       ;
+; Flow Status                     ; Successful - Wed Aug 31 23:00:16 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,943 / 41,910 ( 5 % )                      ;
-; Total registers                 ; 2040                                        ;
-; Total pins                      ; 61 / 499 ( 12 % )                           ;
+; Logic utilization (in ALMs)     ; 1,662 / 41,910 ( 4 % )                      ;
+; Total registers                 ; 2054                                        ;
+; Total pins                      ; 62 / 499 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 128 / 5,662,720 ( < 1 % )                   ;
 ; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/30/2022 12:40:39 ;
+; Start date & time ; 08/31/2022 22:58:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab1Demo            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name      ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 104156970079097.166185243907384        ; --            ; --               ; --         ;
+; COMPILER_SIGNATURE_ID               ; 176098376483596.166197592520632        ; --            ; --               ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --               ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --               ; --         ;
 ; MISC_FILE                           ; RTL/VGA/valX.bsf                       ; --            ; --               ; --         ;
@@ -118,11 +118,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:32     ; 1.0                     ; 4942 MB             ; 00:00:54                           ;
-; Fitter                    ; 00:01:17     ; 1.2                     ; 6761 MB             ; 00:02:58                           ;
-; Assembler                 ; 00:00:10     ; 1.0                     ; 4858 MB             ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:11     ; 1.8                     ; 5249 MB             ; 00:00:19                           ;
-; Total                     ; 00:02:10     ; --                      ; --                  ; 00:04:19                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 4942 MB             ; 00:00:46                           ;
+; Fitter                    ; 00:00:53     ; 1.2                     ; 6753 MB             ; 00:01:58                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 4856 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.7                     ; 5243 MB             ; 00:00:14                           ;
+; Total                     ; 00:01:36     ; --                      ; --                  ; 00:03:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -131,10 +131,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; GOLAN-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; GOLAN-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; GOLAN-PC         ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; GOLAN-PC         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; OmersLaptop      ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; OmersLaptop      ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; OmersLaptop      ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; OmersLaptop      ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

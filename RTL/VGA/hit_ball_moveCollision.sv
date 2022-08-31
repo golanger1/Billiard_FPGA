@@ -11,13 +11,28 @@ module	hit_ball_moveCollision	(
 					input	logic	clk,
 					input	logic	resetN,
 					input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-					input logic collision,  //collision if ball hits an object
+					//input logic ballEnable, //***EXTRA*** - if ball was inserted to hole - change position to down screen 
+					
+					//***EXTRA - take charge out of move_coll -> input as speed when enter pressed***
+					input	logic	chargeUp,  //charge YspeedCounter with negative speed
+					input	logic	chargeDown,  //charge YspeedCounter with positive speed
+					input	logic	chargeLeft,  //charge XspeedCounter with negative speed
+					input	logic	chargeRight,  //charge XspeedCounter with positive speed
+					input	logic	releaseBall, 	//release the white ball
+					
+					input logic collision,  // collision if ball hits an object
+					input logic collision_with_ball,  // collision if ball hits ball
+					input logic collision_with_wall,  // collision if ball hits wall
+					input logic [1:0] collided_wall,
+					//***coliision with hole in hitBallBM***
 					//more collisions?
 					input	logic	[3:0] HitEdgeCode, //for ballToBall collision
 
-					output	 logic signed 	[10:0]	topLeftX, // output the top left corner 
-					output	 logic signed	[10:0]	topLeftY  // can be negative , if the object is partliy outside 
-					
+					output	logic signed 	[10:0]	topLeftX, // output the top left corner 
+					output	logic signed	[10:0]	topLeftY, // can be negative , if the object is partliy outside 
+					output	logic signed 	[10:0] 	XspeedOUT,
+					output	logic signed 	[10:0] 	YspeedOUT
+
 );
 
 
@@ -33,8 +48,9 @@ const int  Y_ACCEL = -1;
 */
 
 // omer 22.08 : fit smiley to whiteBall
-//parameter int HITBALL_ID = 0;
+parameter int BALL_ID = 0; ///***if white - 0***
 //parameter logic [7:0] HITBALL_COLOR = 8'h00;
+
 parameter int INITIAL_X = 400; 
 parameter int INITIAL_Y = 220;
 
@@ -45,10 +61,11 @@ localparam int INITIAL_X_ACCEL = 0;
 localparam int MIN_Y_SPEED = 2;
 localparam int MIN_X_SPEED = 2;
 
-//localparam int MAX_Y_SHOT_SPEED = 1000;
-//localparam int MAX_X_SHOT_SPEED = 1000;
-//localparam int SPEED_STEP = 200;
-//localparam int FRICTION_STEP = 1;
+//whiteBall local params:
+localparam int MAX_Y_SHOT_SPEED = 800;
+localparam int MAX_X_SHOT_SPEED = 800;
+localparam int SPEED_STEP = 200;
+localparam int FRICTION_STEP = 1;
 
 
 
@@ -69,6 +86,7 @@ int  Yaccel; //friction - needs to be opposite to movement
 int  Xaccel; //friction - needs to be opposite to movement
 int XShotSpeed, XShotFriction;
 int YShotSpeed, YShotFriction;
+ 
 //int X_ACCEL_DEVIDER = 128;
 //int Y_ACCEL_DEVIDER = 128;
 
@@ -83,30 +101,72 @@ begin
 		begin 
 			Yspeed	<= INITIAL_Y_SPEED;
 			Yaccel <= INITIAL_Y_ACCEL;
+			YShotFriction <= 0;
+			YShotSpeed <= 0;
 			topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
 		end 
 	
 	else 
+		
 		begin
 		
-		
+			if(BALL_ID == 0 && Yspeed == 0 && Xspeed == 0 ) //relevant for WhiteBall only!!!
+				begin
+					// Keyboard Inputs Y - short instanced:		
+					if (chargeUp && YShotSpeed < MAX_Y_SHOT_SPEED) 
+						begin // button up was pushed --> going down 
+							YShotSpeed <= YShotSpeed + SPEED_STEP;
+							YShotFriction <= YShotFriction - FRICTION_STEP;
+						end
+					
+					if (chargeDown && -YShotSpeed < MAX_Y_SHOT_SPEED) 
+						begin // button down was pushed --> going up
+							YShotSpeed <= YShotSpeed - SPEED_STEP;
+							YShotFriction <= YShotFriction + FRICTION_STEP;
+						end
+						
+					if (releaseBall)
+						begin		
+							Yspeed <= YShotSpeed;
+							Yaccel <= YShotFriction;
+							YShotSpeed <= 0;
+							YShotFriction <= 0;
+						end
+				end
 		//collisions:
 		//hit bit map has one bit per edge:  Left-Top-Right-Bottom	 
-	
-		if ((collision && HitEdgeCode [2] == 1 ))  // hit top border of brick  
+		
+	//if ball-hole
+	//else if:
+			// if (WhiteB || HitB)
+			// if (Table)
+				
+//		if (BallHole_collision) //change location to down screen
+//			begin
+//				
+//			end
+			
+		if (collision_with_ball && (HitEdgeCode [2] == 1) )  // hit top border of brick  
 				if (Yspeed < 0) // while moving up
 					begin
 						Yspeed <= -Yspeed;
 						Yaccel <= -Yaccel;
 					end
 			
-		if ((collision && HitEdgeCode [0] == 1 ))// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
+		if (collision_with_ball && (HitEdgeCode [0] == 1 ) )// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
 				if (Yspeed > 0 )//  while moving down
 					begin
 						Yspeed <= -Yspeed;
 						Yaccel <= -Yaccel;
 					end
+
+		if (collision_with_wall && (collided_wall[1] == 1'b1))  // hit top border of brick  
+			begin
+				Yspeed <= -Yspeed;
+				Yaccel <= -Yaccel;
+			end
 			
+
 			
 		// perform  position and speed integral only 30 times per second 
 		
@@ -124,13 +184,20 @@ begin
 				
 				if ( (Yspeed > MIN_Y_SPEED && Yspeed + Yaccel > 0 ) || (Yspeed < -MIN_Y_SPEED && Yspeed + Yaccel < 0) ) //  limit the speed while going down 
 					begin
-						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
+						if(collision)		
+							begin
+								Yspeed <= Yspeed;  
+							end
+						
+						else //no colision
+							begin
+								Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
+							end
 					end
-				
 				else
 					begin
 						Yspeed <= 0;
-						Yaccel <=0;
+						Yaccel <= 0;
 					end
 								
 			end;
@@ -152,26 +219,62 @@ begin
 	begin
 		Xspeed	<= INITIAL_X_SPEED;
 		Xaccel <= INITIAL_X_ACCEL;
+		XShotFriction <= 0;
+		XShotSpeed <= 0;
 		topLeftX_FixedPoint	<= INITIAL_X * FIXED_POINT_MULTIPLIER;
 	end
-	else begin
+	else 
+		begin
+			
+			if(BALL_ID ==0 && Yspeed == 0 && Xspeed == 0 ) //relevant for WhiteBall only!!!
+				begin
+					// Keyboard Inputs X - short instanced:
+					if (chargeLeft && (XShotSpeed < MAX_X_SHOT_SPEED) ) 
+					// button left was pushed --> going right
+						begin 
+							XShotSpeed <= XShotSpeed + SPEED_STEP;
+							XShotFriction <= XShotFriction - FRICTION_STEP;
+						end
+					
+					if (chargeRight && (-XShotSpeed < MAX_X_SHOT_SPEED))
+					// button right was pushed --> going left
+						begin 
+							XShotSpeed <= XShotSpeed - SPEED_STEP;	
+							XShotFriction <= XShotFriction + FRICTION_STEP;
+						end 
+					
+					if (releaseBall)
+						begin		
+							Xspeed <= XShotSpeed;
+							Xaccel <= XShotFriction;
+							XShotSpeed <= 0;
+							XShotFriction <= 0;
+						end
+				end		
+							
 	
 				
 	// collisions with the sides 			
-				if (collision && HitEdgeCode [3] == 1) 
+				if ( collision_with_ball && (HitEdgeCode [3] == 1) ) 
 					if (Xspeed < 0 ) // while moving left
 						begin  
 								Xspeed <= -Xspeed; // positive move right 
 								Xaccel <= -Xaccel;
 						end
 			
-				if (collision && HitEdgeCode [1] == 1 ) 
+				if ( collision_with_ball && (HitEdgeCode [1] == 1) ) 
 					 // hit right border of brick  
 					if (Xspeed > 0 ) //  while moving right
 						begin
 								Xspeed <= -Xspeed;  // negative move left  
 								Xaccel <= -Xaccel;
 						end	
+						
+				if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
+					begin
+						Xspeed <= -Xspeed;
+						Xaccel <= -Xaccel;
+					end
 		   
 			
 		if (startOfFrame == 1'b1) 
@@ -186,9 +289,16 @@ begin
 				
 				if ( (Xspeed > MIN_X_SPEED && Xspeed + Xaccel > 0 ) || (Xspeed < -MIN_X_SPEED && Xspeed + Xaccel < 0) ) //  limit the speed while going left or right 
 					begin
-						Xspeed <= Xspeed  + Xaccel ; // deAccelerate : slow the speed down every clock tick 
+						if(collision)		
+							begin
+								Xspeed <= Xspeed;  
+							end
+						
+						else //no colision
+							begin
+								Xspeed <= Xspeed  + Xaccel ; // deAccelerate : slow the speed down every clock tick 
+							end
 					end
-				
 				else
 					begin
 						Xspeed <= 0;
@@ -201,7 +311,10 @@ end
 
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
-assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;    
+assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;
+assign 	XspeedOUT = Xspeed;
+assign 	YspeedOUT = Yspeed;    
+    
 
 
 endmodule
