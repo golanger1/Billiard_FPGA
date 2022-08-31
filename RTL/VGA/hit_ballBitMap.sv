@@ -20,7 +20,6 @@
 					output	logic	[`NUM_BALLS:0] hitBall_DR_VEC, //output that the pixel should be dispalyed 
 					output	logic	[7:0] RGBout,  //rgb value from the bitmap 
 					output	logic	[`NUM_BALLS:0][3:0] HitEdgeCode //one bit per edge 
-					/// fuckkkkkk???
  ) ; 
 
  
@@ -92,7 +91,7 @@ begin
 		RGBout <=	8'h00; 
 		HitEdgeCode <= {(`NUM_BALLS+1){4'h0}}; 
 		not_Transparent = 1'b0; //omer 31.08
-		hitBall_DR_VEC <= {(`NUM_BALLS+1){1'b0}};
+		hitBall_DR_VEC = {(`NUM_BALLS+1){1'b0}};
 	end 
 	else 
 		begin 
@@ -100,14 +99,14 @@ begin
 			RGBout <= TRANSPARENT_ENCODING ; // default  
 			HitEdgeCode <= {(`NUM_BALLS+1){4'h0}}; 
 			not_Transparent = 1'b0; //omer 31.08
-			hitBall_DR_VEC <= {(`NUM_BALLS+1){1'b0}};
+			hitBall_DR_VEC = {(`NUM_BALLS+1){1'b0}};
 	
 			if (InsideRectangle[1] && balls_in_game[1]) //   1 - BlueBall
 				begin
 					if(object_colors[offsetY[1]][offsetX[1]] == GENERIC_COLOR_ENCODING || object_colors[offsetY[1]][offsetX[1]] == 8'h00)
 						begin
 							not_Transparent = 1'b1;
-							hitBall_DR_VEC[1] <= 1'b1;
+							hitBall_DR_VEC[1] = 1'b1;
 							HitEdgeCode[1] <= hit_colors[offsetY[1] >> 3][offsetX[1] >> 3 ]; // get hitting edge from the colors table
 							if(object_colors[offsetY[1]][offsetX[1]] == GENERIC_COLOR_ENCODING)
 								begin
@@ -125,7 +124,7 @@ begin
 					if(object_colors[offsetY[2]][offsetX[2]] == GENERIC_COLOR_ENCODING || object_colors[offsetY[2]][offsetX[2]] == 8'h00)
 						begin
 							not_Transparent = 1'b1;
-							hitBall_DR_VEC[2] <= 1'b1;
+							hitBall_DR_VEC[2] = 1'b1;
 							HitEdgeCode[2] <= hit_colors[offsetY[2] >> 3][offsetX[2] >> 3 ]; // get hitting edge from the colors table
 							if(object_colors[offsetY[2]][offsetX[2]] == GENERIC_COLOR_ENCODING)
 								begin
@@ -143,7 +142,7 @@ begin
 					if(object_colors[offsetY[0]][offsetX[0]] == GENERIC_COLOR_ENCODING || object_colors[offsetY[0]][offsetX[0]] == 8'h00)
 						begin
 							not_Transparent = 1'b1;
-							hitBall_DR_VEC[0] <= 1'b1;
+							hitBall_DR_VEC[0] = 1'b1;
 							HitEdgeCode[0] <= hit_colors[offsetY[0] >> 3][offsetX[0] >> 3 ]; // get hitting edge from the colors table
 							if(object_colors[offsetY[0]][offsetX[0]] == GENERIC_COLOR_ENCODING)
 								begin

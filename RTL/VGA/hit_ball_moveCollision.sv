@@ -64,7 +64,7 @@ localparam int MIN_X_SPEED = 2;
 //whiteBall local params:
 localparam int MAX_Y_SHOT_SPEED = 800;
 localparam int MAX_X_SHOT_SPEED = 800;
-localparam int SPEED_STEP = 200;
+localparam int SPEED_STEP = 100;
 localparam int FRICTION_STEP = 1;
 
 
@@ -145,12 +145,18 @@ begin
 //			begin
 //				
 //			end
-			
+		
+	
 		if (collision_with_ball && (HitEdgeCode [2] == 1) )  // hit top border of brick  
 				if (Yspeed < 0) // while moving up
 					begin
 						Yspeed <= -Yspeed;
 						Yaccel <= -Yaccel;
+					end
+				else if (Yspeed == 0)
+					begin
+						Yspeed <= 100;
+						Yaccel <= -1;
 					end
 			
 		if (collision_with_ball && (HitEdgeCode [0] == 1 ) )// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
@@ -159,13 +165,24 @@ begin
 						Yspeed <= -Yspeed;
 						Yaccel <= -Yaccel;
 					end
+				else if (Yspeed == 0)
+					begin
+						Yspeed <= -100;
+						Yaccel <= 1;
+					end
 
 		if (collision_with_wall && (collided_wall[1] == 1'b1))  // hit top border of brick  
-			begin
-				Yspeed <= -Yspeed;
-				Yaccel <= -Yaccel;
-			end
-			
+			if( Yspeed < 0 )
+				begin
+					Yspeed <= -Yspeed+5;
+					Yaccel <= -Yaccel;
+				end
+			else if( Yspeed > 0 )
+				begin
+					Yspeed <= -Yspeed-5;
+					Yaccel <= -Yaccel;
+				end
+			//else (yspeed==0) ? 
 
 			
 		// perform  position and speed integral only 30 times per second 
@@ -184,15 +201,7 @@ begin
 				
 				if ( (Yspeed > MIN_Y_SPEED && Yspeed + Yaccel > 0 ) || (Yspeed < -MIN_Y_SPEED && Yspeed + Yaccel < 0) ) //  limit the speed while going down 
 					begin
-						if(collision)		
-							begin
-								Yspeed <= Yspeed;  
-							end
-						
-						else //no colision
-							begin
-								Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
-							end
+						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
 					end
 				else
 					begin
@@ -261,21 +270,38 @@ begin
 								Xspeed <= -Xspeed; // positive move right 
 								Xaccel <= -Xaccel;
 						end
-			
+					else if (Xspeed == 0)
+						begin
+							Xspeed <= 100;
+							Xaccel <= -1;
+						end	
+				
+				
 				if ( collision_with_ball && (HitEdgeCode [1] == 1) ) 
 					 // hit right border of brick  
 					if (Xspeed > 0 ) //  while moving right
 						begin
 								Xspeed <= -Xspeed;  // negative move left  
 								Xaccel <= -Xaccel;
+						end
+					else if (Xspeed == 0)
+						begin
+							Xspeed <= -100;
+							Xaccel <= 1;
 						end	
 						
 				if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
-					begin
-						Xspeed <= -Xspeed;
-						Xaccel <= -Xaccel;
-					end
-		   
+					if( Xspeed < 0 )
+						begin
+							Xspeed <= -Xspeed+5;
+							Xaccel <= -Xaccel;
+						end
+					else if( Xspeed > 0 )
+						begin
+							Xspeed <= -Xspeed-5;
+							Xaccel <= -Xaccel;
+						end
+					
 			
 		if (startOfFrame == 1'b1) 
 			begin 
@@ -289,15 +315,7 @@ begin
 				
 				if ( (Xspeed > MIN_X_SPEED && Xspeed + Xaccel > 0 ) || (Xspeed < -MIN_X_SPEED && Xspeed + Xaccel < 0) ) //  limit the speed while going left or right 
 					begin
-						if(collision)		
-							begin
-								Xspeed <= Xspeed;  
-							end
-						
-						else //no colision
-							begin
-								Xspeed <= Xspeed  + Xaccel ; // deAccelerate : slow the speed down every clock tick 
-							end
+						Xspeed <= Xspeed  + Xaccel ; // deAccelerate : slow the speed down every clock tick 
 					end
 				else
 					begin
