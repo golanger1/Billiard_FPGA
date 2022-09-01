@@ -58,13 +58,13 @@ localparam int INITIAL_X_SPEED = 0;
 localparam int INITIAL_Y_SPEED = 0;
 localparam int INITIAL_Y_ACCEL = 0;
 localparam int INITIAL_X_ACCEL = 0;
-localparam int MIN_Y_SPEED = 8;
-localparam int MIN_X_SPEED = 8;
+localparam int MIN_Y_SPEED = 2;
+localparam int MIN_X_SPEED = 2;
 
 //whiteBall local params:
 localparam int MAX_Y_SHOT_SPEED = 512;
 localparam int MAX_X_SHOT_SPEED = 512;
-localparam int SPEED_STEP = 128;
+localparam int SPEED_STEP = 64;
 
 
 
@@ -72,6 +72,8 @@ localparam int SPEED_STEP = 128;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 const int	FIXED_SPEED_MULTIPLIER	=	64;
+const int	FRICTION_INTENSITY	=	64;
+
 
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
 // we do all calculations with topLeftX_FixedPoint to get a resolution of 1/64 pixel in calcuatuions,
@@ -90,10 +92,10 @@ int YShotSpeed, YShotFriction;
 //int Friction_dev;
 
 int X_FRICTION;
-assign 	X_FRICTION = Xspeed_Fixed / 32;     //***changed 1.9
+assign 	X_FRICTION = Xspeed_Fixed / FRICTION_INTENSITY;     //***changed 1.9
 //int  Xaccel; //friction - needs to be opposite to movement //changed 1.9
 int Y_FRICTION;
-assign 	Y_FRICTION = Yspeed_Fixed / 32;  //***changed 1.9  
+assign 	Y_FRICTION = Yspeed_Fixed / FRICTION_INTENSITY;  //***changed 1.9  
 //int  Yaccel; //friction - needs to be opposite to movement //changed 1.9
 
 //always_comb //changed 1.9 try change speed - not good
@@ -200,7 +202,7 @@ begin
 					end
 				else if (Yspeed_Fixed == 0)
 					begin
-						Yspeed_Fixed <= 100 * FIXED_SPEED_MULTIPLIER;
+						Yspeed_Fixed <= 128 * FIXED_SPEED_MULTIPLIER;
 						//Yaccel <= -1; //changed 1.9
 					end
 			
@@ -212,7 +214,7 @@ begin
 					end
 				else if (Yspeed_Fixed == 0)
 					begin
-						Yspeed_Fixed <= -100 * FIXED_SPEED_MULTIPLIER;
+						Yspeed_Fixed <= -128 * FIXED_SPEED_MULTIPLIER;
 						//Yaccel <= 1;  //changed 1.9
 					end
 
@@ -319,7 +321,7 @@ begin
 						end
 					else if (Xspeed_Fixed == 0)
 						begin
-							Xspeed_Fixed <= 100 * FIXED_SPEED_MULTIPLIER;
+							Xspeed_Fixed <= 128 * FIXED_SPEED_MULTIPLIER;
 							//Xaccel <= -1;
 						end	
 				
@@ -333,7 +335,7 @@ begin
 						end
 					else if (Xspeed_Fixed == 0)
 						begin
-							Xspeed_Fixed <= -100 * FIXED_SPEED_MULTIPLIER;
+							Xspeed_Fixed <= -128 * FIXED_SPEED_MULTIPLIER;
 							//Xaccel <= 1;
 						end	
 						
