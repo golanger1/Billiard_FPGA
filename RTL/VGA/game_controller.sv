@@ -24,13 +24,13 @@ module	game_controller	(
 //			output logic out_collision_BallWall,
 //			output logic out_collision_BallHole,
 //			output logic out_collision_BallBall, // critical code, generating A single pulse in a frame 
-			output logic [`NUM_BALLS:0] balls_in_game,
+			output logic [`NUM_BALLS:0] balls_in_game, ///***IMPORTANT! - do we need to change to assign???*** or keep synchronic??
 			output logic [`NUM_BALLS:0] balls_collide,
 			output logic [`NUM_BALLS:0] ballwall_collide,
 			output logic [1:0] collided_wall,
 			//output logic signed [1:0] Balls_col_X_Speed_OUT [10:0], // ***check here what is signed and what is unsigned***
 			//output logic signed [1:0] Balls_col_Y_Speed_OUT [10:0] // ***NUMBALLS - unsigned,    10:0 - signed***
-			output logic [1:0][3:0] Balls_col_ID
+			output logic [1:0][3:0] Balls_col_ID  ///***IMPORTANT! - do we need to change to assign???*** or keep synchronic??
 
 
 
@@ -92,9 +92,9 @@ begin
 		//out_collision_BallHole <= 1'b0 ; 
 		//out_collision_BallBall <= 1'b0 ; 
 		balls_in_game <= oneVec ;
-		balls_collide <= zeroVec ;
-		ballwall_collide <= zeroVec;
-		collided_wall <= 2'b00;
+		balls_collide = zeroVec ;
+		ballwall_collide = zeroVec;
+		collided_wall = 2'b00;
 		Balls_col_ID <= {2{4'b0}};
 		//Balls_X_Speed_OUT <= {(`NUM_BALLS+1){11'b0}};
 		//Balls_Y_Speed_OUT <= {(`NUM_BALLS+1){11'b0}};
@@ -105,10 +105,10 @@ begin
 		//out_collision_BallWall <= 1'b0 ; //defaults
 		//out_collision_BallHole <= 1'b0 ; //defaults
 		//out_collision_BallBall <= 1'b0 ;	//defaults
-		balls_collide <= zeroVec ;
-		ballwall_collide <= zeroVec ;
-		collided_wall <= 2'b00;
-		Balls_col_ID <= {2{4'b0}};
+		balls_collide = zeroVec ;
+		ballwall_collide = zeroVec ;
+		collided_wall = 2'b00;
+		Balls_col_ID <= {2{4'b0}};  ///***IMPORTANT! - do we need to change to assign???*** or keep synchronic??
 		//balls_collide <= zeroVec ;
 		
 		if(startOfFrame) 
@@ -139,7 +139,7 @@ begin
 							ball_col_num <= 1'b1;
 						end
 					end
-				balls_collide <= Balls_DR_VEC;			//***EXTRA*** : check if needed
+				assign balls_collide = Balls_DR_VEC;			//***EXTRA*** : check if needed
 			end 
 	
 		if ( collision_BallWall  && (flag == 1'b0)) 
@@ -147,8 +147,8 @@ begin
 				flag	<= 1'b1; // to enter only once 
 				//out_collision_BallWall <= 1'b1; 
 				//ballwall_collide[] <= Balls_DR_VEC;
-				ballwall_collide <= Balls_DR_VEC;
-				collided_wall <= Table_DR;
+				ballwall_collide = Balls_DR_VEC;
+				collided_wall = Table_DR;
 			end 
 			
 /*		//ball2ball collision with speed gathering

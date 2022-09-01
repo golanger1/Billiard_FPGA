@@ -58,19 +58,21 @@ localparam int INITIAL_X_SPEED = 0;
 localparam int INITIAL_Y_SPEED = 0;
 localparam int INITIAL_Y_ACCEL = 0;
 localparam int INITIAL_X_ACCEL = 0;
-localparam int MIN_Y_SPEED = 2;
-localparam int MIN_X_SPEED = 2;
+localparam int MIN_Y_SPEED = 8;
+localparam int MIN_X_SPEED = 8;
 
 //whiteBall local params:
-localparam int MAX_Y_SHOT_SPEED = 800;
-localparam int MAX_X_SHOT_SPEED = 800;
-localparam int SPEED_STEP = 100;
-localparam int FRICTION_STEP = 1;
+localparam int MAX_Y_SHOT_SPEED = 512;
+localparam int MAX_X_SHOT_SPEED = 512;
+localparam int SPEED_STEP = 128;
+
 
 
 
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
+const int	FIXED_SPEED_MULTIPLIER	=	64;
+
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
 // we do all calculations with topLeftX_FixedPoint to get a resolution of 1/64 pixel in calcuatuions,
 // we devide at the end by FIXED_POINT_MULTIPLIER which must be 2^n, to return to the initial proportions
@@ -79,14 +81,55 @@ const int	FIXED_POINT_MULTIPLIER	=	64;
 //const int	bracketOffset =	30;
 //const int   OBJECT_WIDTH_X = 32; //ball pixel width? changed from 64
 //const int   OBJECT_HEIGHT_Y = 32; //ball pixel height? created
-
 int Xspeed, topLeftX_FixedPoint; // local parameters 
 int Yspeed, topLeftY_FixedPoint;
-int  Yaccel; //friction - needs to be opposite to movement
-int  Xaccel; //friction - needs to be opposite to movement
+int Xspeed_Fixed, Yspeed_Fixed;
 int XShotSpeed, XShotFriction;
 int YShotSpeed, YShotFriction;
  
+//int Friction_dev;
+
+int X_FRICTION;
+assign 	X_FRICTION = Xspeed_Fixed / 32;     //***changed 1.9
+//int  Xaccel; //friction - needs to be opposite to movement //changed 1.9
+int Y_FRICTION;
+assign 	Y_FRICTION = Yspeed_Fixed / 32;  //***changed 1.9  
+//int  Yaccel; //friction - needs to be opposite to movement //changed 1.9
+
+//always_comb //changed 1.9 try change speed - not good
+//	begin
+//		if(Xspeed>64 && Yspeed>64)
+//		begin
+//			Friction_dev = 64;
+//		end
+//		else if(Xspeed>32 && Yspeed>32)
+//		begin
+//			Friction_dev = 32;
+//		end
+//		else if(Xspeed>16 && Yspeed>16)
+//		begin
+//			Friction_dev = 16;
+//		end
+//		else if(Xspeed>8 && Yspeed>8)
+//		begin
+//			Friction_dev = 8;
+//		end
+//		else if(Xspeed>4 && Yspeed>4)
+//		begin
+//			Friction_dev = 4;
+//		end
+//		else if(Xspeed>2 && Yspeed>2)
+//		begin
+//			Friction_dev = 2;
+//		end
+//		else
+//		begin
+//			Friction_dev = 1;
+//		end
+//		
+//	end
+
+
 //int X_ACCEL_DEVIDER = 128;
 //int Y_ACCEL_DEVIDER = 128;
 
@@ -99,11 +142,13 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN) 
 		begin 
-			Yspeed	<= INITIAL_Y_SPEED;
-			Yaccel <= INITIAL_Y_ACCEL;
-			YShotFriction <= 0;
-			YShotSpeed <= 0;
+			//Yspeed	<= INITIAL_Y_SPEED; //changed 1.9
+			//Yaccel <= INITIAL_Y_ACCEL; //changed 1.9
+			//YShotFriction <= 0;	//do we need???? //changed 1.9
+			YShotSpeed <= 0;		
 			topLeftY_FixedPoint	<= INITIAL_Y * FIXED_POINT_MULTIPLIER;
+			Yspeed_Fixed	<= INITIAL_Y_SPEED * FIXED_SPEED_MULTIPLIER; //changed 1.9
+
 		end 
 	
 	else 
@@ -116,21 +161,21 @@ begin
 					if (chargeUp && YShotSpeed < MAX_Y_SHOT_SPEED) 
 						begin // button up was pushed --> going down 
 							YShotSpeed <= YShotSpeed + SPEED_STEP;
-							YShotFriction <= YShotFriction - FRICTION_STEP;
+							//YShotFriction <= YShotFriction - FRICTION_STEP; //changed 1.9
 						end
 					
 					if (chargeDown && -YShotSpeed < MAX_Y_SHOT_SPEED) 
 						begin // button down was pushed --> going up
 							YShotSpeed <= YShotSpeed - SPEED_STEP;
-							YShotFriction <= YShotFriction + FRICTION_STEP;
+							//YShotFriction <= YShotFriction + FRICTION_STEP; //changed 1.9
 						end
 						
 					if (releaseBall)
 						begin		
-							Yspeed <= YShotSpeed;
-							Yaccel <= YShotFriction;
+							Yspeed_Fixed <= YShotSpeed * FIXED_SPEED_MULTIPLIER;
+							//Yaccel <= YShotFriction;
 							YShotSpeed <= 0;
-							YShotFriction <= 0;
+							//YShotFriction <= 0;
 						end
 				end
 		//collisions:
@@ -148,39 +193,39 @@ begin
 		
 	
 		if (collision_with_ball && (HitEdgeCode [2] == 1) )  // hit top border of brick  
-				if (Yspeed < 0) // while moving up
+				if (Yspeed_Fixed < 0) // while moving up
 					begin
-						Yspeed <= -Yspeed;
-						Yaccel <= -Yaccel;
+						Yspeed_Fixed <= -Yspeed_Fixed;
+						//Yaccel <= -Yaccel;  //changed 1.9
 					end
-				else if (Yspeed == 0)
+				else if (Yspeed_Fixed == 0)
 					begin
-						Yspeed <= 100;
-						Yaccel <= -1;
+						Yspeed_Fixed <= 100 * FIXED_SPEED_MULTIPLIER;
+						//Yaccel <= -1; //changed 1.9
 					end
 			
 		if (collision_with_ball && (HitEdgeCode [0] == 1 ) )// || (collision && HitEdgeCode [1] == 1 ))   hit bottom border of brick  
-				if (Yspeed > 0 )//  while moving down
+				if (Yspeed_Fixed > 0 )//  while moving down
 					begin
-						Yspeed <= -Yspeed;
-						Yaccel <= -Yaccel;
+						Yspeed_Fixed <= -Yspeed_Fixed;
+						//Yaccel <= -Yaccel;  //changed 1.9
 					end
-				else if (Yspeed == 0)
+				else if (Yspeed_Fixed == 0)
 					begin
-						Yspeed <= -100;
-						Yaccel <= 1;
+						Yspeed_Fixed <= -100 * FIXED_SPEED_MULTIPLIER;
+						//Yaccel <= 1;  //changed 1.9
 					end
 
 		if (collision_with_wall && (collided_wall[1] == 1'b1))  // hit top border of brick  
-			if( Yspeed < 0 )
+			if( Yspeed_Fixed < 0 )
 				begin
-					Yspeed <= -Yspeed+5;
-					Yaccel <= -Yaccel;
+					Yspeed_Fixed <= -Yspeed_Fixed + 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+					//Yaccel <= -Yaccel;  //changed 1.9
 				end
-			else if( Yspeed > 0 )
+			else if( Yspeed_Fixed > 0 )
 				begin
-					Yspeed <= -Yspeed-5;
-					Yaccel <= -Yaccel;
+					Yspeed_Fixed <= -Yspeed_Fixed - 5*FIXED_SPEED_MULTIPLIER;  //changed 1.9
+					//Yaccel <= -Yaccel;  //changed 1.9
 				end
 			//else (yspeed==0) ? 
 
@@ -191,7 +236,7 @@ begin
 			
 			begin 
 			
-				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation 
+				topLeftY_FixedPoint  <= topLeftY_FixedPoint + Yspeed; // position interpolation // changed 1.9 - is it Yspeed or Yspeed_Fixed???
 				
 			// if ( (Yspeed > 0 && Yaccel > 0 ) || (Yspeed < 0 && Yaccel < 0) )
 			//		begin
@@ -199,14 +244,14 @@ begin
 			//		end
 
 				
-				if ( (Yspeed > MIN_Y_SPEED && Yspeed + Yaccel > 0 ) || (Yspeed < -MIN_Y_SPEED && Yspeed + Yaccel < 0) ) //  limit the speed while going down 
+				if ( (Yspeed_Fixed > MIN_Y_SPEED * FIXED_SPEED_MULTIPLIER && Yspeed_Fixed - Y_FRICTION > 0 ) || (Yspeed_Fixed < -MIN_Y_SPEED*FIXED_SPEED_MULTIPLIER && Yspeed_Fixed - Y_FRICTION < 0) ) //  limit the speed while going down   //changed 1.9
 					begin
-						Yspeed <= Yspeed  + Yaccel ; // deAccelerate : slow the speed down every clock tick 
-					end
+						Yspeed_Fixed <= Yspeed_Fixed - Y_FRICTION ; // deAccelerate : slow the speed down every clock tick   //changed 1.9
+					end  
 				else
 					begin
-						Yspeed <= 0;
-						Yaccel <= 0;
+						Yspeed_Fixed <= 0;
+						//Yaccel <= 0; //changed 1.9
 					end
 								
 			end;
@@ -226,11 +271,13 @@ always_ff@(posedge clk or negedge resetN)
 begin
 	if(!resetN)
 	begin
-		Xspeed	<= INITIAL_X_SPEED;
-		Xaccel <= INITIAL_X_ACCEL;
-		XShotFriction <= 0;
+		//Xspeed	<= INITIAL_X_SPEED;
+		//Xaccel <= INITIAL_X_ACCEL;
+		//XShotFriction <= 0;
 		XShotSpeed <= 0;
 		topLeftX_FixedPoint	<= INITIAL_X * FIXED_POINT_MULTIPLIER;
+		Xspeed_Fixed	<= INITIAL_X_SPEED * FIXED_SPEED_MULTIPLIER; //changed 1.9
+
 	end
 	else 
 		begin
@@ -242,22 +289,22 @@ begin
 					// button left was pushed --> going right
 						begin 
 							XShotSpeed <= XShotSpeed + SPEED_STEP;
-							XShotFriction <= XShotFriction - FRICTION_STEP;
+							//XShotFriction <= XShotFriction - FRICTION_STEP;
 						end
 					
 					if (chargeRight && (-XShotSpeed < MAX_X_SHOT_SPEED))
 					// button right was pushed --> going left
 						begin 
 							XShotSpeed <= XShotSpeed - SPEED_STEP;	
-							XShotFriction <= XShotFriction + FRICTION_STEP;
+							//XShotFriction <= XShotFriction + FRICTION_STEP;
 						end 
 					
 					if (releaseBall)
 						begin		
-							Xspeed <= XShotSpeed;
-							Xaccel <= XShotFriction;
+							Xspeed_Fixed <= XShotSpeed * FIXED_SPEED_MULTIPLIER;
+							//Xaccel <= XShotFriction;
 							XShotSpeed <= 0;
-							XShotFriction <= 0;
+							//XShotFriction <= 0;
 						end
 				end		
 							
@@ -265,41 +312,41 @@ begin
 				
 	// collisions with the sides 			
 				if ( collision_with_ball && (HitEdgeCode [3] == 1) ) 
-					if (Xspeed < 0 ) // while moving left
+					if (Xspeed_Fixed < 0 ) // while moving left
 						begin  
-								Xspeed <= -Xspeed; // positive move right 
-								Xaccel <= -Xaccel;
+								Xspeed_Fixed <= -Xspeed_Fixed; // positive move right 
+								//Xaccel <= -Xaccel;
 						end
-					else if (Xspeed == 0)
+					else if (Xspeed_Fixed == 0)
 						begin
-							Xspeed <= 100;
-							Xaccel <= -1;
+							Xspeed_Fixed <= 100 * FIXED_SPEED_MULTIPLIER;
+							//Xaccel <= -1;
 						end	
 				
 				
 				if ( collision_with_ball && (HitEdgeCode [1] == 1) ) 
 					 // hit right border of brick  
-					if (Xspeed > 0 ) //  while moving right
+					if (Xspeed_Fixed > 0 ) //  while moving right
 						begin
-								Xspeed <= -Xspeed;  // negative move left  
-								Xaccel <= -Xaccel;
+								Xspeed_Fixed <= -Xspeed_Fixed; // positive move right 
+								//Xaccel <= -Xaccel;
 						end
-					else if (Xspeed == 0)
+					else if (Xspeed_Fixed == 0)
 						begin
-							Xspeed <= -100;
-							Xaccel <= 1;
+							Xspeed_Fixed <= -100 * FIXED_SPEED_MULTIPLIER;
+							//Xaccel <= 1;
 						end	
 						
 				if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
-					if( Xspeed < 0 )
+					if( Xspeed_Fixed < 0 )
 						begin
-							Xspeed <= -Xspeed+5;
-							Xaccel <= -Xaccel;
+							Xspeed_Fixed <= -Xspeed_Fixed + 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+							//Xaccel <= -Xaccel;
 						end
-					else if( Xspeed > 0 )
+					else if( Xspeed_Fixed > 0 )
 						begin
-							Xspeed <= -Xspeed-5;
-							Xaccel <= -Xaccel;
+							Xspeed_Fixed <= -Xspeed_Fixed - 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+							//Xaccel <= -Xaccel;
 						end
 					
 			
@@ -313,14 +360,13 @@ begin
 			//			Xaccel <= -Xaccel;
 			//		end
 				
-				if ( (Xspeed > MIN_X_SPEED && Xspeed + Xaccel > 0 ) || (Xspeed < -MIN_X_SPEED && Xspeed + Xaccel < 0) ) //  limit the speed while going left or right 
+				if ( (Xspeed_Fixed > MIN_X_SPEED*FIXED_SPEED_MULTIPLIER && Xspeed_Fixed - X_FRICTION > 0 ) || (Xspeed_Fixed < -MIN_X_SPEED*FIXED_SPEED_MULTIPLIER && Xspeed_Fixed - X_FRICTION < 0) ) //  limit the speed while going left or right 
 					begin
-						Xspeed <= Xspeed  + Xaccel ; // deAccelerate : slow the speed down every clock tick 
+						Xspeed_Fixed <= Xspeed_Fixed - X_FRICTION ; // deAccelerate : slow the speed down every clock tick 
 					end
 				else
 					begin
-						Xspeed <= 0;
-						Xaccel <=0;
+						Xspeed_Fixed <= 0;
 					end
 			end;
 					
@@ -330,9 +376,13 @@ end
 //get a better (64 times) resolution using integer   
 assign 	topLeftX = topLeftX_FixedPoint / FIXED_POINT_MULTIPLIER ;   // note it must be 2^n 
 assign 	topLeftY = topLeftY_FixedPoint / FIXED_POINT_MULTIPLIER ;
-assign 	XspeedOUT = Xspeed;
-assign 	YspeedOUT = Yspeed;    
-    
+
+assign 	Xspeed = Xspeed_Fixed / FIXED_SPEED_MULTIPLIER;
+assign 	Yspeed = Yspeed_Fixed / FIXED_SPEED_MULTIPLIER;
+
+assign 	XspeedOUT = Xspeed;  //changed 1.9
+assign 	YspeedOUT = Yspeed;  //changed 1.9  
+
 
 
 endmodule
