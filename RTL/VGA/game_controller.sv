@@ -139,7 +139,7 @@ begin
 							ball_col_num <= 1'b1;
 						end
 					end
-				assign balls_collide = Balls_DR_VEC;			//***EXTRA*** : check if needed
+				balls_collide = Balls_DR_VEC;			//***EXTRA*** : check if needed
 			end 
 	
 		if ( collision_BallWall  && (flag == 1'b0)) 
