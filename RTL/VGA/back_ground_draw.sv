@@ -10,7 +10,7 @@ module	back_ground_draw	(
 					input 	logic	[10:0]	pixelY,
 
 					output	logic	[7:0]	BG_RGB,
-					output	logic		bordersDrawReq 
+					output	logic	[1:0]	bordersDrawReq 
 );
 
 const int	xFrameSize	=	639;
@@ -42,7 +42,7 @@ begin
 		greenBits <= 3'b110 ; 
 		redBits <= 3'b010 ;
 		blueBits <= 2'b00;
-		bordersDrawReq <= 	1'b0 ; 
+		bordersDrawReq <= 	2'b00 ; 
 
 					
 	/*
@@ -57,9 +57,7 @@ begin
 		
 		// draw the black borders, send bordersDrawReq.
 		if (        pixelX == bracketOffset ||
-						pixelY == bracketOffset ||
-						pixelX == (xFrameSize-bracketOffset) || 
-						pixelY == (yFrameSize-bracketOffset)) 
+						pixelX == (xFrameSize-bracketOffset) ) 
 			begin 
 			/*
 					redBits 	 <= 3'b011 ;	
@@ -70,7 +68,22 @@ begin
 					greenBits <= LIGHT_COLOR ;	
 					blueBits  <= LIGHT_COLOR ;
 					
-					bordersDrawReq <= 	1'b1 ; // pulse if drawing the boarders 
+					bordersDrawReq[0] <= 	1'b1 ; // pulse if drawing the boarders 
+			end
+
+		if (        pixelY == bracketOffset ||
+						pixelY == (yFrameSize-bracketOffset) ) 
+			begin 
+			/*
+					redBits 	 <= 3'b011 ;	
+					greenBits <= 3'b001 ;	
+					blueBits  <= 2'b01  ;
+					*/
+					redBits 	 <= LIGHT_COLOR ;	
+					greenBits <= LIGHT_COLOR ;	
+					blueBits  <= LIGHT_COLOR ;
+					
+					bordersDrawReq[1] <= 	1'b1 ; // pulse if drawing the boarders 
 			end
 	
 	// note numbers can be used inline if they appear only once 
@@ -80,17 +93,24 @@ begin
 	// draw brown borders 
 	//-------------------------------------------------------------------------------------
 		
-		if ( ( (pixelY > 0) && (pixelY < bracketOffset) ) ||
-		( (pixelY > (yFrameSize - bracketOffset)) && (pixelY < yFrameSize) ) ||
-		( (pixelX > 0) && (pixelX < bracketOffset) ) ||
+		if ( ( (pixelX > 0) && (pixelX < bracketOffset) ) ||
 		( (pixelX > (xFrameSize - bracketOffset)) && (pixelX < xFrameSize) ) ) 
 				begin 
 					redBits 	 <= 3'b011 ;	
 					greenBits <= 3'b001 ;	
 					blueBits  <= 2'b00  ; 
-					bordersDrawReq <= 	1'b1 ; // pulse if drawing the boarders 
+					bordersDrawReq[0] <= 	1'b1 ; // pulse if drawing the boarders 
 				end
-				
+		
+		if ( ( (pixelY > 0) && (pixelY < bracketOffset) ) ||
+		( (pixelY > (yFrameSize - bracketOffset)) && (pixelY < yFrameSize) ) ) 
+				begin 
+					redBits 	 <= 3'b011 ;	
+					greenBits <= 3'b001 ;	
+					blueBits  <= 2'b00  ; 
+					bordersDrawReq[1] <= 	1'b1 ; // pulse if drawing the boarders 
+				end
+						
 		// draw the white borders of the screen
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
 			begin 

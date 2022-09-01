@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 240 208)
+	(rect 16 16 240 144)
 	(text "black_hole_block" (rect 5 0 107 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 171 24 188)(font "Intel Clear" ))
+	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -60,64 +60,40 @@ agreement for further details.
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
-		(pt 0 112)
-		(input)
-		(text "chargeUp" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeUp" (rect 21 107 77 126)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
-		(text "releaseBall" (rect 21 123 85 142)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "collision" (rect 21 139 68 158)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
 		(pt 224 32)
 		(output)
-		(text "GHoleDR" (rect 0 0 54 19)(font "Intel Clear" (font_size 8)))
-		(text "GHoleDR" (rect 149 27 203 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 224 32)(pt 208 32))
+		(text "HoleID[2..0]" (rect 0 0 70 19)(font "Intel Clear" (font_size 8)))
+		(text "HoleID[2..0]" (rect 133 27 203 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(port
 		(pt 224 48)
 		(output)
-		(text "GHoleRGB[7..0]" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
-		(text "GHoleRGB[7..0]" (rect 110 43 203 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 224 48)(pt 208 48)(line_width 3))
+		(text "GHoleDR" (rect 0 0 54 19)(font "Intel Clear" (font_size 8)))
+		(text "GHoleDR" (rect 149 43 203 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 48)(pt 208 48))
 	)
 	(port
 		(pt 224 64)
 		(output)
-		(text "HHoleDR" (rect 0 0 54 19)(font "Intel Clear" (font_size 8)))
-		(text "HHoleDR" (rect 149 59 203 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 224 64)(pt 208 64))
+		(text "GHoleRGB[7..0]" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
+		(text "GHoleRGB[7..0]" (rect 110 59 203 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(port
 		(pt 224 80)
 		(output)
-		(text "HHoleRGB[7..0]" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
-		(text "HHoleRGB[7..0]" (rect 110 75 203 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 224 80)(pt 208 80)(line_width 3))
+		(text "HHoleDR" (rect 0 0 54 19)(font "Intel Clear" (font_size 8)))
+		(text "HHoleDR" (rect 149 75 203 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 80)(pt 208 80))
 	)
-	(parameter
-		"initial_x_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "HHoleRGB[7..0]" (rect 0 0 93 19)(font "Intel Clear" (font_size 8)))
+		(text "HHoleRGB[7..0]" (rect 110 91 203 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 96)(pt 208 96)(line_width 3))
+	)
 	(parameter
 		"initial_x"
 		"0"
@@ -128,8 +104,13 @@ agreement for further details.
 		"0"
 		""
 		(type "PARAMETER_UNSIGNED_DEC")	)
+	(parameter
+		"HOLE_ID"
+		"0"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 208 176))
+		(rectangle (rect 16 16 208 112))
 	)
 	(annotation_block (parameter)(rect 240 -64 340 16))
 )

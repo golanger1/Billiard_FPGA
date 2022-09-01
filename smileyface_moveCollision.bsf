@@ -138,26 +138,6 @@ agreement for further details.
 		"0"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MIN_Y_SPEED"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MIN_X_SPEED"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MAX_Y_SHOT_SPEED"
-		"800"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MAX_X_SHOT_SPEED"
-		"800"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 216 192)(line_width 1))
 	)
