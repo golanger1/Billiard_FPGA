@@ -27,6 +27,8 @@ module	hit_ball_moveCollision	(
 					//***coliision with hole in hitBallBM***
 					//more collisions?
 					input	logic	[3:0] HitEdgeCode, //for ballToBall collision
+					input logic [10:0] Xspeed_in,  // new speed from the speed calculations unit
+					input logic [10:0] Yspeed_in,
 
 					output	logic signed 	[10:0]	topLeftX, // output the top left corner 
 					output	logic signed	[10:0]	topLeftY, // can be negative , if the object is partliy outside 
@@ -193,7 +195,13 @@ begin
 //				
 //			end
 		
-	
+			if ( collision_with_ball )
+				begin
+					Yspeed_Fixed <= Yspeed_in * FIXED_SPEED_MULTIPLIER;
+				end
+	/***
+		using hitEdgeCode:
+		
 		if (collision_with_ball && (HitEdgeCode [2] == 1) )  // hit top border of brick  
 				if (Yspeed_Fixed < 0) // while moving up
 					begin
@@ -217,6 +225,7 @@ begin
 						Yspeed_Fixed <= -128 * FIXED_SPEED_MULTIPLIER;
 						//Yaccel <= 1;  //changed 1.9
 					end
+	***/
 
 		if (collision_with_wall && (collided_wall[1] == 1'b1))  // hit top border of brick  
 			if( Yspeed_Fixed < 0 )
@@ -311,8 +320,15 @@ begin
 				end		
 							
 	
+		// collisions with the sides 	
+		
+			if ( collision_with_ball )
+				begin
+					Xspeed_Fixed <= Xspeed_in * FIXED_SPEED_MULTIPLIER;
+				end
+	/***
+		using hitEdgeCode:
 				
-	// collisions with the sides 			
 				if ( collision_with_ball && (HitEdgeCode [3] == 1) ) 
 					if (Xspeed_Fixed < 0 ) // while moving left
 						begin  
@@ -338,6 +354,7 @@ begin
 							Xspeed_Fixed <= -128 * FIXED_SPEED_MULTIPLIER;
 							//Xaccel <= 1;
 						end	
+	***/
 						
 				if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
 					if( Xspeed_Fixed < 0 )
