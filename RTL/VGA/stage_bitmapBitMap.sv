@@ -12,15 +12,15 @@
 					input	logic	InsideRectangle, //input that the pixel is within a bracket 
  
 					output	logic	drawingRequest, //output that the pixel should be dispalyed 
-					output	logic	[7:0] RGBout,  //rgb value from the bitmap 
-					output	logic	[3:0] HitEdgeCode //one bit per edge 
+					output	logic	[7:0] RGBout  //rgb value from the bitmap 
+					//output	logic	[3:0] HitEdgeCode //one bit per edge 
  ) ; 
  
  
 // generating the bitmap 
  
 
-localparam logic [7:0] COLOR_ENCODING = 8'hFF ;// RGB value in the bitmap representing the BITMAP coolor
+localparam logic [7:0] COLOR_ENCODING = 8'hFE ;// RGB value in the bitmap representing the BITMAP coolor
 localparam logic [7:0] TRANSPARENT_ENCODING = 8'hff ;// RGB value in the bitmap representing a transparent pixel  
 logic[0:7][0:31] object_colors = {
 	32'b00000001100000000000000000000000,
@@ -37,26 +37,28 @@ logic[0:7][0:31] object_colors = {
 //////////--------------------------------------------------------------------------------------------------------------= 
 //hit bit map has one bit per edge:  hit_colors[3:0] =   {Left, Top, Right, Bottom}	 
 //there is one bit per edge, in the corner two bits are set  
- logic [0:3] [0:3] [3:0] hit_colors = 
+ 
+ /*logic [0:3] [0:3] [3:0] hit_colors = 
 		   {16'hC446,     
 			16'h8C62,    
 			16'h8932, 
-			16'h9113}; 
+			16'h9113}; */
+			
  // pipeline (ff) to get the pixel color from the array 	 
 //////////--------------------------------------------------------------------------------------------------------------= 
 always_ff@(posedge clk or negedge resetN) 
 begin 
 	if(!resetN) begin 
 		RGBout <=	8'h00; 
-		HitEdgeCode <= 4'h0; 
+		//HitEdgeCode <= 4'h0; 
 	end 
 	else begin 
 		RGBout <= TRANSPARENT_ENCODING ; // default  
-		HitEdgeCode <= 4'h0; 
+		//HitEdgeCode <= 4'h0; 
  
 		if (InsideRectangle == 1'b1 ) 
 		begin // inside an external bracket  
-			HitEdgeCode <= hit_colors[offsetY >> 1][offsetX >> 3 ]; // get hitting edge from the colors table
+			//HitEdgeCode <= hit_colors[offsetY >> 1][offsetX >> 3 ]; // get hitting edge from the colors table
 			RGBout <= (object_colors[offsetY][offsetX] ==  1 ) ? COLOR_ENCODING  : TRANSPARENT_ENCODING; 
 		end  	 
 		 
