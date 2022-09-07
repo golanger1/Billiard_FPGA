@@ -526,94 +526,9 @@ agreement for further details.
 	(annotation_block (parameter)(rect 720 296 1480 334))
 )
 (symbol
-	(rect 1232 1160 1576 1368)
-	(text "balls_speed_calculator" (rect 5 0 115 12)(font "Arial" ))
-	(text "inst1" (rect 8 192 30 209)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
-		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
-		(text "startOfFrame" (rect 21 59 88 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "balls_collide[2..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "balls_collide[2..0]" (rect 21 75 105 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "Balls_col_ID[1..0][3..0]" (rect 0 0 113 12)(font "Arial" ))
-		(text "Balls_col_ID[1..0][3..0]" (rect 21 91 134 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "Xspeed_VEC_in[2..0][10..0]" (rect 0 0 135 12)(font "Arial" ))
-		(text "Xspeed_VEC_in[2..0][10..0]" (rect 21 107 156 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "Yspeed_VEC_in[2..0][10..0]" (rect 0 0 138 12)(font "Arial" ))
-		(text "Yspeed_VEC_in[2..0][10..0]" (rect 21 123 159 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "topLeftX_VEC_in[2..0][10..0]" (rect 0 0 141 12)(font "Arial" ))
-		(text "topLeftX_VEC_in[2..0][10..0]" (rect 21 139 162 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "topLeftY_VEC_in[2..0][10..0]" (rect 0 0 143 12)(font "Arial" ))
-		(text "topLeftY_VEC_in[2..0][10..0]" (rect 21 155 164 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
-	)
-	(port
-		(pt 344 32)
-		(output)
-		(text "Xspeed_VEC_out[2..0][10..0]" (rect 0 0 142 12)(font "Arial" ))
-		(text "Xspeed_VEC_out[2..0][10..0]" (rect 203 27 345 39)(font "Arial" ))
-		(line (pt 344 32)(pt 328 32)(line_width 3))
-	)
-	(port
-		(pt 344 48)
-		(output)
-		(text "Yspeed_VEC_out[2..0][10..0]" (rect 0 0 145 12)(font "Arial" ))
-		(text "Yspeed_VEC_out[2..0][10..0]" (rect 201 43 346 55)(font "Arial" ))
-		(line (pt 344 48)(pt 328 48)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 328 192))
-	)
-)
-(symbol
-	(rect 1280 800 1576 1120)
+	(rect 296 488 592 808)
 	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
-	(text "White_Ball" (rect 8 299 62 316)(font "Intel Clear" ))
+	(text "hitBall_1" (rect 8 299 51 316)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -784,7 +699,7 @@ agreement for further details.
 	)
 	(parameter
 		"initial_x"
-		"100"
+		"500"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -804,18 +719,18 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"ball_id"
-		"0"
+		"1"
 		""
 		(type "PARAMETER_UNSIGNED_DEC")	)
 	(parameter
 		"hitball_color"
-		"fe"
+		"e0"
 		""
 		(type "PARAMETER_UNSIGNED_HEX")	)
 	(drawing
 		(rectangle (rect 16 16 280 304))
 	)
-	(annotation_block (parameter)(rect 1280 656 1487 789))
+	(annotation_block (parameter)(rect 296 344 503 477))
 )
 (symbol
 	(rect 296 1000 592 1320)
@@ -1025,9 +940,9 @@ agreement for further details.
 	(annotation_block (parameter)(rect 296 856 503 989))
 )
 (symbol
-	(rect 296 488 592 808)
+	(rect 1280 800 1576 1120)
 	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
-	(text "hitBall_1" (rect 8 299 51 316)(font "Intel Clear" ))
+	(text "White_Ball" (rect 8 299 62 316)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1198,7 +1113,7 @@ agreement for further details.
 	)
 	(parameter
 		"initial_x"
-		"500"
+		"100"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -1218,18 +1133,103 @@ agreement for further details.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"ball_id"
-		"1"
+		"0"
 		""
 		(type "PARAMETER_UNSIGNED_DEC")	)
 	(parameter
 		"hitball_color"
-		"e0"
+		"fe"
 		""
 		(type "PARAMETER_UNSIGNED_HEX")	)
 	(drawing
 		(rectangle (rect 16 16 280 304))
 	)
-	(annotation_block (parameter)(rect 296 344 503 477))
+	(annotation_block (parameter)(rect 1280 656 1487 789))
+)
+(symbol
+	(rect 1232 1160 1576 1368)
+	(text "balls_speed_calculator" (rect 5 0 115 12)(font "Arial" ))
+	(text "inst1" (rect 8 192 31 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
+		(text "startOfFrame" (rect 21 59 88 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "balls_collide[2..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "balls_collide[2..0]" (rect 21 75 105 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "Balls_col_ID[1..0][3..0]" (rect 0 0 113 12)(font "Arial" ))
+		(text "Balls_col_ID[1..0][3..0]" (rect 21 91 134 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Xspeed_VEC_in[2..0][10..0]" (rect 0 0 135 12)(font "Arial" ))
+		(text "Xspeed_VEC_in[2..0][10..0]" (rect 21 107 156 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Yspeed_VEC_in[2..0][10..0]" (rect 0 0 138 12)(font "Arial" ))
+		(text "Yspeed_VEC_in[2..0][10..0]" (rect 21 123 159 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "topLeftX_VEC_in[2..0][10..0]" (rect 0 0 141 12)(font "Arial" ))
+		(text "topLeftX_VEC_in[2..0][10..0]" (rect 21 139 162 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "topLeftY_VEC_in[2..0][10..0]" (rect 0 0 143 12)(font "Arial" ))
+		(text "topLeftY_VEC_in[2..0][10..0]" (rect 21 155 164 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 344 32)
+		(output)
+		(text "Xspeed_VEC_out[2..0][10..0]" (rect 0 0 142 12)(font "Arial" ))
+		(text "Xspeed_VEC_out[2..0][10..0]" (rect 203 27 323 39)(font "Arial" ))
+		(line (pt 344 32)(pt 328 32)(line_width 3))
+	)
+	(port
+		(pt 344 48)
+		(output)
+		(text "Yspeed_VEC_out[2..0][10..0]" (rect 0 0 145 12)(font "Arial" ))
+		(text "Yspeed_VEC_out[2..0][10..0]" (rect 201 43 323 55)(font "Arial" ))
+		(line (pt 344 48)(pt 328 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 328 192))
+	)
 )
 (connector
 	(text "pixelY[10..0]" (rect 346 96 405 113)(font "Intel Clear" ))

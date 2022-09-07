@@ -27,8 +27,8 @@ module	hit_ball_moveCollision	(
 					//***coliision with hole in hitBallBM***
 					//more collisions?
 					input	logic	[3:0] HitEdgeCode, //for ballToBall collision
-					input logic [10:0] Xspeed_in,  // new speed from the speed calculations unit
-					input logic [10:0] Yspeed_in,
+					input logic signed [10:0] Xspeed_in,  // new speed from the speed calculations unit
+					input logic signed [10:0] Yspeed_in,
 
 					output	logic signed 	[10:0]	topLeftX, // output the top left corner 
 					output	logic signed	[10:0]	topLeftY, // can be negative , if the object is partliy outside 
@@ -195,10 +195,10 @@ begin
 //				
 //			end
 		
-			if ( collision_with_ball )
-				begin
-					Yspeed_Fixed <= Yspeed_in * FIXED_SPEED_MULTIPLIER;
-				end
+		if ( collision_with_ball )
+			begin
+				Yspeed_Fixed <= Yspeed_in * FIXED_SPEED_MULTIPLIER;
+			end
 	/***
 		using hitEdgeCode:
 		
@@ -356,17 +356,17 @@ begin
 						end	
 	***/
 						
-				if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
-					if( Xspeed_Fixed < 0 )
-						begin
-							Xspeed_Fixed <= -Xspeed_Fixed + 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
-							//Xaccel <= -Xaccel;
-						end
-					else if( Xspeed_Fixed > 0 )
-						begin
-							Xspeed_Fixed <= -Xspeed_Fixed - 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
-							//Xaccel <= -Xaccel;
-						end
+			if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
+				if( Xspeed_Fixed < 0 )
+					begin
+						Xspeed_Fixed <= -Xspeed_Fixed + 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+						//Xaccel <= -Xaccel;
+					end
+				else if( Xspeed_Fixed > 0 )
+					begin
+						Xspeed_Fixed <= -Xspeed_Fixed - 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+						//Xaccel <= -Xaccel;
+					end
 					
 			
 		if (startOfFrame == 1'b1) 
