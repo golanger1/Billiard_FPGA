@@ -324,7 +324,7 @@ agreement for further details.
 	(input)
 	(rect 80 672 256 688)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "Xspeed_in[10..0]" (rect 5 0 85 17)(font "Intel Clear" ))
+	(text "Xspeed_in[10..0]" (rect 5 0 84 17)(font "Intel Clear" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -340,7 +340,7 @@ agreement for further details.
 	(input)
 	(rect 80 688 256 704)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "Yspeed_in[10..0]" (rect 5 0 85 17)(font "Intel Clear" ))
+	(text "Yspeed_in[10..0]" (rect 5 0 84 17)(font "Intel Clear" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))

@@ -1948,7 +1948,7 @@ agreement for further details.
 (text "Number display bitmap" (rect 448 1128 591 1147)(font "Intel Clear" (font_size 8)(bold)))
 (text "Add here the \"square_object\" and  \"random\" modules" (rect -584 1120 -203 1140)(font "Intel Clear" (font_size 10)(bold)))
 (text "Update the objects_mux" (rect 376 368 550 388)(font "Intel Clear" (font_size 10)(bold)))
-(text "Update the game_controller" (rect 328 608 528 628)(font "Intel Clear" (font_size 10)(bold)))
+(text "Update the game_controller" (rect 328 624 528 644)(font "Intel Clear" (font_size 10)(bold)))
 (text "united hitBalls moving and drawing" (rect 392 -224 610 -205)(font "Intel Clear" (font_size 8)(bold)))
 (rectangle (rect 328 864 1256 1080)(color 0 0 0)(line_width 3))
 (rectangle (rect -368 -32 288 400)(color 0 0 0)(line_width 3))

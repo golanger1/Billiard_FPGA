@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Sep 08 00:45:55 2022
+Analysis & Synthesis Status : Successful - Thu Sep 08 21:57:14 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Lab1Demo
 Top-level Entity Name : TOP_VGA_DEMO_KBD
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 5734
+Total registers : 9609
 Total pins : 62
 Total virtual pins : 0
-Total block memory bits : 224,384
+Total block memory bits : 658,560
 Total DSP Blocks : 20
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

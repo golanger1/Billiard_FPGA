@@ -1,16 +1,16 @@
-Fitter Status : Successful - Thu Sep 08 00:47:16 2022
+Fitter Status : Successful - Thu Sep 08 21:59:02 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Lab1Demo
 Top-level Entity Name : TOP_VGA_DEMO_KBD
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 2,906 / 41,910 ( 7 % )
-Total registers : 5920
+Logic utilization (in ALMs) : 4,084 / 41,910 ( 10 % )
+Total registers : 9831
 Total pins : 62 / 499 ( 12 % )
 Total virtual pins : 0
-Total block memory bits : 224,384 / 5,662,720 ( 4 % )
-Total RAM Blocks : 24 / 553 ( 4 % )
+Total block memory bits : 658,560 / 5,662,720 ( 12 % )
+Total RAM Blocks : 67 / 553 ( 12 % )
 Total DSP Blocks : 20 / 112 ( 18 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
