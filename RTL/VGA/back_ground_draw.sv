@@ -12,6 +12,8 @@ module	back_ground_draw	(
 					input	logic	[7:0] Stage_RGBout,
 					input	logic	Score_DR, //output that the pixel should be dispalyed 
 					input	logic	[7:0] Score_RGBout,
+					input	logic	Score_Stage_Digits_DR, //output that the pixel should be dispalyed 
+					input	logic	[7:0] Score_Stage_Digits_RGBOut,
 					
 					output	logic	[7:0]	BG_RGB,
 					output	logic	[1:0]	bordersDrawReq 
@@ -127,7 +129,11 @@ begin
 		BG_RGB <= Stage_RGBout;  
 			
 	else if ( Score_DR == 1'b1 )   //score text
-		BG_RGB <= Score_RGBout; 
+		BG_RGB <= Score_RGBout;  
+		
+	else if ( Score_Stage_Digits_DR == 1'b1 )
+		BG_RGB <= Score_Stage_Digits_RGBOut;
+	
 	
 	else
 		BG_RGB =  {redBits , greenBits , blueBits} ; //collect color nibbles to an 8 bit word 
