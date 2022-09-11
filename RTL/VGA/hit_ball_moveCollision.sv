@@ -60,8 +60,8 @@ localparam int INITIAL_X_SPEED = 0;
 localparam int INITIAL_Y_SPEED = 0;
 localparam int INITIAL_Y_ACCEL = 0;
 localparam int INITIAL_X_ACCEL = 0;
-localparam int MIN_Y_SPEED = 2;
-localparam int MIN_X_SPEED = 2;
+localparam int MIN_Y_SPEED = 8;
+localparam int MIN_X_SPEED = 8;
 
 //whiteBall local params:
 localparam int MAX_Y_SHOT_SPEED = 512;
@@ -197,7 +197,7 @@ begin
 		
 		if ( collision_with_ball )
 			begin
-				Yspeed_Fixed <= Yspeed_in * FIXED_SPEED_MULTIPLIER;
+				Yspeed_Fixed <= (Yspeed_in * FIXED_SPEED_MULTIPLIER) + Yspeed_in; // Yspeed_in for better collision speed
 			end
 	/***
 		using hitEdgeCode:
@@ -259,6 +259,10 @@ begin
 					begin
 						Yspeed_Fixed <= Yspeed_Fixed - Y_FRICTION ; // deAccelerate : slow the speed down every clock tick   //changed 1.9
 					end  
+				else if ( ( (Xspeed_Fixed > MIN_X_SPEED * FIXED_SPEED_MULTIPLIER) || (Xspeed_Fixed < -MIN_X_SPEED*FIXED_SPEED_MULTIPLIER) ) && ( Yspeed_Fixed != 0 ) )
+					begin
+						Yspeed_Fixed <= (( Yspeed_Fixed > 0 ) ? 1 : -1 )*(MIN_Y_SPEED/4)*FIXED_SPEED_MULTIPLIER;				
+					end
 				else
 					begin
 						Yspeed_Fixed <= 0;
@@ -324,7 +328,7 @@ begin
 		
 			if ( collision_with_ball )
 				begin
-					Xspeed_Fixed <= Xspeed_in * FIXED_SPEED_MULTIPLIER;
+					Xspeed_Fixed <= (Xspeed_in * FIXED_SPEED_MULTIPLIER) + Xspeed_in; // +Xspeed_in for better collision speeds;
 				end
 	/***
 		using hitEdgeCode:
@@ -382,6 +386,10 @@ begin
 				if ( (Xspeed_Fixed > MIN_X_SPEED*FIXED_SPEED_MULTIPLIER && Xspeed_Fixed - X_FRICTION > 0 ) || (Xspeed_Fixed < -MIN_X_SPEED*FIXED_SPEED_MULTIPLIER && Xspeed_Fixed - X_FRICTION < 0) ) //  limit the speed while going left or right 
 					begin
 						Xspeed_Fixed <= Xspeed_Fixed - X_FRICTION ; // deAccelerate : slow the speed down every clock tick 
+					end
+				else if ( ( (Yspeed_Fixed > MIN_Y_SPEED * FIXED_SPEED_MULTIPLIER) || (Yspeed_Fixed < -MIN_Y_SPEED*FIXED_SPEED_MULTIPLIER) ) && ( Xspeed_Fixed != 0 ) )
+					begin
+						Xspeed_Fixed <= (( Xspeed_Fixed > 0 ) ? 1 : -1 )*(MIN_X_SPEED/4)*FIXED_SPEED_MULTIPLIER;				
 					end
 				else
 					begin
