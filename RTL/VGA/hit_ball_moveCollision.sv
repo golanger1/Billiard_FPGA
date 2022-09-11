@@ -27,6 +27,8 @@ module	hit_ball_moveCollision	(
 					//***coliision with hole in hitBallBM***
 					//more collisions?
 					input	logic	[3:0] HitEdgeCode, //for ballToBall collision
+					input logic signed [10:0] Xspeed_in,  // new speed from the speed calculations unit
+					input logic signed [10:0] Yspeed_in,
 
 					output	logic signed 	[10:0]	topLeftX, // output the top left corner 
 					output	logic signed	[10:0]	topLeftY, // can be negative , if the object is partliy outside 
@@ -58,13 +60,13 @@ localparam int INITIAL_X_SPEED = 0;
 localparam int INITIAL_Y_SPEED = 0;
 localparam int INITIAL_Y_ACCEL = 0;
 localparam int INITIAL_X_ACCEL = 0;
-localparam int MIN_Y_SPEED = 8;
-localparam int MIN_X_SPEED = 8;
+localparam int MIN_Y_SPEED = 2;
+localparam int MIN_X_SPEED = 2;
 
 //whiteBall local params:
 localparam int MAX_Y_SHOT_SPEED = 512;
 localparam int MAX_X_SHOT_SPEED = 512;
-localparam int SPEED_STEP = 128;
+localparam int SPEED_STEP = 64;
 
 
 
@@ -72,6 +74,8 @@ localparam int SPEED_STEP = 128;
 
 const int	FIXED_POINT_MULTIPLIER	=	64;
 const int	FIXED_SPEED_MULTIPLIER	=	64;
+const int	FRICTION_INTENSITY	=	64;
+
 
 // FIXED_POINT_MULTIPLIER is used to enable working with integers in high resolution so that 
 // we do all calculations with topLeftX_FixedPoint to get a resolution of 1/64 pixel in calcuatuions,
@@ -90,10 +94,10 @@ int YShotSpeed, YShotFriction;
 //int Friction_dev;
 
 int X_FRICTION;
-assign 	X_FRICTION = Xspeed_Fixed / 32;     //***changed 1.9
+assign 	X_FRICTION = Xspeed_Fixed / FRICTION_INTENSITY;     //***changed 1.9
 //int  Xaccel; //friction - needs to be opposite to movement //changed 1.9
 int Y_FRICTION;
-assign 	Y_FRICTION = Yspeed_Fixed / 32;  //***changed 1.9  
+assign 	Y_FRICTION = Yspeed_Fixed / FRICTION_INTENSITY;  //***changed 1.9  
 //int  Yaccel; //friction - needs to be opposite to movement //changed 1.9
 
 //always_comb //changed 1.9 try change speed - not good
@@ -191,7 +195,13 @@ begin
 //				
 //			end
 		
-	
+		if ( collision_with_ball )
+			begin
+				Yspeed_Fixed <= Yspeed_in * FIXED_SPEED_MULTIPLIER;
+			end
+	/***
+		using hitEdgeCode:
+		
 		if (collision_with_ball && (HitEdgeCode [2] == 1) )  // hit top border of brick  
 				if (Yspeed_Fixed < 0) // while moving up
 					begin
@@ -200,7 +210,7 @@ begin
 					end
 				else if (Yspeed_Fixed == 0)
 					begin
-						Yspeed_Fixed <= 100 * FIXED_SPEED_MULTIPLIER;
+						Yspeed_Fixed <= 128 * FIXED_SPEED_MULTIPLIER;
 						//Yaccel <= -1; //changed 1.9
 					end
 			
@@ -212,9 +222,10 @@ begin
 					end
 				else if (Yspeed_Fixed == 0)
 					begin
-						Yspeed_Fixed <= -100 * FIXED_SPEED_MULTIPLIER;
+						Yspeed_Fixed <= -128 * FIXED_SPEED_MULTIPLIER;
 						//Yaccel <= 1;  //changed 1.9
 					end
+	***/
 
 		if (collision_with_wall && (collided_wall[1] == 1'b1))  // hit top border of brick  
 			if( Yspeed_Fixed < 0 )
@@ -309,8 +320,15 @@ begin
 				end		
 							
 	
+		// collisions with the sides 	
+		
+			if ( collision_with_ball )
+				begin
+					Xspeed_Fixed <= Xspeed_in * FIXED_SPEED_MULTIPLIER;
+				end
+	/***
+		using hitEdgeCode:
 				
-	// collisions with the sides 			
 				if ( collision_with_ball && (HitEdgeCode [3] == 1) ) 
 					if (Xspeed_Fixed < 0 ) // while moving left
 						begin  
@@ -319,7 +337,7 @@ begin
 						end
 					else if (Xspeed_Fixed == 0)
 						begin
-							Xspeed_Fixed <= 100 * FIXED_SPEED_MULTIPLIER;
+							Xspeed_Fixed <= 128 * FIXED_SPEED_MULTIPLIER;
 							//Xaccel <= -1;
 						end	
 				
@@ -333,21 +351,22 @@ begin
 						end
 					else if (Xspeed_Fixed == 0)
 						begin
-							Xspeed_Fixed <= -100 * FIXED_SPEED_MULTIPLIER;
+							Xspeed_Fixed <= -128 * FIXED_SPEED_MULTIPLIER;
 							//Xaccel <= 1;
 						end	
+	***/
 						
-				if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
-					if( Xspeed_Fixed < 0 )
-						begin
-							Xspeed_Fixed <= -Xspeed_Fixed + 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
-							//Xaccel <= -Xaccel;
-						end
-					else if( Xspeed_Fixed > 0 )
-						begin
-							Xspeed_Fixed <= -Xspeed_Fixed - 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
-							//Xaccel <= -Xaccel;
-						end
+			if ( collision_with_wall && (collided_wall[0] == 1'b1) )  // hit top border of brick  
+				if( Xspeed_Fixed < 0 )
+					begin
+						Xspeed_Fixed <= -Xspeed_Fixed + 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+						//Xaccel <= -Xaccel;
+					end
+				else if( Xspeed_Fixed > 0 )
+					begin
+						Xspeed_Fixed <= -Xspeed_Fixed - 5*FIXED_SPEED_MULTIPLIER; //do we need to add speed?
+						//Xaccel <= -Xaccel;
+					end
 					
 			
 		if (startOfFrame == 1'b1) 

@@ -313,6 +313,22 @@ agreement for further details.
 	(text "VCC" (rect 144 7 164 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 496 216 704 232)
+	(text "INPUT" (rect 165 0 193 10)(font "Arial" (font_size 6)))
+	(text "Balls_col_ID[1..0][3..0]" (rect 5 0 112 17)(font "Intel Clear" ))
+	(pt 208 8)
+	(drawing
+		(line (pt 124 12)(pt 149 12))
+		(line (pt 124 4)(pt 149 4))
+		(line (pt 153 8)(pt 208 8))
+		(line (pt 124 12)(pt 124 4))
+		(line (pt 149 4)(pt 153 8))
+		(line (pt 149 12)(pt 153 8))
+	)
+	(text "VCC" (rect 168 7 188 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 1496 408 1672 424)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -426,543 +442,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 296 488 592 776)
-	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
-	(text "hitBall_1" (rect 8 267 51 284)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
-		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "chargeUp       " (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeUp       " (rect 21 107 102 126)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "chargeDown       " (rect 0 0 96 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeDown       " (rect 21 123 117 142)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "chargeLeft           " (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeLeft           " (rect 21 139 122 158)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "chargeRight             " (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeRight             " (rect 21 155 136 174)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 160)(pt 16 160))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
-		(text "releaseBall" (rect 21 171 85 190)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 176)(pt 16 176))
-	)
-	(port
-		(pt 0 192)
-		(input)
-		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "collision" (rect 21 187 68 206)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 192)(pt 16 192))
-	)
-	(port
-		(pt 0 208)
-		(input)
-		(text "collision_with_ball" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "collision_with_ball" (rect 21 203 129 222)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 208)(pt 16 208))
-	)
-	(port
-		(pt 0 224)
-		(input)
-		(text "collision_with_wall" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
-		(text "collision_with_wall" (rect 21 219 130 238)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 224)(pt 16 224))
-	)
-	(port
-		(pt 0 240)
-		(input)
-		(text "collided_wall[1..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "collided_wall[1..0]" (rect 21 235 129 254)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 240)(pt 16 240)(line_width 3))
-	)
-	(port
-		(pt 0 256)
-		(input)
-		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "HitEdgeCode[3..0]" (rect 21 251 129 270)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 256)(pt 16 256)(line_width 3))
-	)
-	(port
-		(pt 296 32)
-		(output)
-		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_OffsetX[10..0]" (rect 147 27 275 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 32)(pt 280 32)(line_width 3))
-	)
-	(port
-		(pt 296 48)
-		(output)
-		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_OffsetY[10..0]" (rect 147 43 275 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 48)(pt 280 48)(line_width 3))
-	)
-	(port
-		(pt 296 64)
-		(output)
-		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_DR       " (rect 188 59 275 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 64)(pt 280 64))
-	)
-	(port
-		(pt 296 80)
-		(output)
-		(text "Xspeed[10..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Xspeed[10..0]" (rect 192 75 275 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 80)(pt 280 80)(line_width 3))
-	)
-	(port
-		(pt 296 96)
-		(output)
-		(text "Yspeed[10..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Yspeed[10..0]" (rect 192 91 275 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 96)(pt 280 96)(line_width 3))
-	)
-	(parameter
-		"initial_x"
-		"500"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y"
-		"220"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_x_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"ball_id"
-		"1"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(parameter
-		"hitball_color"
-		"e0"
-		""
-		(type "PARAMETER_UNSIGNED_HEX")	)
-	(drawing
-		(rectangle (rect 16 16 280 272))
-	)
-	(annotation_block (parameter)(rect 296 344 503 477))
-)
-(symbol
-	(rect 296 1000 592 1288)
-	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
-	(text "hitBall_2" (rect 8 267 51 284)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
-		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "chargeUp       " (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeUp       " (rect 21 107 102 126)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "chargeDown       " (rect 0 0 96 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeDown       " (rect 21 123 117 142)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "chargeLeft           " (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeLeft           " (rect 21 139 122 158)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "chargeRight             " (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeRight             " (rect 21 155 136 174)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 160)(pt 16 160))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
-		(text "releaseBall" (rect 21 171 85 190)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 176)(pt 16 176))
-	)
-	(port
-		(pt 0 192)
-		(input)
-		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "collision" (rect 21 187 68 206)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 192)(pt 16 192))
-	)
-	(port
-		(pt 0 208)
-		(input)
-		(text "collision_with_ball" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "collision_with_ball" (rect 21 203 129 222)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 208)(pt 16 208))
-	)
-	(port
-		(pt 0 224)
-		(input)
-		(text "collision_with_wall" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
-		(text "collision_with_wall" (rect 21 219 130 238)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 224)(pt 16 224))
-	)
-	(port
-		(pt 0 240)
-		(input)
-		(text "collided_wall[1..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "collided_wall[1..0]" (rect 21 235 129 254)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 240)(pt 16 240)(line_width 3))
-	)
-	(port
-		(pt 0 256)
-		(input)
-		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "HitEdgeCode[3..0]" (rect 21 251 129 270)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 256)(pt 16 256)(line_width 3))
-	)
-	(port
-		(pt 296 32)
-		(output)
-		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_OffsetX[10..0]" (rect 147 27 275 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 32)(pt 280 32)(line_width 3))
-	)
-	(port
-		(pt 296 48)
-		(output)
-		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_OffsetY[10..0]" (rect 147 43 275 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 48)(pt 280 48)(line_width 3))
-	)
-	(port
-		(pt 296 64)
-		(output)
-		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_DR       " (rect 188 59 275 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 64)(pt 280 64))
-	)
-	(port
-		(pt 296 80)
-		(output)
-		(text "Xspeed[10..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Xspeed[10..0]" (rect 192 75 275 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 80)(pt 280 80)(line_width 3))
-	)
-	(port
-		(pt 296 96)
-		(output)
-		(text "Yspeed[10..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Yspeed[10..0]" (rect 192 91 275 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 96)(pt 280 96)(line_width 3))
-	)
-	(parameter
-		"initial_x"
-		"300"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y"
-		"220"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_x_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"ball_id"
-		"2"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(parameter
-		"hitball_color"
-		"0e"
-		""
-		(type "PARAMETER_UNSIGNED_HEX")	)
-	(drawing
-		(rectangle (rect 16 16 280 272))
-	)
-	(annotation_block (parameter)(rect 296 856 503 989))
-)
-(symbol
-	(rect 1280 800 1576 1088)
-	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
-	(text "White_Ball" (rect 8 267 62 284)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
-		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
-		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
-		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "chargeUp       " (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeUp       " (rect 21 107 102 126)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "chargeDown       " (rect 0 0 96 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeDown       " (rect 21 123 117 142)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "chargeLeft           " (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeLeft           " (rect 21 139 122 158)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "chargeRight             " (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
-		(text "chargeRight             " (rect 21 155 136 174)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 160)(pt 16 160))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
-		(text "releaseBall" (rect 21 171 85 190)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 176)(pt 16 176))
-	)
-	(port
-		(pt 0 192)
-		(input)
-		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "collision" (rect 21 187 68 206)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 192)(pt 16 192))
-	)
-	(port
-		(pt 0 208)
-		(input)
-		(text "collision_with_ball" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "collision_with_ball" (rect 21 203 129 222)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 208)(pt 16 208))
-	)
-	(port
-		(pt 0 224)
-		(input)
-		(text "collision_with_wall" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
-		(text "collision_with_wall" (rect 21 219 130 238)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 224)(pt 16 224))
-	)
-	(port
-		(pt 0 240)
-		(input)
-		(text "collided_wall[1..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "collided_wall[1..0]" (rect 21 235 129 254)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 240)(pt 16 240)(line_width 3))
-	)
-	(port
-		(pt 0 256)
-		(input)
-		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "HitEdgeCode[3..0]" (rect 21 251 129 270)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 256)(pt 16 256)(line_width 3))
-	)
-	(port
-		(pt 296 32)
-		(output)
-		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_OffsetX[10..0]" (rect 147 27 275 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 32)(pt 280 32)(line_width 3))
-	)
-	(port
-		(pt 296 48)
-		(output)
-		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_OffsetY[10..0]" (rect 147 43 275 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 48)(pt 280 48)(line_width 3))
-	)
-	(port
-		(pt 296 64)
-		(output)
-		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
-		(text "hitBall_DR       " (rect 188 59 275 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 64)(pt 280 64))
-	)
-	(port
-		(pt 296 80)
-		(output)
-		(text "Xspeed[10..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Xspeed[10..0]" (rect 192 75 275 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 80)(pt 280 80)(line_width 3))
-	)
-	(port
-		(pt 296 96)
-		(output)
-		(text "Yspeed[10..0]" (rect 0 0 83 19)(font "Intel Clear" (font_size 8)))
-		(text "Yspeed[10..0]" (rect 192 91 275 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 296 96)(pt 280 96)(line_width 3))
-	)
-	(parameter
-		"initial_x"
-		"100"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y"
-		"220"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_x_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"initial_y_speed"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"ball_id"
-		"0"
-		""
-		(type "PARAMETER_UNSIGNED_DEC")	)
-	(parameter
-		"hitball_color"
-		"fe"
-		""
-		(type "PARAMETER_UNSIGNED_HEX")	)
-	(drawing
-		(rectangle (rect 16 16 280 272))
-	)
-	(annotation_block (parameter)(rect 1280 656 1487 789))
-)
-(symbol
 	(rect 1000 384 1280 528)
 	(text "hit_ballBitMap" (rect 5 0 72 12)(font "Arial" ))
 	(text "inst6" (rect 8 128 31 140)(font "Arial" ))
@@ -1012,28 +491,28 @@ agreement for further details.
 		(pt 280 32)
 		(output)
 		(text "hitBall_DR" (rect 0 0 51 12)(font "Arial" ))
-		(text "hitBall_DR" (rect 216 27 259 39)(font "Arial" ))
+		(text "hitBall_DR" (rect 216 27 267 39)(font "Arial" ))
 		(line (pt 280 32)(pt 264 32))
 	)
 	(port
 		(pt 280 48)
 		(output)
 		(text "hitBall_DR_VEC[2..0]" (rect 0 0 106 12)(font "Arial" ))
-		(text "hitBall_DR_VEC[2..0]" (rect 170 43 259 55)(font "Arial" ))
+		(text "hitBall_DR_VEC[2..0]" (rect 170 43 276 55)(font "Arial" ))
 		(line (pt 280 48)(pt 264 48)(line_width 3))
 	)
 	(port
 		(pt 280 64)
 		(output)
 		(text "RGBout[7..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "RGBout[7..0]" (rect 205 59 259 71)(font "Arial" ))
+		(text "RGBout[7..0]" (rect 205 59 269 71)(font "Arial" ))
 		(line (pt 280 64)(pt 264 64)(line_width 3))
 	)
 	(port
 		(pt 280 80)
 		(output)
 		(text "HitEdgeCode[2..0][3..0]" (rect 0 0 116 12)(font "Arial" ))
-		(text "HitEdgeCode[2..0][3..0]" (rect 161 75 259 87)(font "Arial" ))
+		(text "HitEdgeCode[2..0][3..0]" (rect 161 75 277 87)(font "Arial" ))
 		(line (pt 280 80)(pt 264 80)(line_width 3))
 	)
 	(parameter
@@ -1045,6 +524,712 @@ agreement for further details.
 		(rectangle (rect 16 16 264 128))
 	)
 	(annotation_block (parameter)(rect 720 296 1480 334))
+)
+(symbol
+	(rect 1280 800 1576 1120)
+	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "White_Ball" (rect 8 299 62 316)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
+		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "chargeUp       " (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeUp       " (rect 21 107 102 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "chargeDown       " (rect 0 0 96 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeDown       " (rect 21 123 117 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "chargeLeft           " (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeLeft           " (rect 21 139 122 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "chargeRight             " (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeRight             " (rect 21 155 136 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
+		(text "releaseBall" (rect 21 171 85 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "collision" (rect 21 187 68 206)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "collision_with_ball" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "collision_with_ball" (rect 21 203 129 222)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "collision_with_wall" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "collision_with_wall" (rect 21 219 130 238)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "collided_wall[1..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "collided_wall[1..0]" (rect 21 235 129 254)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "HitEdgeCode[3..0]" (rect 21 251 129 270)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "Xspeed_in[10..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed_in[10..0]" (rect 21 267 122 286)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "Yspeed_in[10..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed_in[10..0]" (rect 21 283 122 302)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 288)(pt 16 288)(line_width 3))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetX[10..0]" (rect 147 27 275 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(port
+		(pt 296 48)
+		(output)
+		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetY[10..0]" (rect 147 43 275 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 48)(pt 280 48)(line_width 3))
+	)
+	(port
+		(pt 296 64)
+		(output)
+		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_DR       " (rect 188 59 275 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 64)(pt 280 64))
+	)
+	(port
+		(pt 296 80)
+		(output)
+		(text "Xspeed_out[10..0]" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed_out[10..0]" (rect 166 75 275 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 80)(pt 280 80)(line_width 3))
+	)
+	(port
+		(pt 296 96)
+		(output)
+		(text "Yspeed_out[10..0]" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed_out[10..0]" (rect 166 91 275 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 96)(pt 280 96)(line_width 3))
+	)
+	(port
+		(pt 296 112)
+		(output)
+		(text "topLeftX[10..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "topLeftX[10..0]" (rect 185 107 275 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 112)(pt 280 112)(line_width 3))
+	)
+	(port
+		(pt 296 128)
+		(output)
+		(text "topLeftY[10..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "topLeftY[10..0]" (rect 185 123 275 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 128)(pt 280 128)(line_width 3))
+	)
+	(parameter
+		"initial_x"
+		"100"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y"
+		"220"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_x_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"ball_id"
+		"0"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(parameter
+		"hitball_color"
+		"fe"
+		""
+		(type "PARAMETER_UNSIGNED_HEX")	)
+	(drawing
+		(rectangle (rect 16 16 280 304))
+	)
+	(annotation_block (parameter)(rect 1280 656 1487 789))
+)
+(symbol
+	(rect 296 488 592 808)
+	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "hitBall_1" (rect 8 299 51 316)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
+		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "chargeUp       " (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeUp       " (rect 21 107 102 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "chargeDown       " (rect 0 0 96 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeDown       " (rect 21 123 117 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "chargeLeft           " (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeLeft           " (rect 21 139 122 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "chargeRight             " (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeRight             " (rect 21 155 136 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
+		(text "releaseBall" (rect 21 171 85 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "collision" (rect 21 187 68 206)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "collision_with_ball" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "collision_with_ball" (rect 21 203 129 222)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "collision_with_wall" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "collision_with_wall" (rect 21 219 130 238)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "collided_wall[1..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "collided_wall[1..0]" (rect 21 235 129 254)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "HitEdgeCode[3..0]" (rect 21 251 129 270)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "Xspeed_in[10..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed_in[10..0]" (rect 21 267 122 286)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "Yspeed_in[10..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed_in[10..0]" (rect 21 283 122 302)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 288)(pt 16 288)(line_width 3))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetX[10..0]" (rect 147 27 275 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(port
+		(pt 296 48)
+		(output)
+		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetY[10..0]" (rect 147 43 275 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 48)(pt 280 48)(line_width 3))
+	)
+	(port
+		(pt 296 64)
+		(output)
+		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_DR       " (rect 188 59 275 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 64)(pt 280 64))
+	)
+	(port
+		(pt 296 80)
+		(output)
+		(text "Xspeed_out[10..0]" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed_out[10..0]" (rect 166 75 275 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 80)(pt 280 80)(line_width 3))
+	)
+	(port
+		(pt 296 96)
+		(output)
+		(text "Yspeed_out[10..0]" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed_out[10..0]" (rect 166 91 275 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 96)(pt 280 96)(line_width 3))
+	)
+	(port
+		(pt 296 112)
+		(output)
+		(text "topLeftX[10..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "topLeftX[10..0]" (rect 185 107 275 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 112)(pt 280 112)(line_width 3))
+	)
+	(port
+		(pt 296 128)
+		(output)
+		(text "topLeftY[10..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "topLeftY[10..0]" (rect 185 123 275 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 128)(pt 280 128)(line_width 3))
+	)
+	(parameter
+		"initial_x"
+		"500"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y"
+		"220"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_x_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"ball_id"
+		"1"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(parameter
+		"hitball_color"
+		"e0"
+		""
+		(type "PARAMETER_UNSIGNED_HEX")	)
+	(drawing
+		(rectangle (rect 16 16 280 304))
+	)
+	(annotation_block (parameter)(rect 296 344 503 477))
+)
+(symbol
+	(rect 296 1000 592 1320)
+	(text "HitBall_Block" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "hitBall_2" (rect 8 299 51 316)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "pixelX[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelX[10..0]" (rect 21 27 96 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixelY[10..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "pixelY[10..0]" (rect 21 43 96 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 59 37 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "resetN" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "resetN" (rect 21 75 59 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "startOfFrame" (rect 0 0 79 19)(font "Intel Clear" (font_size 8)))
+		(text "startOfFrame" (rect 21 91 100 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "chargeUp       " (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeUp       " (rect 21 107 102 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "chargeDown       " (rect 0 0 96 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeDown       " (rect 21 123 117 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "chargeLeft           " (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeLeft           " (rect 21 139 122 158)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "chargeRight             " (rect 0 0 115 19)(font "Intel Clear" (font_size 8)))
+		(text "chargeRight             " (rect 21 155 136 174)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "releaseBall" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
+		(text "releaseBall" (rect 21 171 85 190)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "collision" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "collision" (rect 21 187 68 206)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "collision_with_ball" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "collision_with_ball" (rect 21 203 129 222)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "collision_with_wall" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "collision_with_wall" (rect 21 219 130 238)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "collided_wall[1..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "collided_wall[1..0]" (rect 21 235 129 254)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "HitEdgeCode[3..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "HitEdgeCode[3..0]" (rect 21 251 129 270)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "Xspeed_in[10..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed_in[10..0]" (rect 21 267 122 286)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "Yspeed_in[10..0]" (rect 0 0 101 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed_in[10..0]" (rect 21 283 122 302)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 288)(pt 16 288)(line_width 3))
+	)
+	(port
+		(pt 296 32)
+		(output)
+		(text "hitBall_OffsetX[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetX[10..0]" (rect 147 27 275 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 32)(pt 280 32)(line_width 3))
+	)
+	(port
+		(pt 296 48)
+		(output)
+		(text "hitBall_OffsetY[10..0]" (rect 0 0 128 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_OffsetY[10..0]" (rect 147 43 275 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 48)(pt 280 48)(line_width 3))
+	)
+	(port
+		(pt 296 64)
+		(output)
+		(text "hitBall_DR       " (rect 0 0 87 19)(font "Intel Clear" (font_size 8)))
+		(text "hitBall_DR       " (rect 188 59 275 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 64)(pt 280 64))
+	)
+	(port
+		(pt 296 80)
+		(output)
+		(text "Xspeed_out[10..0]" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "Xspeed_out[10..0]" (rect 166 75 275 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 80)(pt 280 80)(line_width 3))
+	)
+	(port
+		(pt 296 96)
+		(output)
+		(text "Yspeed_out[10..0]" (rect 0 0 109 19)(font "Intel Clear" (font_size 8)))
+		(text "Yspeed_out[10..0]" (rect 166 91 275 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 96)(pt 280 96)(line_width 3))
+	)
+	(port
+		(pt 296 112)
+		(output)
+		(text "topLeftX[10..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "topLeftX[10..0]" (rect 185 107 275 126)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 112)(pt 280 112)(line_width 3))
+	)
+	(port
+		(pt 296 128)
+		(output)
+		(text "topLeftY[10..0]" (rect 0 0 90 19)(font "Intel Clear" (font_size 8)))
+		(text "topLeftY[10..0]" (rect 185 123 275 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 296 128)(pt 280 128)(line_width 3))
+	)
+	(parameter
+		"initial_x"
+		"300"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y"
+		"220"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_x_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"initial_y_speed"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"ball_id"
+		"2"
+		""
+		(type "PARAMETER_UNSIGNED_DEC")	)
+	(parameter
+		"hitball_color"
+		"0e"
+		""
+		(type "PARAMETER_UNSIGNED_HEX")	)
+	(drawing
+		(rectangle (rect 16 16 280 304))
+	)
+	(annotation_block (parameter)(rect 296 856 503 989))
+)
+(symbol
+	(rect 1232 1160 1576 1368)
+	(text "balls_speed_calculator" (rect 5 0 115 12)(font "Arial" ))
+	(text "balls_speed_calc_module" (rect 8 192 133 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
+		(text "startOfFrame" (rect 21 59 88 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "balls_collide[2..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "balls_collide[2..0]" (rect 21 75 105 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "Balls_col_ID[1..0][3..0]" (rect 0 0 113 12)(font "Arial" ))
+		(text "Balls_col_ID[1..0][3..0]" (rect 21 91 134 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Xspeed_VEC_in[2..0][10..0]" (rect 0 0 135 12)(font "Arial" ))
+		(text "Xspeed_VEC_in[2..0][10..0]" (rect 21 107 156 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Yspeed_VEC_in[2..0][10..0]" (rect 0 0 138 12)(font "Arial" ))
+		(text "Yspeed_VEC_in[2..0][10..0]" (rect 21 123 159 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "topLeftX_VEC_in[2..0][10..0]" (rect 0 0 141 12)(font "Arial" ))
+		(text "topLeftX_VEC_in[2..0][10..0]" (rect 21 139 162 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "topLeftY_VEC_in[2..0][10..0]" (rect 0 0 143 12)(font "Arial" ))
+		(text "topLeftY_VEC_in[2..0][10..0]" (rect 21 155 164 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 344 32)
+		(output)
+		(text "Xspeed_VEC_out[2..0][10..0]" (rect 0 0 142 12)(font "Arial" ))
+		(text "Xspeed_VEC_out[2..0][10..0]" (rect 203 27 323 39)(font "Arial" ))
+		(line (pt 344 32)(pt 328 32)(line_width 3))
+	)
+	(port
+		(pt 344 48)
+		(output)
+		(text "Yspeed_VEC_out[2..0][10..0]" (rect 0 0 145 12)(font "Arial" ))
+		(text "Yspeed_VEC_out[2..0][10..0]" (rect 201 43 323 55)(font "Arial" ))
+		(line (pt 344 48)(pt 328 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 328 192))
+	)
 )
 (connector
 	(text "pixelY[10..0]" (rect 346 96 405 113)(font "Intel Clear" ))
@@ -1459,5 +1644,140 @@ agreement for further details.
 	(text "ballwall_collide[0]" (rect 1202 1008 1292 1025)(font "Intel Clear" ))
 	(pt 1144 1024)
 	(pt 1280 1024)
+)
+(connector
+	(text "Xspeed_VEC[(NUM_BALLS)..0][10..0]" (rect 1049 1256 1226 1273)(font "Intel Clear" ))
+	(pt 1024 1272)
+	(pt 1232 1272)
+	(bus)
+)
+(connector
+	(text "Yspeed_VEC[(NUM_BALLS)..0][10..0]" (rect 1049 1272 1226 1289)(font "Intel Clear" ))
+	(pt 1024 1288)
+	(pt 1232 1288)
+	(bus)
+)
+(connector
+	(text "clk" (rect 1144 1176 1158 1193)(font "Intel Clear" ))
+	(pt 1024 1192)
+	(pt 1232 1192)
+)
+(connector
+	(text "resetN" (rect 1136 1192 1169 1204)(font "Arial" ))
+	(pt 1024 1208)
+	(pt 1232 1208)
+)
+(connector
+	(text "startOfFrame" (rect 1120 1208 1183 1225)(font "Intel Clear" ))
+	(pt 1024 1224)
+	(pt 1232 1224)
+)
+(connector
+	(text "balls_collide[2..0]" (rect 1148 1224 1232 1241)(font "Intel Clear" ))
+	(pt 1024 1240)
+	(pt 1232 1240)
+	(bus)
+)
+(connector
+	(text "Balls_col_ID[1..0][3..0]" (rect 1116 1240 1223 1257)(font "Intel Clear" ))
+	(pt 1024 1256)
+	(pt 1232 1256)
+	(bus)
+)
+(connector
+	(text "topLeftX[1][10..0]" (rect 617 584 700 601)(font "Intel Clear" ))
+	(pt 704 600)
+	(pt 592 600)
+	(bus)
+)
+(connector
+	(text "topLeftY[1][10..0]" (rect 617 600 700 617)(font "Intel Clear" ))
+	(pt 704 616)
+	(pt 592 616)
+	(bus)
+)
+(connector
+	(text "topLeftX[2][10..0]" (rect 617 1096 700 1113)(font "Intel Clear" ))
+	(pt 704 1112)
+	(pt 592 1112)
+	(bus)
+)
+(connector
+	(text "topLeftY[2][10..0]" (rect 617 1112 700 1129)(font "Intel Clear" ))
+	(pt 704 1128)
+	(pt 592 1128)
+	(bus)
+)
+(connector
+	(text "topLeftX[0][10..0]" (rect 1601 896 1684 913)(font "Intel Clear" ))
+	(pt 1688 912)
+	(pt 1576 912)
+	(bus)
+)
+(connector
+	(text "topLeftY[0][10..0]" (rect 1601 912 1684 929)(font "Intel Clear" ))
+	(pt 1688 928)
+	(pt 1576 928)
+	(bus)
+)
+(connector
+	(text "topLeftX[(NUM_BALLS)..0][10..0]" (rect 1049 1288 1205 1305)(font "Intel Clear" ))
+	(pt 1232 1304)
+	(pt 1024 1304)
+	(bus)
+)
+(connector
+	(text "topLeftY[(NUM_BALLS)..0][10..0]" (rect 1049 1304 1205 1321)(font "Intel Clear" ))
+	(pt 1232 1320)
+	(pt 1024 1320)
+	(bus)
+)
+(connector
+	(text "Xspeed_VEC_new[2][10..0]" (rect 184 1256 313 1273)(font "Intel Clear" ))
+	(pt 160 1272)
+	(pt 296 1272)
+	(bus)
+)
+(connector
+	(text "Yspeed_VEC_new[2][10..0]" (rect 184 1272 313 1289)(font "Intel Clear" ))
+	(pt 160 1288)
+	(pt 296 1288)
+	(bus)
+)
+(connector
+	(text "Xspeed_VEC_new[1][10..0]" (rect 184 744 313 761)(font "Intel Clear" ))
+	(pt 160 760)
+	(pt 296 760)
+	(bus)
+)
+(connector
+	(text "Yspeed_VEC_new[1][10..0]" (rect 184 760 313 777)(font "Intel Clear" ))
+	(pt 160 776)
+	(pt 296 776)
+	(bus)
+)
+(connector
+	(text "Xspeed_VEC_new[0][10..0]" (rect 1168 1056 1297 1073)(font "Intel Clear" ))
+	(pt 1144 1072)
+	(pt 1280 1072)
+	(bus)
+)
+(connector
+	(text "Yspeed_VEC_new[0][10..0]" (rect 1168 1072 1297 1089)(font "Intel Clear" ))
+	(pt 1144 1088)
+	(pt 1280 1088)
+	(bus)
+)
+(connector
+	(text "Xspeed_VEC_new[(NUM_BALLS)..0][10..0]" (rect 1577 1176 1779 1193)(font "Intel Clear" ))
+	(pt 1576 1192)
+	(pt 1760 1192)
+	(bus)
+)
+(connector
+	(text "Yspeed_VEC_new[(NUM_BALLS)..0][10..0]" (rect 1577 1192 1779 1209)(font "Intel Clear" ))
+	(pt 1576 1208)
+	(pt 1760 1208)
+	(bus)
 )
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021" (rect 168 24 527 43)(font "Intel Clear" (font_size 8)))
