@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Thu Sep 08 21:57:14 2022
+=======
+Analysis & Synthesis Status : Successful - Wed Sep 07 16:34:54 2022
+>>>>>>> add_score_and_stage_pics
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Lab1Demo
 Top-level Entity Name : TOP_VGA_DEMO_KBD
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
+<<<<<<< HEAD
 Total registers : 9609
+=======
+Total registers : 1498
+>>>>>>> add_score_and_stage_pics
 Total pins : 62
 Total virtual pins : 0
 Total block memory bits : 658,560

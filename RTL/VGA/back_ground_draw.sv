@@ -8,7 +8,11 @@ module	back_ground_draw	(
 					input	logic	resetN,
 					input 	logic	[10:0]	pixelX,
 					input 	logic	[10:0]	pixelY,
-
+					input	logic	Stage_DR, //output that the pixel should be dispalyed 
+					input	logic	[7:0] Stage_RGBout,
+					input	logic	Score_DR, //output that the pixel should be dispalyed 
+					input	logic	[7:0] Score_RGBout,
+					
 					output	logic	[7:0]	BG_RGB,
 					output	logic	[1:0]	bordersDrawReq 
 );
@@ -109,8 +113,8 @@ begin
 					greenBits <= 3'b001 ;	
 					blueBits  <= 2'b00  ; 
 					bordersDrawReq[1] <= 	1'b1 ; // pulse if drawing the boarders 
-				end
-						
+				end 
+			
 		// draw the white borders of the screen
 		if (pixelX == 0 || pixelY == 0  || pixelX == xFrameSize || pixelY == yFrameSize)
 			begin 
@@ -119,9 +123,14 @@ begin
 				blueBits  <= DARK_COLOR ;	// 3rd bit will be truncated
 			end
 
-
-		
-	BG_RGB =  {redBits , greenBits , blueBits} ; //collect color nibbles to an 8 bit word 
+	if ( Stage_DR == 1'b1 )   //stage text
+		BG_RGB <= Stage_RGBout;  
+			
+	else if ( Score_DR == 1'b1 )   //score text
+		BG_RGB <= Score_RGBout; 
+	
+	else
+		BG_RGB =  {redBits , greenBits , blueBits} ; //collect color nibbles to an 8 bit word 
 			
 
 

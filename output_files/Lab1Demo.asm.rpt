@@ -1,5 +1,9 @@
 Assembler report for Lab1Demo
+<<<<<<< HEAD
 Thu Sep 08 21:59:15 2022
+=======
+Wed Sep 07 16:36:00 2022
+>>>>>>> add_score_and_stage_pics
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -39,7 +43,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Assembler Status      ; Successful - Thu Sep 08 21:59:15 2022 ;
+=======
+; Assembler Status      ; Successful - Wed Sep 07 16:36:00 2022 ;
+>>>>>>> add_score_and_stage_pics
 ; Revision Name         ; Lab1Demo                              ;
 ; Top-level Entity Name ; TOP_VGA_DEMO_KBD                      ;
 ; Family                ; Cyclone V                             ;
@@ -78,8 +86,13 @@ agreement for further details.
 +----------------+-------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                   ;
 +----------------+-------------------------------------------------------------------------------------------+
+<<<<<<< HEAD
 ; JTAG usercode  ; 0x029DC9A5                                                                                ;
 ; Checksum       ; 0x029DC9A5                                                                                ;
+=======
+; JTAG usercode  ; 0x00F3A85E                                                                                ;
+; Checksum       ; 0x00F3A85E                                                                                ;
+>>>>>>> add_score_and_stage_pics
 +----------------+-------------------------------------------------------------------------------------------+
 
 
@@ -89,6 +102,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Thu Sep 08 21:59:07 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (115030): Assembler is generating device programming files
@@ -97,5 +111,15 @@ Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Processing ended: Thu Sep 08 21:59:15 2022
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
+=======
+    Info: Processing started: Wed Sep 07 16:35:52 2022
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1Demo -c Lab1Demo
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Wed Sep 07 16:36:00 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
+>>>>>>> add_score_and_stage_pics
 
 

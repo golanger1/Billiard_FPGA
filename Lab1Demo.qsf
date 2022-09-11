@@ -243,6 +243,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
 set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/stage_bitmapBitMap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/score_bitmapBitMap.sv
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/balls_speed_calculator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/whiteBall_moveCollision.sv

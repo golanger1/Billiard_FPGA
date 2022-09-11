@@ -214,7 +214,7 @@ VCCIO3B                      : AD13      : power  :                   : 3.3V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD14      :        :                   :         : 3B        :                
 DNU                          : AD15      :        :                   :         :           :                
 VCCPD3B4A                    : AD16      : power  :                   : 3.3V    : 3B, 4A    :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 4A        :                
+BG_RGB[5]                    : AD17      : output : 3.3-V LVTTL       :         : 4A        : N              
 VCCIO4A                      : AD18      : power  :                   : 3.3V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 4A        :                
@@ -245,8 +245,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :      
 VCCIO3B                      : AE15      : power  :                   : 3.3V    : 3B        :                
 BG_RGB[6]                    : AE16      : output : 3.3-V LVTTL       :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE17      :        :                   :         : 4A        :                
+<<<<<<< HEAD
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4A        :                
+=======
+BG_RGB[4]                    : AE18      : output : 3.3-V LVTTL       :         : 4A        : N              
+BG_RGB[0]                    : AE19      : output : 3.3-V LVTTL       :         : 4A        : N              
+>>>>>>> add_score_and_stage_pics
 GND                          : AE20      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AE21      : power  :                   : 3.3V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE22      :        :                   :         : 4A        :                
@@ -276,7 +281,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF15      :        :                   :      
 BG_RGB[5]                    : AF16      : output : 3.3-V LVTTL       :         : 4A        : N              
 GND                          : AF17      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 4A        :                
+<<<<<<< HEAD
 BG_RGB[0]                    : AF19      : output : 3.3-V LVTTL       :         : 4A        : N              
+=======
+boardersDrawReq[1]           : AF19      : output : 3.3-V LVTTL       :         : 4A        : N              
+>>>>>>> add_score_and_stage_pics
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF21      :        :                   :         : 4A        :                
 VCCIO4A                      : AF22      : power  :                   : 3.3V    : 4A        :                
@@ -307,10 +316,17 @@ HEX0[3]                      : AG16      : output : 3.3-V LVTTL       :         
 HEX0[2]                      : AG17      : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX0[5]                      : AG18      : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AG19      : power  :                   : 3.3V    : 4A        :                
+<<<<<<< HEAD
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG21      :        :                   :         : 4A        :                
 BG_RGB[4]                    : AG22      : output : 3.3-V LVTTL       :         : 4A        : N              
 BG_RGB[1]                    : AG23      : output : 3.3-V LVTTL       :         : 4A        : N              
+=======
+BG_RGB[6]                    : AG20      : output : 3.3-V LVTTL       :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG21      :        :                   :         : 4A        :                
+boardersDrawReq[0]           : AG22      : output : 3.3-V LVTTL       :         : 4A        : N              
+BG_RGB[2]                    : AG23      : output : 3.3-V LVTTL       :         : 4A        : N              
+>>>>>>> add_score_and_stage_pics
 GND                          : AG24      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
 OVGA[6]                      : AG26      : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -901,8 +917,13 @@ GND                          : V12       : gnd    :                   :         
 VCC                          : V13       : power  :                   : 1.1V    :           :                
 GND                          : V14       : gnd    :                   :         :           :                
 VCC                          : V15       : power  :                   : 1.1V    :           :                
+<<<<<<< HEAD
 BG_RGB[2]                    : V16       : output : 3.3-V LVTTL       :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 4A        :                
+=======
+RESERVED_INPUT_WITH_WEAK_PULLUP : V16       :        :                   :         : 4A        :                
+BG_RGB[1]                    : V17       : output : 3.3-V LVTTL       :         : 4A        : N              
+>>>>>>> add_score_and_stage_pics
 HEX0[1]                      : V18       : output : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : V19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 6B        :                

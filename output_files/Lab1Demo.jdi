@@ -1,11 +1,19 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="899e8abe316b47149669"/>
+=======
+    <hash md5_digest_80b="6553a98e88e55be4248d"/>
+>>>>>>> add_score_and_stage_pics
   </project>
   <file_info>
     <file device="5CSXFC6D6F31C6" path="Lab1Demo.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+<<<<<<< HEAD
   <hub_info hub_ir_width="10" ir_width="10" node_addr_width="2" node_count="3"/>
+=======
+  <hub_info hub_ir_width="8" ir_width="8" node_addr_width="1" node_count="1"/>
+>>>>>>> add_score_and_stage_pics
   <node_info>
     <node hpath="HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" instance_id="0" mfg_id="110" node_id="3" sld_node_info="0x10186E00" version="2">
       <parameters>
@@ -69,6 +77,7 @@
         <port name="jtag.bp.inst5_inst_LPM_CONSTANT_component_ag_mgl_prim1_tdo"/>
       </outputs>
     </node>
+<<<<<<< HEAD
     <node hpath="Number_position:inst2|lpm_constant:LPM_CONSTANT_component|lpm_constant_og8:ag|sld_mod_ram_rom:mgl_prim1" instance_id="1" mfg_id="110" node_id="3" sld_node_info="0x10186E01" version="2">
       <parameters>
         <parameter name="SLD_NODE_INFO" type="dec" value="270036480"/>
@@ -194,6 +203,8 @@
       <inputs/>
       <outputs/>
     </node>
+=======
+>>>>>>> add_score_and_stage_pics
   </node_info>
   <sld_infos>
     <sld_info hpath="sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:instrumentation_fabric" library="alt_sld_fab" name="instrumentation_fabric">
