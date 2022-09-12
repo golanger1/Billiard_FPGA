@@ -20,17 +20,21 @@ module Sounds_SM
 	// state machine decleration 
 	enum logic [2:0] {s_idle, s_win, s_lose, s_collision} sound_ps, sound_ns ;
 	
-	logic [4:0] SOF_counter;
+	logic [4:0] SOF_counter_ns, SOF_counter_ps;
+	logic [3:0] freq_ns, freq_ps;
+	
+	assign freq = freq_ps;
 	
 	always @(posedge clk or negedge resetN)
    begin
 	   
-   if ( !resetN )  // Asynchronic reset
-		sound_ps <= s_idle;
-   
-	else 		// Synchronic logic FSM
-		sound_ps <= sound_ns;
+		if ( !resetN )  // Asynchronic reset
+			sound_ps <= s_idle;
 		
+		else 		// Synchronic logic FSM
+			sound_ps <= sound_ns;
+			SOF_counter_ps <= SOF_counter_ns;
+			freq_ps <= freq_ns;
 	end // always sync
 	
 	
@@ -41,15 +45,14 @@ module Sounds_SM
 		sound_ns = sound_ps; 
 		enable_sound = 1'b0;
 		
-		SOF_counter = SOF_counter;
-		freq = freq;
+		SOF_counter_ns = SOF_counter_ps;
+		freq_ns = freq_ps;
 			
 		case (sound_ps)
 		
 			//Note: the implementation of the idle state is already given you as an example
 			s_idle: begin
-				
-				SOF_counter = 5'd0;
+				SOF_counter_ns = 5'd0;
 				
 				if ( collisionPulse == 1'b1 )
 					begin
@@ -66,20 +69,20 @@ module Sounds_SM
 				end // idle
 						
 			s_win: begin
-				freq = 4'd9;
+				freq_ns = 4'd9;
 				enable_sound = 1'b1;
 				
 				if ( startOfFrame )
 					begin
-						SOF_counter = SOF_counter + 5'd1;
+						SOF_counter_ns = SOF_counter_ps + 5'd1;
 					end
 				
 				if ( collisionPulse == 1'b1 ) // if collision
 					begin
-						SOF_counter = 5'd0;
+						SOF_counter_ns = 5'd0;
 						sound_ns = s_collision;
 					end
-				else if ( SOF_counter == 5'd29 ) // if one sec didn't pass
+				else if ( SOF_counter_ps == 5'd29 ) // if one sec didn't pass
 					begin
 						sound_ns = s_idle;
 					end
@@ -87,25 +90,25 @@ module Sounds_SM
 				
 			
 			s_lose: begin
-				freq = 4'd1;
+				freq_ns = 4'd1;
 				enable_sound = 1'b1;
 				
 				if ( startOfFrame )
 					begin
-						SOF_counter = SOF_counter + 5'd1;
+						SOF_counter_ns = SOF_counter_ps + 5'd1;
 					end
 				
 				if ( winPulse == 1'b1 ) // if won
 					begin
-						SOF_counter = 5'd0;
+						SOF_counter_ns = 5'd0;
 						sound_ns = s_win;
 					end
 				else if ( collisionPulse == 1'b1 ) // if collision
 					begin
-						SOF_counter = 5'd0;
+						SOF_counter_ns = 5'd0;
 						sound_ns = s_collision;
 					end
-				else if ( SOF_counter == 5'd29 )// if one sec didn't pass
+				else if ( SOF_counter_ps == 5'd29 )// if one sec didn't pass
 					begin
 						sound_ns = s_idle;
 					end
@@ -114,25 +117,25 @@ module Sounds_SM
 			
 			
 			s_collision: begin
-				freq = 4'd5;
+				freq_ns = 4'd5;
 				enable_sound = 1'b1;
 				
 				if ( startOfFrame )
 					begin
-						SOF_counter = SOF_counter + 5'd1;
+						SOF_counter_ns = SOF_counter_ps + 5'd1;
 					end
 				
 				if ( winPulse == 1'b1 ) // if won
 					begin
-						SOF_counter = 5'd0;
+						SOF_counter_ns = 5'd0;
 						sound_ns = s_win;
 					end
 				else if ( losePulse == 1'b1 )// if one sec didn't pass
 					begin
-						SOF_counter = 5'd0;
+						SOF_counter_ns = 5'd0;
 						sound_ns = s_lose;
 					end
-				else if ( SOF_counter == 5'd29 )// if one sec didn't pass
+				else if ( SOF_counter_ps == 5'd29 )// if one sec didn't pass
 					begin
 						sound_ns = s_idle;
 					end

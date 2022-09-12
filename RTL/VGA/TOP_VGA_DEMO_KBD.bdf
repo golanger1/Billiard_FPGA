@@ -35,7 +35,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 360 912 536 928)
+	(rect 464 896 640 912)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "AUD_ADCDAT" (rect 9 0 83 12)(font "Arial" ))
 	(pt 176 8)
@@ -115,7 +115,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1048 960 1224 976)
+	(rect 1152 968 1328 984)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "HEX0[6..0]" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
@@ -227,7 +227,7 @@ agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 928 912 1104 928)
+	(rect 1032 920 1208 936)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "AUDOUT[7..0]" (rect 90 0 161 12)(font "Arial" ))
 	(pt 0 8)
@@ -243,7 +243,7 @@ agreement for further details.
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
 )
 (symbol
-	(rect 848 936 1032 1016)
+	(rect 952 944 1136 1024)
 	(text "SEG7" (rect 5 0 33 12)(font "Arial" ))
 	(text "inst10" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
@@ -382,7 +382,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 584 888 808 1016)
+	(rect 688 896 912 1024)
 	(text "AUDIO" (rect 5 0 45 19)(font "Intel Clear" (font_size 8)))
 	(text "inst18" (rect 8 107 36 124)(font "Intel Clear" ))
 	(port
@@ -2296,6 +2296,70 @@ agreement for further details.
 	)
 	(annotation_block (parameter)(rect 488 1992 625 2049))
 )
+(symbol
+	(rect 344 928 552 1072)
+	(text "Sounds_SM" (rect 5 0 62 12)(font "Arial" ))
+	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "startOfFrame" (rect 0 0 67 12)(font "Arial" ))
+		(text "startOfFrame" (rect 21 59 88 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "winPulse" (rect 0 0 42 12)(font "Arial" ))
+		(text "winPulse" (rect 21 75 63 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "losePulse" (rect 0 0 47 12)(font "Arial" ))
+		(text "losePulse" (rect 21 91 68 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "collisionPulse" (rect 0 0 66 12)(font "Arial" ))
+		(text "collisionPulse" (rect 21 107 87 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "enable_sound" (rect 0 0 67 12)(font "Arial" ))
+		(text "enable_sound" (rect 131 27 187 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "freq[3..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "freq[3..0]" (rect 149 43 187 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 128))
+	)
+)
 (connector
 	(pt 1328 1248)
 	(pt 1360 1248)
@@ -2391,66 +2455,6 @@ agreement for further details.
 (connector
 	(pt -144 112)
 	(pt -184 112)
-)
-(connector
-	(pt 832 968)
-	(pt 848 968)
-	(bus)
-)
-(connector
-	(pt 1032 968)
-	(pt 1048 968)
-	(bus)
-)
-(connector
-	(pt 832 968)
-	(pt 832 1040)
-	(bus)
-)
-(connector
-	(pt 928 920)
-	(pt 808 920)
-	(bus)
-)
-(connector
-	(text "keypadValid" (rect 424 952 484 969)(font "Intel Clear" ))
-	(pt 416 968)
-	(pt 584 968)
-)
-(connector
-	(pt 552 1040)
-	(pt 552 984)
-	(bus)
-)
-(connector
-	(pt 584 984)
-	(pt 552 984)
-	(bus)
-)
-(connector
-	(text "resetN" (rect 544 936 574 953)(font "Intel Clear" ))
-	(pt 584 952)
-	(pt 536 952)
-)
-(connector
-	(text "clk" (rect 544 920 558 937)(font "Intel Clear" ))
-	(pt 584 936)
-	(pt 536 936)
-)
-(connector
-	(pt 584 920)
-	(pt 536 920)
-)
-(connector
-	(text "keyPad[3..0]" (rect 424 1024 484 1041)(font "Intel Clear" ))
-	(pt 416 1040)
-	(pt 552 1040)
-	(bus)
-)
-(connector
-	(pt 552 1040)
-	(pt 832 1040)
-	(bus)
 )
 (connector
 	(text "clk" (rect 464 680 478 697)(font "Intel Clear" ))
@@ -3413,13 +3417,119 @@ agreement for further details.
 	(pt 1232 1192)
 	(bus)
 )
+(connector
+	(pt 936 976)
+	(pt 952 976)
+	(bus)
+)
+(connector
+	(pt 1136 976)
+	(pt 1152 976)
+	(bus)
+)
+(connector
+	(pt 936 976)
+	(pt 936 1048)
+	(bus)
+)
+(connector
+	(text "resetN" (rect 648 944 678 961)(font "Intel Clear" ))
+	(pt 688 960)
+	(pt 640 960)
+)
+(connector
+	(text "clk" (rect 648 928 662 945)(font "Intel Clear" ))
+	(pt 688 944)
+	(pt 640 944)
+)
+(connector
+	(pt 912 928)
+	(pt 1032 928)
+	(bus)
+)
+(connector
+	(pt 680 928)
+	(pt 680 904)
+)
+(connector
+	(pt 688 928)
+	(pt 680 928)
+)
+(connector
+	(pt 680 904)
+	(pt 640 904)
+)
+(connector
+	(text "keyPad[3..0]" (rect 640 1032 700 1049)(font "Intel Clear" ))
+	(pt 640 1048)
+	(pt 936 1048)
+	(bus)
+)
+(connector
+	(text "enable_sounds" (rect 552 944 623 961)(font "Intel Clear" ))
+	(pt 688 976)
+	(pt 616 976)
+)
+(connector
+	(text " SM_sound_freq[3..0]" (rect 577 976 677 993)(font "Intel Clear" ))
+	(pt 688 992)
+	(pt 568 992)
+	(bus)
+)
+(connector
+	(pt 616 976)
+	(pt 616 960)
+)
+(connector
+	(pt 616 960)
+	(pt 552 960)
+)
+(connector
+	(pt 568 992)
+	(pt 568 976)
+	(bus)
+)
+(connector
+	(pt 568 976)
+	(pt 552 976)
+	(bus)
+)
+(connector
+	(text "clk" (rect 272 944 286 961)(font "Intel Clear" ))
+	(pt 344 960)
+	(pt 256 960)
+)
+(connector
+	(text "resetN" (rect 272 960 305 972)(font "Arial" ))
+	(pt 344 976)
+	(pt 256 976)
+)
+(connector
+	(text "startOfFrame" (rect 272 976 335 993)(font "Intel Clear" ))
+	(pt 344 992)
+	(pt 256 992)
+)
+(connector
+	(text "collision" (rect 272 1024 310 1041)(font "Intel Clear" ))
+	(pt 344 1040)
+	(pt 256 1040)
+)
+(connector
+	(text "chargeDown       " (rect 266 992 341 1009)(font "Intel Clear" ))
+	(pt 256 1008)
+	(pt 344 1008)
+)
+(connector
+	(text "chargeUp       " (rect 266 1008 327 1025)(font "Intel Clear" ))
+	(pt 256 1024)
+	(pt 344 1024)
+)
 (junction (pt 1328 1248))
-(junction (pt 552 1040))
-(text "Output to 7Seg" (rect 912 1024 1002 1043)(font "Intel Clear" (font_size 8)))
+(text "Output to 7Seg" (rect 1016 1032 1106 1051)(font "Intel Clear" (font_size 8)))
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021" (rect -568 -72 -209 -53)(font "Intel Clear" (font_size 8)))
 (text "25 MHz Clock genrtaor" (rect 80 -256 214 -237)(font "Intel Clear" (font_size 8)))
 (text "The heyboard interface" (rect -360 -48 -218 -29)(font "Intel Clear" (font_size 8)(bold)))
-(text "Sound Unit" (rect 400 872 470 891)(font "Intel Clear" (font_size 8)(bold)))
+(text "Sound Unit" (rect 480 872 550 891)(font "Intel Clear" (font_size 8)(bold)))
 (text "Update the objects_mux" (rect 376 368 550 388)(font "Intel Clear" (font_size 10)(bold)))
 (text "Update the game_controller" (rect 328 624 528 644)(font "Intel Clear" (font_size 10)(bold)))
 (text "united hitBalls moving and drawing" (rect 392 -224 610 -205)(font "Intel Clear" (font_size 8)(bold)))
@@ -3432,9 +3542,9 @@ agreement for further details.
 (text "Score large digit     " (rect 968 1624 1093 1643)(font "Intel Clear" (font_size 9)(bold)))
 (text "Score small digit     " (rect 960 1864 1087 1883)(font "Intel Clear" (font_size 9)(bold)))
 (text "Stage digit     " (rect 968 2088 1054 2107)(font "Intel Clear" (font_size 9)(bold)))
-(rectangle (rect 328 864 1256 1080)(color 0 0 0)(line_width 3))
+(rectangle (rect 240 864 1336 1080)(color 0 0 0)(line_width 3))
 (rectangle (rect -368 -32 288 400)(color 0 0 0)(line_width 3))
 (rectangle (rect 376 -240 1224 304)(color 0 0 0)(line_width 3))
-(rectangle (rect -632 864 296 1080)(color 0 0 0)(line_width 3))
+(rectangle (rect -632 864 224 1080)(color 0 0 0)(line_width 3))
 (rectangle (rect -512 416 288 840)(color 0 0 0)(line_width 3))
 (rectangle (rect -640 1096 1256 2144)(color 0 0 0)(line_width 3))

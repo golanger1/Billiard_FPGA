@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1Demo
-Sun Sep 11 22:33:29 2022
+Mon Sep 12 18:46:23 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -19,91 +19,92 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  11. State Machine - |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5|cur_st
  12. State Machine - |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4|pres_st
  13. State Machine - |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3|present_state
- 14. Registers Protected by Synthesis
- 15. Registers Removed During Synthesis
- 16. General Register Statistics
- 17. Inverted Register Statistics
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for AUDIO:inst18|audio_codec_controller:inst2
- 20. Source assignments for KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4
- 21. Parameter Settings for User Entity Instance: AUDIO:inst18|sintable:inst1
- 22. Parameter Settings for User Entity Instance: AUDIO:inst18|addr_counter:inst9
- 23. Parameter Settings for User Entity Instance: clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i
- 24. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5
- 25. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3
- 26. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6
- 27. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5
- 28. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2
- 29. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1
- 30. Parameter Settings for User Entity Instance: square_object:stageSquare
- 31. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2
- 32. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|square_object:inst6
- 33. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst
- 34. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_1
- 35. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|square_object:inst6
- 36. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst
- 37. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:White_Ball
- 38. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:White_Ball|square_object:inst6
- 39. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst
- 40. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1
- 41. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|square_object:inst6
- 42. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|black_hole_graphic_draw:graph_hole_move
- 43. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|square_object:inst7
- 44. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|black_hole_hits_draw:hit_hole_move
- 45. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|LPM_CONSTANT:inst
- 46. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2
- 47. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|square_object:inst6
- 48. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|black_hole_graphic_draw:graph_hole_move
- 49. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|square_object:inst7
- 50. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|black_hole_hits_draw:hit_hole_move
- 51. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|LPM_CONSTANT:inst
- 52. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3
- 53. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|square_object:inst6
- 54. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|black_hole_graphic_draw:graph_hole_move
- 55. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|square_object:inst7
- 56. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|black_hole_hits_draw:hit_hole_move
- 57. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|LPM_CONSTANT:inst
- 58. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4
- 59. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|square_object:inst6
- 60. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|black_hole_graphic_draw:graph_hole_move
- 61. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|square_object:inst7
- 62. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|black_hole_hits_draw:hit_hole_move
- 63. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|LPM_CONSTANT:inst
- 64. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5
- 65. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|square_object:inst6
- 66. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|black_hole_graphic_draw:graph_hole_move
- 67. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|square_object:inst7
- 68. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|black_hole_hits_draw:hit_hole_move
- 69. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|LPM_CONSTANT:inst
- 70. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6
- 71. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|square_object:inst6
- 72. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|black_hole_graphic_draw:graph_hole_move
- 73. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|square_object:inst7
- 74. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|black_hole_hits_draw:hit_hole_move
- 75. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|LPM_CONSTANT:inst
- 76. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|square_object:inst11
- 77. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component
- 78. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_stg_sqr
- 79. Parameter Settings for User Entity Instance: LPM_CONSTANT:Y_stg_sqr
- 80. Parameter Settings for User Entity Instance: square_object:scoreSquare
- 81. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_sqr
- 82. Parameter Settings for User Entity Instance: LPM_CONSTANT:Y_scr_sqr
- 83. Parameter Settings for User Entity Instance: score_stage_NumsBitMap:inst1
- 84. Parameter Settings for User Entity Instance: square_object:score_large_digit_square
- 85. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_lrg_dgt_sqr
- 86. Parameter Settings for User Entity Instance: LPM_CONSTANT:Y_digits_sqr
- 87. Parameter Settings for User Entity Instance: square_object:score_small_digit_square
- 88. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_lrg_dgt_sqr8
- 89. Parameter Settings for User Entity Instance: square_object:stage_digit_square
- 90. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_lrg_dgt_sqr9
- 91. Parameter Settings for User Entity Instance: NumbersBitMap:inst15
- 92. Parameter Settings for User Entity Instance: LPM_CONSTANT:zero_vec_const
- 93. In-System Memory Content Editor Settings
- 94. Post-Synthesis Netlist Statistics for Top Partition
- 95. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
- 96. Elapsed Time Per Partition
- 97. Analysis & Synthesis Messages
- 98. Analysis & Synthesis Suppressed Messages
+ 14. State Machine - |TOP_VGA_DEMO_KBD|Sounds_SM:inst2|sound_ps
+ 15. Registers Protected by Synthesis
+ 16. Logic Cells Representing Combinational Loops
+ 17. Registers Removed During Synthesis
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for AUDIO:inst18|audio_codec_controller:inst2
+ 22. Source assignments for KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4
+ 23. Parameter Settings for User Entity Instance: AUDIO:inst18|sintable:inst1
+ 24. Parameter Settings for User Entity Instance: AUDIO:inst18|addr_counter:inst9
+ 25. Parameter Settings for User Entity Instance: clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i
+ 26. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2
+ 27. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|square_object:inst6
+ 28. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst
+ 29. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_1
+ 30. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|square_object:inst6
+ 31. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst
+ 32. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:White_Ball
+ 33. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:White_Ball|square_object:inst6
+ 34. Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst
+ 35. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1
+ 36. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|square_object:inst6
+ 37. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|black_hole_graphic_draw:graph_hole_move
+ 38. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|square_object:inst7
+ 39. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|black_hole_hits_draw:hit_hole_move
+ 40. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_1|LPM_CONSTANT:inst
+ 41. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2
+ 42. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|square_object:inst6
+ 43. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|black_hole_graphic_draw:graph_hole_move
+ 44. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|square_object:inst7
+ 45. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|black_hole_hits_draw:hit_hole_move
+ 46. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_2|LPM_CONSTANT:inst
+ 47. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3
+ 48. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|square_object:inst6
+ 49. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|black_hole_graphic_draw:graph_hole_move
+ 50. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|square_object:inst7
+ 51. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|black_hole_hits_draw:hit_hole_move
+ 52. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_3|LPM_CONSTANT:inst
+ 53. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4
+ 54. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|square_object:inst6
+ 55. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|black_hole_graphic_draw:graph_hole_move
+ 56. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|square_object:inst7
+ 57. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|black_hole_hits_draw:hit_hole_move
+ 58. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_4|LPM_CONSTANT:inst
+ 59. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5
+ 60. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|square_object:inst6
+ 61. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|black_hole_graphic_draw:graph_hole_move
+ 62. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|square_object:inst7
+ 63. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|black_hole_hits_draw:hit_hole_move
+ 64. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_5|LPM_CONSTANT:inst
+ 65. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6
+ 66. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|square_object:inst6
+ 67. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|black_hole_graphic_draw:graph_hole_move
+ 68. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|square_object:inst7
+ 69. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|black_hole_hits_draw:hit_hole_move
+ 70. Parameter Settings for User Entity Instance: all_holes_block:inst9|black_hole_block:hole_6|LPM_CONSTANT:inst
+ 71. Parameter Settings for User Entity Instance: square_object:stageSquare
+ 72. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_stg_sqr
+ 73. Parameter Settings for User Entity Instance: LPM_CONSTANT:Y_stg_sqr
+ 74. Parameter Settings for User Entity Instance: square_object:scoreSquare
+ 75. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_sqr
+ 76. Parameter Settings for User Entity Instance: LPM_CONSTANT:Y_scr_sqr
+ 77. Parameter Settings for User Entity Instance: score_stage_NumsBitMap:inst1
+ 78. Parameter Settings for User Entity Instance: square_object:score_large_digit_square
+ 79. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_lrg_dgt_sqr
+ 80. Parameter Settings for User Entity Instance: LPM_CONSTANT:Y_digits_sqr
+ 81. Parameter Settings for User Entity Instance: square_object:score_small_digit_square
+ 82. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_lrg_dgt_sqr8
+ 83. Parameter Settings for User Entity Instance: square_object:stage_digit_square
+ 84. Parameter Settings for User Entity Instance: LPM_CONSTANT:X_scr_lrg_dgt_sqr9
+ 85. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5
+ 86. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3
+ 87. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6
+ 88. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5
+ 89. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2
+ 90. Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1
+ 91. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|square_object:inst11
+ 92. Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component
+ 93. Parameter Settings for User Entity Instance: NumbersBitMap:inst15
+ 94. Parameter Settings for User Entity Instance: LPM_CONSTANT:zero_vec_const
+ 95. In-System Memory Content Editor Settings
+ 96. Post-Synthesis Netlist Statistics for Top Partition
+ 97. Elapsed Time Per Partition
+ 98. Analysis & Synthesis Messages
+ 99. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -130,13 +131,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Sep 11 22:33:29 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 12 18:46:22 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1523                                        ;
+; Total registers                 ; 1526                                        ;
 ; Total pins                      ; 62                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 128                                         ;
@@ -262,6 +263,7 @@ agreement for further details.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                             ; Library       ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------------+
+; RTL/AUDIO/sounds_state_machine.sv                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/sounds_state_machine.sv                                  ;               ;
 ; RTL/VGA/score_stage_NumsBitMap.sv                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/score_stage_NumsBitMap.sv                                  ;               ;
 ; RTL/VGA/stage_bitmapBitMap.sv                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/stage_bitmapBitMap.sv                                      ;               ;
 ; RTL/VGA/score_bitmapBitMap.sv                                      ; yes             ; User SystemVerilog HDL File                  ; C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/score_bitmapBitMap.sv                                      ;               ;
@@ -327,16 +329,16 @@ agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                             ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 2439                                                                                              ;
+; Estimate of Logic utilization (ALMs needed) ; 2449                                                                                              ;
 ;                                             ;                                                                                                   ;
-; Combinational ALUT usage for logic          ; 4052                                                                                              ;
+; Combinational ALUT usage for logic          ; 4065                                                                                              ;
 ;     -- 7 input functions                    ; 51                                                                                                ;
-;     -- 6 input functions                    ; 717                                                                                               ;
-;     -- 5 input functions                    ; 726                                                                                               ;
-;     -- 4 input functions                    ; 496                                                                                               ;
-;     -- <=3 input functions                  ; 2062                                                                                              ;
+;     -- 6 input functions                    ; 723                                                                                               ;
+;     -- 5 input functions                    ; 762                                                                                               ;
+;     -- 4 input functions                    ; 484                                                                                               ;
+;     -- <=3 input functions                  ; 2045                                                                                              ;
 ;                                             ;                                                                                                   ;
-; Dedicated logic registers                   ; 1523                                                                                              ;
+; Dedicated logic registers                   ; 1526                                                                                              ;
 ;                                             ;                                                                                                   ;
 ; I/O pins                                    ; 62                                                                                                ;
 ; Total MLAB memory bits                      ; 0                                                                                                 ;
@@ -348,9 +350,9 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                                 ;
 ;                                             ;                                                                                                   ;
 ; Maximum fan-out node                        ; clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 1064                                                                                              ;
-; Total fan-out                               ; 21028                                                                                             ;
-; Average fan-out                             ; 3.66                                                                                              ;
+; Maximum fan-out                             ; 1067                                                                                              ;
+; Total fan-out                               ; 21180                                                                                             ;
+; Average fan-out                             ; 3.68                                                                                              ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -359,9 +361,8 @@ agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                          ; Entity Name                       ; Library Name  ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+---------------+
-; |TOP_VGA_DEMO_KBD                                                                                                                       ; 4052 (2)            ; 1523 (0)                  ; 128               ; 20         ; 62   ; 0            ; |TOP_VGA_DEMO_KBD                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_KBD                  ; work          ;
-;    |AUDIO:inst18|                                                                                                                       ; 534 (0)             ; 601 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18                                                                                                                                                                                                                                                                                                                               ; AUDIO                             ; work          ;
-;       |ToneDecoder:inst4|                                                                                                               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|ToneDecoder:inst4                                                                                                                                                                                                                                                                                                             ; ToneDecoder                       ; work          ;
+; |TOP_VGA_DEMO_KBD                                                                                                                       ; 4065 (2)            ; 1526 (0)                  ; 128               ; 20         ; 62   ; 0            ; |TOP_VGA_DEMO_KBD                                                                                                                                                                                                                                                                                                                                            ; TOP_VGA_DEMO_KBD                  ; work          ;
+;    |AUDIO:inst18|                                                                                                                       ; 527 (0)             ; 601 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18                                                                                                                                                                                                                                                                                                                               ; AUDIO                             ; work          ;
 ;       |addr_counter:inst9|                                                                                                              ; 11 (11)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|addr_counter:inst9                                                                                                                                                                                                                                                                                                            ; addr_counter                      ; work          ;
 ;       |audio_codec_controller:inst2|                                                                                                    ; 432 (1)             ; 552 (0)                   ; 128               ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2                                                                                                                                                                                                                                                                                                  ; audio_codec_controller            ; work          ;
 ;          |CLOCK_500:CLOCK_500_inst|                                                                                                     ; 33 (33)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|CLOCK_500:CLOCK_500_inst                                                                                                                                                                                                                                                                         ; CLOCK_500                         ; work          ;
@@ -445,7 +446,7 @@ agreement for further details.
 ;                      |mux_5r7:wrfull_eq_comp_lsb_mux|                                                                                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|dac2serial:dac2serial_right_inst|dac_synchronizer:dac_synchronizer_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_p9m1:auto_generated|mux_5r7:wrfull_eq_comp_lsb_mux                                                                                                              ; mux_5r7                           ; work          ;
 ;                      |mux_5r7:wrfull_eq_comp_msb_mux|                                                                                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|dac2serial:dac2serial_right_inst|dac_synchronizer:dac_synchronizer_inst|dcfifo_mixed_widths:dcfifo_mixed_widths_component|dcfifo_p9m1:auto_generated|mux_5r7:wrfull_eq_comp_msb_mux                                                                                                              ; mux_5r7                           ; work          ;
 ;          |i2c:i2c_inst|                                                                                                                 ; 31 (31)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|audio_codec_controller:inst2|i2c:i2c_inst                                                                                                                                                                                                                                                                                     ; i2c                               ; work          ;
-;       |prescaler:inst3|                                                                                                                 ; 42 (42)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|prescaler:inst3                                                                                                                                                                                                                                                                                                               ; prescaler                         ; work          ;
+;       |prescaler:inst3|                                                                                                                 ; 44 (44)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|prescaler:inst3                                                                                                                                                                                                                                                                                                               ; prescaler                         ; work          ;
 ;       |sintable:inst1|                                                                                                                  ; 40 (40)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|AUDIO:inst18|sintable:inst1                                                                                                                                                                                                                                                                                                                ; sintable                          ; work          ;
 ;    |HART_DISPLAY:inst5|                                                                                                                 ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5                                                                                                                                                                                                                                                                                                                         ; HART_DISPLAY                      ; work          ;
 ;       |matrix_top_XY:inst|                                                                                                              ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst                                                                                                                                                                                                                                                                                                      ; matrix_top_XY                     ; work          ;
@@ -453,21 +454,22 @@ agreement for further details.
 ;             |lpm_constant_gj8:ag|                                                                                                       ; 19 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag                                                                                                                                                                                                                                              ; lpm_constant_gj8                  ; work          ;
 ;                |sld_mod_ram_rom:mgl_prim1|                                                                                              ; 19 (10)             ; 32 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1                                                                                                                                                                                                                    ; sld_mod_ram_rom                   ; work          ;
 ;                   |sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|                                                              ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr                                                                                                                                                             ; sld_rom_sr                        ; work          ;
-;    |KEYBOARD_DECODER:inst7|                                                                                                             ; 72 (0)              ; 66 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7                                                                                                                                                                                                                                                                                                                     ; KEYBOARD_DECODER                  ; work          ;
+;    |KEYBOARD_DECODER:inst7|                                                                                                             ; 67 (0)              ; 65 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7                                                                                                                                                                                                                                                                                                                     ; KEYBOARD_DECODER                  ; work          ;
 ;       |KBDINTF:inst|                                                                                                                    ; 39 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst                                                                                                                                                                                                                                                                                                        ; KBDINTF                           ; work          ;
 ;          |bitrec:inst4|                                                                                                                 ; 14 (14)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4                                                                                                                                                                                                                                                                                           ; bitrec                            ; work          ;
 ;          |byterec:inst3|                                                                                                                ; 20 (20)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3                                                                                                                                                                                                                                                                                          ; byterec                           ; work          ;
 ;          |lpf:inst5|                                                                                                                    ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5                                                                                                                                                                                                                                                                                              ; lpf                               ; work          ;
-;       |keyPad_decoder:inst4|                                                                                                            ; 25 (25)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|keyPad_decoder:inst4                                                                                                                                                                                                                                                                                                ; keyPad_decoder                    ; work          ;
-;       |singleKeyDecoder:inst1|                                                                                                          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
+;       |keyPad_decoder:inst4|                                                                                                            ; 20 (20)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|keyPad_decoder:inst4                                                                                                                                                                                                                                                                                                ; keyPad_decoder                    ; work          ;
+;       |singleKeyDecoder:inst1|                                                                                                          ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
 ;       |singleKeyDecoder:inst2|                                                                                                          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
-;       |singleKeyDecoder:inst3|                                                                                                          ; 4 (4)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
+;       |singleKeyDecoder:inst3|                                                                                                          ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
 ;       |singleKeyDecoder:inst5|                                                                                                          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
 ;       |singleKeyDecoder:inst6|                                                                                                          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6                                                                                                                                                                                                                                                                                              ; singleKeyDecoder                  ; work          ;
 ;    |SEG7:inst10|                                                                                                                        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|SEG7:inst10                                                                                                                                                                                                                                                                                                                                ; SEG7                              ; work          ;
-;    |United_HitBalls_Block:inst13|                                                                                                       ; 2482 (0)            ; 476 (0)                   ; 0                 ; 20         ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13                                                                                                                                                                                                                                                                                                               ; United_HitBalls_Block             ; work          ;
-;       |HitBall_Block:White_Ball|                                                                                                        ; 805 (0)             ; 191 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball                                                                                                                                                                                                                                                                                      ; HitBall_Block                     ; work          ;
-;          |hit_ball_moveCollision:inst|                                                                                                  ; 741 (741)           ; 180 (180)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst                                                                                                                                                                                                                                                          ; hit_ball_moveCollision            ; work          ;
+;    |Sounds_SM:inst2|                                                                                                                    ; 21 (21)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|Sounds_SM:inst2                                                                                                                                                                                                                                                                                                                            ; Sounds_SM                         ; work          ;
+;    |United_HitBalls_Block:inst13|                                                                                                       ; 2484 (0)            ; 476 (0)                   ; 0                 ; 20         ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13                                                                                                                                                                                                                                                                                                               ; United_HitBalls_Block             ; work          ;
+;       |HitBall_Block:White_Ball|                                                                                                        ; 807 (0)             ; 191 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball                                                                                                                                                                                                                                                                                      ; HitBall_Block                     ; work          ;
+;          |hit_ball_moveCollision:inst|                                                                                                  ; 743 (743)           ; 180 (180)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst                                                                                                                                                                                                                                                          ; hit_ball_moveCollision            ; work          ;
 ;          |square_object:inst6|                                                                                                          ; 64 (64)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|square_object:inst6                                                                                                                                                                                                                                                                  ; square_object                     ; work          ;
 ;       |HitBall_Block:hitBall_1|                                                                                                         ; 665 (0)             ; 139 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1                                                                                                                                                                                                                                                                                       ; HitBall_Block                     ; work          ;
 ;          |hit_ball_moveCollision:inst|                                                                                                  ; 601 (601)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst                                                                                                                                                                                                                                                           ; hit_ball_moveCollision            ; work          ;
@@ -492,8 +494,8 @@ agreement for further details.
 ;       |black_hole_block:hole_3|                                                                                                         ; 48 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3                                                                                                                                                                                                                                                                                              ; black_hole_block                  ; work          ;
 ;          |black_hole_graphicBitMap:inst1|                                                                                               ; 29 (29)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3|black_hole_graphicBitMap:inst1                                                                                                                                                                                                                                                               ; black_hole_graphicBitMap          ; work          ;
 ;          |black_hole_hitsBitMap:inst2|                                                                                                  ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3|black_hole_hitsBitMap:inst2                                                                                                                                                                                                                                                                  ; black_hole_hitsBitMap             ; work          ;
-;          |square_object:inst6|                                                                                                          ; 6 (6)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3|square_object:inst6                                                                                                                                                                                                                                                                          ; square_object                     ; work          ;
-;          |square_object:inst7|                                                                                                          ; 7 (7)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3|square_object:inst7                                                                                                                                                                                                                                                                          ; square_object                     ; work          ;
+;          |square_object:inst6|                                                                                                          ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3|square_object:inst6                                                                                                                                                                                                                                                                          ; square_object                     ; work          ;
+;          |square_object:inst7|                                                                                                          ; 6 (6)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_3|square_object:inst7                                                                                                                                                                                                                                                                          ; square_object                     ; work          ;
 ;       |black_hole_block:hole_4|                                                                                                         ; 40 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_4                                                                                                                                                                                                                                                                                              ; black_hole_block                  ; work          ;
 ;          |black_hole_graphicBitMap:inst1|                                                                                               ; 29 (29)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_4|black_hole_graphicBitMap:inst1                                                                                                                                                                                                                                                               ; black_hole_graphicBitMap          ; work          ;
 ;          |black_hole_hitsBitMap:inst2|                                                                                                  ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|all_holes_block:inst9|black_hole_block:hole_4|black_hole_hitsBitMap:inst2                                                                                                                                                                                                                                                                  ; black_hole_hitsBitMap             ; work          ;
@@ -514,9 +516,9 @@ agreement for further details.
 ;    |clock_divider:inst12|                                                                                                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12                                                                                                                                                                                                                                                                                                                       ; clock_divider                     ; clock_divider ;
 ;       |clock_divider_0002:clock_divider_inst|                                                                                           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12|clock_divider_0002:clock_divider_inst                                                                                                                                                                                                                                                                                 ; clock_divider_0002                ; clock_divider ;
 ;          |altera_pll:altera_pll_i|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|clock_divider:inst12|clock_divider_0002:clock_divider_inst|altera_pll:altera_pll_i                                                                                                                                                                                                                                                         ; altera_pll                        ; work          ;
-;    |game_controller:inst14|                                                                                                             ; 20 (20)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|game_controller:inst14                                                                                                                                                                                                                                                                                                                     ; game_controller                   ; work          ;
+;    |game_controller:inst14|                                                                                                             ; 21 (21)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|game_controller:inst14                                                                                                                                                                                                                                                                                                                     ; game_controller                   ; work          ;
 ;    |objects_mux:inst16|                                                                                                                 ; 9 (9)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|objects_mux:inst16                                                                                                                                                                                                                                                                                                                         ; objects_mux                       ; work          ;
-;    |score_bitmapBitMap:scoreBitMap|                                                                                                     ; 9 (9)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|score_bitmapBitMap:scoreBitMap                                                                                                                                                                                                                                                                                                             ; score_bitmapBitMap                ; work          ;
+;    |score_bitmapBitMap:scoreBitMap|                                                                                                     ; 10 (10)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|score_bitmapBitMap:scoreBitMap                                                                                                                                                                                                                                                                                                             ; score_bitmapBitMap                ; work          ;
 ;    |score_stage_NumsBitMap:inst1|                                                                                                       ; 379 (379)           ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|score_stage_NumsBitMap:inst1                                                                                                                                                                                                                                                                                                               ; score_stage_NumsBitMap            ; work          ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 100 (1)             ; 87 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld    ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 99 (0)              ; 87 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld    ;
@@ -619,6 +621,19 @@ Encoding Type:  One-Hot
 +---------------------------------+---------------------------------+-------------------------------+-----------------------------+---------------------------+----------------------------+-----------------------------+---------------------------+---------------------------+-----------------------------+-----------------------+
 
 
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |TOP_VGA_DEMO_KBD|Sounds_SM:inst2|sound_ps                                       ;
++----------------------+----------------------+-----------------+----------------+-----------------+
+; Name                 ; sound_ps.s_collision ; sound_ps.s_lose ; sound_ps.s_win ; sound_ps.s_idle ;
++----------------------+----------------------+-----------------+----------------+-----------------+
+; sound_ps.s_idle      ; 0                    ; 0               ; 0              ; 0               ;
+; sound_ps.s_win       ; 0                    ; 0               ; 1              ; 1               ;
+; sound_ps.s_lose      ; 0                    ; 1               ; 0              ; 1               ;
+; sound_ps.s_collision ; 1                    ; 0               ; 0              ; 1               ;
++----------------------+----------------------+-----------------+----------------+-----------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Protected by Synthesis                                                                                                                                                     ;
 +----------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
@@ -633,6 +648,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; Sounds_SM:inst2|freq[2]                                ;   ;
+; Sounds_SM:inst2|freq[3]                                ;   ;
+; Sounds_SM:inst2|SOF_counter_ns~9                       ;   ;
+; Sounds_SM:inst2|SOF_counter_ns~10                      ;   ;
+; Sounds_SM:inst2|SOF_counter_ns~11                      ;   ;
+; Sounds_SM:inst2|SOF_counter_ns~12                      ;   ;
+; Sounds_SM:inst2|SOF_counter_ns~13                      ;   ;
+; Number of logic cells representing combinational loops ; 7 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                                                                                                      ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
@@ -644,6 +676,9 @@ Encoding Type:  One-Hot
 ; game_controller:inst14|Balls_col_ID[0][2]                                                          ; Stuck at GND due to stuck port data_in                                                             ;
 ; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|YShotSpeed[0..5] ; Stuck at GND due to stuck port data_in                                                             ;
 ; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|XShotSpeed[0..5] ; Stuck at GND due to stuck port data_in                                                             ;
+; back_ground_draw:inst4|blueBits[0,1]                                                               ; Merged with back_ground_draw:inst4|redBits[2]                                                      ;
+; back_ground_draw:inst4|greenBits[0]                                                                ; Merged with back_ground_draw:inst4|redBits[0]                                                      ;
+; back_ground_draw:inst4|greenBits[1]                                                                ; Merged with back_ground_draw:inst4|greenBits[2]                                                    ;
 ; all_holes_block:inst9|black_hole_block:hole_6|black_hole_hitsBitMap:inst2|RGBout[3]                ; Merged with all_holes_block:inst9|black_hole_block:hole_6|black_hole_hitsBitMap:inst2|RGBout[7]    ;
 ; all_holes_block:inst9|black_hole_block:hole_6|black_hole_graphicBitMap:inst1|RGBout[0..6]          ; Merged with all_holes_block:inst9|black_hole_block:hole_6|black_hole_graphicBitMap:inst1|RGBout[7] ;
 ; all_holes_block:inst9|black_hole_block:hole_5|black_hole_hitsBitMap:inst2|RGBout[3]                ; Merged with all_holes_block:inst9|black_hole_block:hole_5|black_hole_hitsBitMap:inst2|RGBout[7]    ;
@@ -658,9 +693,6 @@ Encoding Type:  One-Hot
 ; all_holes_block:inst9|black_hole_block:hole_1|black_hole_graphicBitMap:inst1|RGBout[0..6]          ; Merged with all_holes_block:inst9|black_hole_block:hole_1|black_hole_graphicBitMap:inst1|RGBout[7] ;
 ; United_HitBalls_Block:inst13|hit_ballBitMap:inst6|RGBout[5,6]                                      ; Merged with United_HitBalls_Block:inst13|hit_ballBitMap:inst6|RGBout[7]                            ;
 ; United_HitBalls_Block:inst13|hit_ballBitMap:inst6|RGBout[2,3]                                      ; Merged with United_HitBalls_Block:inst13|hit_ballBitMap:inst6|RGBout[4]                            ;
-; back_ground_draw:inst4|blueBits[0,1]                                                               ; Merged with back_ground_draw:inst4|redBits[2]                                                      ;
-; back_ground_draw:inst4|greenBits[0]                                                                ; Merged with back_ground_draw:inst4|redBits[0]                                                      ;
-; back_ground_draw:inst4|greenBits[1]                                                                ; Merged with back_ground_draw:inst4|greenBits[2]                                                    ;
 ; all_holes_block:inst9|holes_mux:inst|RGBOut[3]                                                     ; Merged with all_holes_block:inst9|holes_mux:inst|RGBOut[7]                                         ;
 ; back_ground_draw:inst4|BG_RGB[7]                                                                   ; Merged with back_ground_draw:inst4|BG_RGB[1]                                                       ;
 ; back_ground_draw:inst4|BG_RGB[5]                                                                   ; Merged with back_ground_draw:inst4|BG_RGB[2]                                                       ;
@@ -682,7 +714,10 @@ Encoding Type:  One-Hot
 ; KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3|present_state~5                                  ; Lost fanout                                                                                        ;
 ; KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3|present_state~6                                  ; Lost fanout                                                                                        ;
 ; KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3|present_state~7                                  ; Lost fanout                                                                                        ;
-; Total Number of Removed Registers = 138                                                            ;                                                                                                    ;
+; Sounds_SM:inst2|sound_ps~4                                                                         ; Lost fanout                                                                                        ;
+; Sounds_SM:inst2|sound_ps~5                                                                         ; Lost fanout                                                                                        ;
+; Sounds_SM:inst2|sound_ps~6                                                                         ; Lost fanout                                                                                        ;
+; Total Number of Removed Registers = 141                                                            ;                                                                                                    ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 
 
@@ -691,12 +726,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1523  ;
+; Total registers                              ; 1526  ;
 ; Number of registers using Synchronous Clear  ; 442   ;
 ; Number of registers using Synchronous Load   ; 12    ;
-; Number of registers using Asynchronous Clear ; 930   ;
+; Number of registers using Asynchronous Clear ; 933   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 955   ;
+; Number of registers using Clock Enable       ; 957   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -713,17 +748,9 @@ Encoding Type:  One-Hot
 ; back_ground_draw:inst4|redBits[0]                                                                                                                                                                                                                                                                                               ; 1       ;
 ; back_ground_draw:inst4|greenBits[2]                                                                                                                                                                                                                                                                                             ; 1       ;
 ; VGA_Controller:inst|oVGA_HS_d                                                                                                                                                                                                                                                                                                   ; 1       ;
-; game_controller:inst14|balls_in_game[0]                                                                                                                                                                                                                                                                                         ; 2       ;
 ; game_controller:inst14|balls_in_game[1]                                                                                                                                                                                                                                                                                         ; 2       ;
+; game_controller:inst14|balls_in_game[0]                                                                                                                                                                                                                                                                                         ; 2       ;
 ; game_controller:inst14|balls_in_game[2]                                                                                                                                                                                                                                                                                         ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftX_FixedPoint[8]                                                                                                                                                                                                                        ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[10]                                                                                                                                                                                                                       ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[9]                                                                                                                                                                                                                        ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[8]                                                                                                                                                                                                                        ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftX_FixedPoint[12]                                                                                                                                                                                                                       ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftX_FixedPoint[11]                                                                                                                                                                                                                       ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[13]                                                                                                                                                                                                                       ; 2       ;
-; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[12]                                                                                                                                                                                                                       ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|topLeftX_FixedPoint[10]                                                                                                                                                                                                                        ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|topLeftX_FixedPoint[8]                                                                                                                                                                                                                         ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|topLeftY_FixedPoint[10]                                                                                                                                                                                                                        ; 2       ;
@@ -735,6 +762,14 @@ Encoding Type:  One-Hot
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|topLeftX_FixedPoint[14]                                                                                                                                                                                                                        ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|topLeftY_FixedPoint[13]                                                                                                                                                                                                                        ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|topLeftY_FixedPoint[12]                                                                                                                                                                                                                        ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftX_FixedPoint[8]                                                                                                                                                                                                                        ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[10]                                                                                                                                                                                                                       ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[9]                                                                                                                                                                                                                        ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[8]                                                                                                                                                                                                                        ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftX_FixedPoint[12]                                                                                                                                                                                                                       ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftX_FixedPoint[11]                                                                                                                                                                                                                       ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[13]                                                                                                                                                                                                                       ; 2       ;
+; United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|topLeftY_FixedPoint[12]                                                                                                                                                                                                                       ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|topLeftX_FixedPoint[9]                                                                                                                                                                                                                         ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|topLeftX_FixedPoint[8]                                                                                                                                                                                                                         ; 2       ;
 ; United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|topLeftY_FixedPoint[10]                                                                                                                                                                                                                        ; 2       ;
@@ -787,53 +822,48 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1|keyIsPressed                                                                                                                                                                                                                                                                                               ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4|BG_RGB[2]                                                                                                                                                                                                                                                                                                                         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux:inst16|RGBOut[0]                                                                                                                                                                                                                                                                                                                             ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[4]                                                                                                                                                                                                            ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|hit_ballBitMap:inst6|RGBout[1]                                                                                                                                                                                                                                                                                              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|game_controller:inst14|Balls_col_ID[1][1]                                                                                                                                                                                                                                                                                                                ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|YShotSpeed[26]                                                                                                                                                                                                                                                         ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|XShotSpeed[23]                                                                                                                                                                                                                                                         ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[2]                                                                                                                                                           ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Xspeed_Fixed[5]                                                                                                                                                                                                                                                         ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Yspeed_Fixed[4]                                                                                                                                                                                                                                                         ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Yspeed_Fixed[0]                                                                                                                                                                                                                                                         ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Xspeed_Fixed[4]                                                                                                                                                                                                                                                         ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Yspeed_Fixed[5]                                                                                                                                                                                                                                                        ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Xspeed_Fixed[4]                                                                                                                                                                                                                                                        ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[1]                                                                                                                                                                ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Xspeed_Fixed[23]                                                                                                                                                                                                                                                        ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Yspeed_Fixed[14]                                                                                                                                                                                                                                                        ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Yspeed_Fixed[16]                                                                                                                                                                                                                                                        ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Xspeed_Fixed[14]                                                                                                                                                                                                                                                        ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Yspeed_Fixed[10]                                                                                                                                                                                                                                                       ;
-; 7:1                ; 20 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Yspeed_Fixed[20]                                                                                                                                                                                                                                                       ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Xspeed_Fixed[11]                                                                                                                                                                                                                                                       ;
-; 7:1                ; 20 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Xspeed_Fixed[24]                                                                                                                                                                                                                                                       ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|keyPad_decoder:inst4|key[0]                                                                                                                                                                                                                                                                                                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4|greenBits[2]                                                                                                                                                                                                                                                                                                                      ;
-; 4:1                ; 44 bits   ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Mux54                                                                                                                                                                                                                                                                        ;
-; 4:1                ; 44 bits   ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Mux83                                                                                                                                                                                                                                                                        ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Xspeed_VEC_out[2][6]                                                                                                                                                                                                                                                         ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Xspeed_VEC_out[1][8]                                                                                                                                                                                                                                                         ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Yspeed_VEC_out[0][6]                                                                                                                                                                                                                                                         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4|Selector6                                                                                                                                                                                                                                                                                               ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4|Selector4                                                                                                                                                                                                                                                                                               ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3|Selector6                                                                                                                                                                                                                                                                                              ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]                             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[0]                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[1]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[2]              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0] ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[2]                      ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5|keyIsPressed                                                                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4|BG_RGB[1]                                                                                                                                                               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|objects_mux:inst16|RGBOut[7]                                                                                                                                                                   ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|constant_shift_reg[6]                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|hit_ballBitMap:inst6|RGBout[4]                                                                                                                                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|game_controller:inst14|Balls_col_ID[0][1]                                                                                                                                                      ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|YShotSpeed[20]                                                                                               ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|XShotSpeed[18]                                                                                               ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|word_counter[2] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Yspeed_Fixed[5]                                                                                               ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Xspeed_Fixed[0]                                                                                               ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Yspeed_Fixed[3]                                                                                               ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Xspeed_Fixed[0]                                                                                               ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Yspeed_Fixed[4]                                                                                              ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Xspeed_Fixed[1]                                                                                              ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|HART_DISPLAY:inst5|matrix_top_XY:inst|lpm_constant:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr|WORD_SR[2]      ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Yspeed_Fixed[30]                                                                                              ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_2|hit_ball_moveCollision:inst|Xspeed_Fixed[14]                                                                                              ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Yspeed_Fixed[19]                                                                                              ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:hitBall_1|hit_ball_moveCollision:inst|Xspeed_Fixed[22]                                                                                              ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Yspeed_Fixed[9]                                                                                              ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Yspeed_Fixed[17]                                                                                             ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Xspeed_Fixed[7]                                                                                              ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|HitBall_Block:White_Ball|hit_ball_moveCollision:inst|Xspeed_Fixed[13]                                                                                             ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|keyPad_decoder:inst4|key[0]                                                                                                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_VGA_DEMO_KBD|back_ground_draw:inst4|greenBits[2]                                                                                                                                                            ;
+; 4:1                ; 44 bits   ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Mux44                                                                                                              ;
+; 4:1                ; 44 bits   ; 88 LEs        ; 88 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Mux7                                                                                                               ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Xspeed_VEC_out[2][9]                                                                                               ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Yspeed_VEC_out[1][6]                                                                                               ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|United_HitBalls_Block:inst13|balls_speed_calculator:balls_speed_calc_module|Xspeed_VEC_out[0][6]                                                                                               ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4|Selector7                                                                                                                                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4|Selector8                                                                                                                                     ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|Sounds_SM:inst2|Selector1                                                                                                                                                                      ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3|Selector1                                                                                                                                    ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |TOP_VGA_DEMO_KBD|Sounds_SM:inst2|Selector6                                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1495,78 +1525,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5 ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; FILTER_SIZE    ; 4     ; Signed Integer                                                    ;
-+----------------+-------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3 ;
-+----------------+-----------+---------------------------------------------------------------+
-; Parameter Name ; Value     ; Type                                                          ;
-+----------------+-----------+---------------------------------------------------------------+
-; KEY_VALUE      ; 101011010 ; Unsigned Binary                                               ;
-+----------------+-----------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6 ;
-+----------------+-----------+---------------------------------------------------------------+
-; Parameter Name ; Value     ; Type                                                          ;
-+----------------+-----------+---------------------------------------------------------------+
-; KEY_VALUE      ; 001110101 ; Unsigned Binary                                               ;
-+----------------+-----------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5 ;
-+----------------+-----------+---------------------------------------------------------------+
-; Parameter Name ; Value     ; Type                                                          ;
-+----------------+-----------+---------------------------------------------------------------+
-; KEY_VALUE      ; 001110100 ; Unsigned Binary                                               ;
-+----------------+-----------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2 ;
-+----------------+-----------+---------------------------------------------------------------+
-; Parameter Name ; Value     ; Type                                                          ;
-+----------------+-----------+---------------------------------------------------------------+
-; KEY_VALUE      ; 001101011 ; Unsigned Binary                                               ;
-+----------------+-----------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1 ;
-+----------------+-----------+---------------------------------------------------------------+
-; Parameter Name ; Value     ; Type                                                          ;
-+----------------+-----------+---------------------------------------------------------------+
-; KEY_VALUE      ; 001110010 ; Unsigned Binary                                               ;
-+----------------+-----------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: square_object:stageSquare ;
-+-----------------+----------+-------------------------------------------+
-; Parameter Name  ; Value    ; Type                                      ;
-+-----------------+----------+-------------------------------------------+
-; OBJECT_WIDTH_X  ; 32       ; Signed Integer                            ;
-; OBJECT_HEIGHT_Y ; 8        ; Signed Integer                            ;
-; OBJECT_COLOR    ; 00000011 ; Unsigned Binary                           ;
-+-----------------+----------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: United_HitBalls_Block:inst13|HitBall_Block:hitBall_2 ;
 +----------------+-------+--------------------------------------------------------------------------+
@@ -2101,28 +2059,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|square_object:inst11 ;
-+-----------------+----------+---------------------------------------------------------+
-; Parameter Name  ; Value    ; Type                                                    ;
-+-----------------+----------+---------------------------------------------------------+
-; OBJECT_WIDTH_X  ; 512      ; Signed Integer                                          ;
-; OBJECT_HEIGHT_Y ; 416      ; Signed Integer                                          ;
-; OBJECT_COLOR    ; 01011011 ; Unsigned Binary                                         ;
-+-----------------+----------+---------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component ;
-+--------------------+------------------+--------------------------------------------------------------------------------+
-; Parameter Name     ; Value            ; Type                                                                           ;
-+--------------------+------------------+--------------------------------------------------------------------------------+
-; LPM_WIDTH          ; 11               ; Signed Integer                                                                 ;
-; LPM_CVALUE         ; 32               ; Signed Integer                                                                 ;
-; ENABLE_RUNTIME_MOD ; YES              ; Untyped                                                                        ;
-; CBXI_PARAMETER     ; lpm_constant_gj8 ; Untyped                                                                        ;
-+--------------------+------------------+--------------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: square_object:stageSquare ;
++-----------------+----------+-------------------------------------------+
+; Parameter Name  ; Value    ; Type                                      ;
++-----------------+----------+-------------------------------------------+
+; OBJECT_WIDTH_X  ; 32       ; Signed Integer                            ;
+; OBJECT_HEIGHT_Y ; 8        ; Signed Integer                            ;
+; OBJECT_COLOR    ; 00000011 ; Unsigned Binary                           ;
++-----------------+----------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2288,6 +2233,91 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5 ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; FILTER_SIZE    ; 4     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3 ;
++----------------+-----------+---------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                          ;
++----------------+-----------+---------------------------------------------------------------+
+; KEY_VALUE      ; 101011010 ; Unsigned Binary                                               ;
++----------------+-----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6 ;
++----------------+-----------+---------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                          ;
++----------------+-----------+---------------------------------------------------------------+
+; KEY_VALUE      ; 001110101 ; Unsigned Binary                                               ;
++----------------+-----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5 ;
++----------------+-----------+---------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                          ;
++----------------+-----------+---------------------------------------------------------------+
+; KEY_VALUE      ; 001110100 ; Unsigned Binary                                               ;
++----------------+-----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2 ;
++----------------+-----------+---------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                          ;
++----------------+-----------+---------------------------------------------------------------+
+; KEY_VALUE      ; 001101011 ; Unsigned Binary                                               ;
++----------------+-----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1 ;
++----------------+-----------+---------------------------------------------------------------+
+; Parameter Name ; Value     ; Type                                                          ;
++----------------+-----------+---------------------------------------------------------------+
+; KEY_VALUE      ; 001110010 ; Unsigned Binary                                               ;
++----------------+-----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|square_object:inst11 ;
++-----------------+----------+---------------------------------------------------------+
+; Parameter Name  ; Value    ; Type                                                    ;
++-----------------+----------+---------------------------------------------------------+
+; OBJECT_WIDTH_X  ; 512      ; Signed Integer                                          ;
+; OBJECT_HEIGHT_Y ; 416      ; Signed Integer                                          ;
+; OBJECT_COLOR    ; 01011011 ; Unsigned Binary                                         ;
++-----------------+----------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                                           ;
++--------------------+------------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH          ; 11               ; Signed Integer                                                                 ;
+; LPM_CVALUE         ; 32               ; Signed Integer                                                                 ;
+; ENABLE_RUNTIME_MOD ; YES              ; Untyped                                                                        ;
+; CBXI_PARAMETER     ; lpm_constant_gj8 ; Untyped                                                                        ;
++--------------------+------------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: NumbersBitMap:inst15 ;
 +----------------+----------+---------------------------------------+
@@ -2325,32 +2355,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------+---------------+
 ; Type                                ; Count         ;
 +-------------------------------------+---------------+
-; arriav_ff                           ; 884           ;
-;     CLR                             ; 140           ;
+; arriav_ff                           ; 887           ;
+;     CLR                             ; 141           ;
 ;     CLR SCLR                        ; 43            ;
 ;     ENA                             ; 25            ;
-;     ENA CLR                         ; 404           ;
+;     ENA CLR                         ; 406           ;
 ;     ENA CLR SCLR                    ; 71            ;
 ;     ENA SCLR                        ; 190           ;
 ;     ENA SLD                         ; 11            ;
-; arriav_lcell_comb                   ; 3525          ;
+; arriav_lcell_comb                   ; 3538          ;
 ;     arith                           ; 1291          ;
 ;         0 data inputs               ; 16            ;
 ;         1 data inputs               ; 883           ;
-;         2 data inputs               ; 250           ;
+;         2 data inputs               ; 225           ;
 ;         3 data inputs               ; 6             ;
 ;         4 data inputs               ; 66            ;
-;         5 data inputs               ; 70            ;
+;         5 data inputs               ; 95            ;
 ;     extend                          ; 48            ;
 ;         7 data inputs               ; 48            ;
-;     normal                          ; 1908          ;
+;     normal                          ; 1921          ;
 ;         0 data inputs               ; 2             ;
 ;         1 data inputs               ; 47            ;
-;         2 data inputs               ; 110           ;
-;         3 data inputs               ; 162           ;
-;         4 data inputs               ; 359           ;
-;         5 data inputs               ; 596           ;
-;         6 data inputs               ; 632           ;
+;         2 data inputs               ; 111           ;
+;         3 data inputs               ; 169           ;
+;         4 data inputs               ; 347           ;
+;         5 data inputs               ; 607           ;
+;         6 data inputs               ; 638           ;
 ;     shared                          ; 278           ;
 ;         0 data inputs               ; 2             ;
 ;         2 data inputs               ; 232           ;
@@ -2362,46 +2392,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll                         ; 1             ;
 ;                                     ;               ;
 ; Max LUT depth                       ; 9.60          ;
-; Average LUT depth                   ; 6.24          ;
+; Average LUT depth                   ; 6.22          ;
 +-------------------------------------+---------------+
 
 
-+------------------------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
-+-----------------------+------------------------------------------+
-; Type                  ; Count                                    ;
-+-----------------------+------------------------------------------+
-; arriav_ff             ; 87                                       ;
-;     CLR               ; 4                                        ;
-;     ENA               ; 30                                       ;
-;     ENA CLR           ; 29                                       ;
-;     ENA CLR SLD       ; 1                                        ;
-;     SCLR              ; 7                                        ;
-;     plain             ; 16                                       ;
-; arriav_lcell_comb     ; 100                                      ;
-;     normal            ; 100                                      ;
-;         0 data inputs ; 1                                        ;
-;         1 data inputs ; 4                                        ;
-;         2 data inputs ; 19                                       ;
-;         3 data inputs ; 24                                       ;
-;         4 data inputs ; 18                                       ;
-;         5 data inputs ; 17                                       ;
-;         6 data inputs ; 17                                       ;
-; boundary_port         ; 103                                      ;
-;                       ;                                          ;
-; Max LUT depth         ; 3.00                                     ;
-; Average LUT depth     ; 1.45                                     ;
-+-----------------------+------------------------------------------+
-
-
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:06     ;
-; sld_hub:auto_hub ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -2410,9 +2411,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Sep 11 22:32:57 2022
+    Info: Processing started: Mon Sep 12 18:45:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/audio/sounds_state_machine.sv
+    Info (12023): Found entity 1: Sounds_SM File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/sounds_state_machine.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/score_stage_numsbitmap.sv
     Info (12023): Found entity 1: score_stage_NumsBitMap File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/score_stage_NumsBitMap.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file rtl/vga/crossbitmap.sv
@@ -2603,27 +2606,9 @@ Info (12133): Instantiated megafunction "clock_divider:inst12|clock_divider_0002
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "KEYBOARD_DECODER" for hierarchy "KEYBOARD_DECODER:inst7"
-Info (12128): Elaborating entity "keyPad_decoder" for hierarchy "KEYBOARD_DECODER:inst7|keyPad_decoder:inst4"
-Warning (10230): Verilog HDL assignment warning at keyPad_decoder.sv(39): truncated value with size 32 to match size of target (4) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/keyPad_decoder.sv Line: 39
-Info (12128): Elaborating entity "KBDINTF" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst"
-Info (12128): Elaborating entity "byterec" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3"
-Info (12128): Elaborating entity "bitrec" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4"
-Info (12128): Elaborating entity "lpf" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5"
-Warning (10230): Verilog HDL assignment warning at lpf.sv(47): truncated value with size 32 to match size of target (4) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/lpf.sv Line: 47
-Warning (10230): Verilog HDL assignment warning at lpf.sv(53): truncated value with size 32 to match size of target (4) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/lpf.sv Line: 53
-Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3"
-Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6"
-Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5"
-Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2"
-Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1"
-Info (12128): Elaborating entity "back_ground_draw" for hierarchy "back_ground_draw:inst4"
-Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(43): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(75): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 75
-Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(90): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 90
-Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(125): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 125
-Info (12128): Elaborating entity "stage_bitmapBitMap" for hierarchy "stage_bitmapBitMap:stageBitMap"
-Info (12128): Elaborating entity "square_object" for hierarchy "square_object:stageSquare"
+Info (12128): Elaborating entity "Sounds_SM" for hierarchy "Sounds_SM:inst2"
+Critical Warning (10237): Verilog HDL warning at sounds_state_machine.sv(36): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/sounds_state_machine.sv Line: 36
+Critical Warning (10237): Verilog HDL warning at sounds_state_machine.sv(37): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/AUDIO/sounds_state_machine.sv Line: 37
 Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:inst"
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(76): truncated value with size 32 to match size of target (11) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/VGA_Controller.sv Line: 76
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(77): truncated value with size 32 to match size of target (11) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/VGA_Controller.sv Line: 77
@@ -3575,35 +3560,13 @@ Info (12130): Elaborated megafunction instantiation "all_holes_block:inst9|black
 Info (12133): Instantiated megafunction "all_holes_block:inst9|black_hole_block:hole_6|LPM_CONSTANT:inst" with the following parameter:
     Info (12134): Parameter "LPM_CVALUE" = "6"
     Info (12134): Parameter "LPM_WIDTH" = "3"
-Info (12128): Elaborating entity "HART_DISPLAY" for hierarchy "HART_DISPLAY:inst5"
-Info (12128): Elaborating entity "HartsMatrixBitMap" for hierarchy "HART_DISPLAY:inst5|HartsMatrixBitMap:inst6"
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
-Info (12128): Elaborating entity "square_object" for hierarchy "HART_DISPLAY:inst5|square_object:inst11"
-Info (12128): Elaborating entity "matrix_top_XY" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst"
-Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v Line: 49
-Info (12130): Elaborated megafunction instantiation "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v Line: 49
-Info (12133): Instantiated megafunction "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component" with the following parameter: File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v Line: 49
-    Info (12134): Parameter "lpm_cvalue" = "32"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=NONE"
-    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
-    Info (12134): Parameter "lpm_width" = "11"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_gj8.tdf
-    Info (12023): Found entity 1: lpm_constant_gj8 File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 26
-Info (12128): Elaborating entity "lpm_constant_gj8" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf Line: 46
-Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 31
-Info (12133): Instantiated megafunction "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 31
-    Info (12134): Parameter "CVALUE" = "00000100000"
-    Info (12134): Parameter "IS_DATA_IN_RAM" = "0"
-    Info (12134): Parameter "IS_READABLE" = "0"
-    Info (12134): Parameter "NODE_NAME" = "0"
-    Info (12134): Parameter "NUMWORDS" = "1"
-    Info (12134): Parameter "SHIFT_COUNT_BITS" = "4"
-    Info (12134): Parameter "WIDTH_WORD" = "11"
-    Info (12134): Parameter "WIDTHAD" = "1"
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 456
+Info (12128): Elaborating entity "back_ground_draw" for hierarchy "back_ground_draw:inst4"
+Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(43): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(75): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(90): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at back_ground_draw.sv(125): truncated value with size 3 to match size of target (2) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/VGA/back_ground_draw.sv Line: 125
+Info (12128): Elaborating entity "stage_bitmapBitMap" for hierarchy "stage_bitmapBitMap:stageBitMap"
+Info (12128): Elaborating entity "square_object" for hierarchy "square_object:stageSquare"
 Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "LPM_CONSTANT:X_stg_sqr"
 Info (12130): Elaborated megafunction instantiation "LPM_CONSTANT:X_stg_sqr"
 Info (12133): Instantiated megafunction "LPM_CONSTANT:X_stg_sqr" with the following parameter:
@@ -3643,6 +3606,49 @@ Info (12130): Elaborated megafunction instantiation "LPM_CONSTANT:X_scr_lrg_dgt_
 Info (12133): Instantiated megafunction "LPM_CONSTANT:X_scr_lrg_dgt_sqr9" with the following parameter:
     Info (12134): Parameter "LPM_CVALUE" = "97"
     Info (12134): Parameter "LPM_WIDTH" = "11"
+Info (12128): Elaborating entity "KEYBOARD_DECODER" for hierarchy "KEYBOARD_DECODER:inst7"
+Info (12128): Elaborating entity "keyPad_decoder" for hierarchy "KEYBOARD_DECODER:inst7|keyPad_decoder:inst4"
+Warning (10230): Verilog HDL assignment warning at keyPad_decoder.sv(39): truncated value with size 32 to match size of target (4) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/keyPad_decoder.sv Line: 39
+Info (12128): Elaborating entity "KBDINTF" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst"
+Info (12128): Elaborating entity "byterec" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst|byterec:inst3"
+Info (12128): Elaborating entity "bitrec" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst|bitrec:inst4"
+Info (12128): Elaborating entity "lpf" for hierarchy "KEYBOARD_DECODER:inst7|KBDINTF:inst|lpf:inst5"
+Warning (10230): Verilog HDL assignment warning at lpf.sv(47): truncated value with size 32 to match size of target (4) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/lpf.sv Line: 47
+Warning (10230): Verilog HDL assignment warning at lpf.sv(53): truncated value with size 32 to match size of target (4) File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/RTL/KEYBOARD/lpf.sv Line: 53
+Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst3"
+Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst6"
+Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst5"
+Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst2"
+Info (12128): Elaborating entity "singleKeyDecoder" for hierarchy "KEYBOARD_DECODER:inst7|singleKeyDecoder:inst1"
+Info (12128): Elaborating entity "HART_DISPLAY" for hierarchy "HART_DISPLAY:inst5"
+Info (12128): Elaborating entity "HartsMatrixBitMap" for hierarchy "HART_DISPLAY:inst5|HartsMatrixBitMap:inst6"
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "object_colors" into its bus
+Info (12128): Elaborating entity "square_object" for hierarchy "HART_DISPLAY:inst5|square_object:inst11"
+Info (12128): Elaborating entity "matrix_top_XY" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst"
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v Line: 49
+Info (12130): Elaborated megafunction instantiation "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v Line: 49
+Info (12133): Instantiated megafunction "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component" with the following parameter: File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/matrix_top_XY.v Line: 49
+    Info (12134): Parameter "lpm_cvalue" = "32"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=NONE"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "11"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_gj8.tdf
+    Info (12023): Found entity 1: lpm_constant_gj8 File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 26
+Info (12128): Elaborating entity "lpm_constant_gj8" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_constant.tdf Line: 46
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 31
+Info (12133): Instantiated megafunction "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/db/lpm_constant_gj8.tdf Line: 31
+    Info (12134): Parameter "CVALUE" = "00000100000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "0"
+    Info (12134): Parameter "IS_READABLE" = "0"
+    Info (12134): Parameter "NODE_NAME" = "0"
+    Info (12134): Parameter "NUMWORDS" = "1"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "4"
+    Info (12134): Parameter "WIDTH_WORD" = "11"
+    Info (12134): Parameter "WIDTHAD" = "1"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "HART_DISPLAY:inst5|matrix_top_XY:inst|LPM_CONSTANT:LPM_CONSTANT_component|lpm_constant_gj8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 456
 Info (12128): Elaborating entity "SEG7" for hierarchy "SEG7:inst10"
 Info (12128): Elaborating entity "NumbersBitMap" for hierarchy "NumbersBitMap:inst15"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "number_bitmap" into its bus
@@ -3652,7 +3658,7 @@ Info (12133): Instantiated megafunction "LPM_CONSTANT:zero_vec_const" with the f
     Info (12134): Parameter "LPM_CVALUE" = "0"
     Info (12134): Parameter "LPM_WIDTH" = "4"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.09.11.22:33:13 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.09.12.18:46:05 Progress: Loading sld6dfc5e3d/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3693,8 +3699,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "greenLight" is stuck at GND
     Warning (13410): Pin "OVGA[26]" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/output_files/Lab1Demo.map.smsg
 Info (35026): Attempting to remove 150 I/O cell(s) that do not connect to top-level pins or have illegal connectivity
     Info (35027): Removed I/O cell "AUDIO:inst18|audio_codec_controller:inst2|MICROPHON_LED~output"
@@ -4068,19 +4073,19 @@ Info (35003): Optimize away 266 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "AUDIO:inst18|audio_codec_controller:inst2|adc2parallel:adc2parallel_right_inst|synch_fifo:adc_synch_fifo_inst|dcfifo:dcfifo_component|dcfifo_8il1:auto_generated|altdpram:fiforam|lpm_decode:wdecoder|decode_mpf:auto_generated|w_anode317w[3]" File: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/audio_codec_controller.qxp Line: -1
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 4651 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4664 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 50 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 4561 logic cells
+    Info (21061): Implemented 4574 logic cells
     Info (21064): Implemented 2 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 20 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 139 warnings
-    Info: Peak virtual memory: 4951 megabytes
-    Info: Processing ended: Sun Sep 11 22:33:29 2022
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:00:58
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
+    Info: Peak virtual memory: 4948 megabytes
+    Info: Processing ended: Mon Sep 12 18:46:23 2022
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:01:01
 
 
 +------------------------------------------+
