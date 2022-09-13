@@ -242,13 +242,15 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tck
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to altera_reserved_tms
-set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to boardersDrawReq[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to boardersDrawReq[1]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/holes_hitUnitedBitMap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/holes_graphicUnitedBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/score_stage_NumsBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/crossBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/stage_bitmapBitMap.sv
