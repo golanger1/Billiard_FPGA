@@ -20,8 +20,9 @@
 // counter limit setting 
 	
 //       ----------------------------------------------	
+	localparam oneSecVal = 26'd25_000_000; // for DE10 board un-comment this line 
 //	localparam oneSecVal = 26'd50_000_000; // for DE10 board un-comment this line 
-	localparam oneSecVal = 26'd20; // for quartus simulation un-comment this line 
+//	localparam oneSecVal = 26'd20; // for quartus simulation un-comment this line 
 //       ----------------------------------------------	
 	
 	assign  sec = turbo ? oneSecVal/10 : oneSecVal;  // it is legal to devide by 10, as it is done by the complier not by logic (actual transistors) 
@@ -32,22 +33,26 @@
    begin
 	
 		// asynchronous reset
-		if ( !resetN ) begin
-			one_sec <= 1'b0;
-			oneSecCount <= 26'd0;
-		end // if reset
+		if ( !resetN ) 
+			begin
+				one_sec <= 1'b0;
+				oneSecCount <= 0;
+			end // if reset
 		
 		// executed once every clock 	
-		else begin
-			if (oneSecCount >= sec) begin
-				one_sec <= 1'b1;
-				oneSecCount <= 0;
-			end
-			else begin
-				oneSecCount <= oneSecCount + 1;
-				one_sec		<= 1'b0;
-			end
-		end // else clk
+		else 
+			begin
+				if (oneSecCount >= sec) 
+					begin
+						oneSecCount <= 0;
+						one_sec		<= 1'b1;
+					end
+				else 
+					begin
+						oneSecCount <= oneSecCount + 1;
+						one_sec		<= 1'b0;
+					end
+			end // else clk
 		
 	end // always
 endmodule
