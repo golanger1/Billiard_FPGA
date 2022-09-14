@@ -35,17 +35,13 @@ always_ff @(posedge clk or negedge resetN)
 			end
 			
 			else begin
-				if ( enable1 && enable2 && enable3 ) 
-					begin
-						if ( count == 4'b0 ) 
-							begin
-								count <= 4'h9;
-							end
-						else
-							begin
-								count <= count - 4'd1;
-							end
-					end
+				if ( enable1 && enable2 && enable3 ) begin
+					if ( count == 0 ) 
+						count <= 4'h9;
+					else
+						count <= count - 1;
+				end
+				
 			end
 		end //Synch
 	end //always
