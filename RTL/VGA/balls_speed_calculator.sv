@@ -8,7 +8,7 @@
 //-- Eyal Lev 31 Jan 2021
 
 
-`define NUM_BALLS 2 
+`define NUM_BALLS 3 
 
 module	balls_speed_calculator	(	
 //		--------	Clock Input	 	
@@ -53,6 +53,10 @@ module	balls_speed_calculator	(
 
 //logic flag_counter; 
 //logic flag; 
+
+localparam int MIN_Y_SPEED = 8; // exists also in movecollision - change accordingly
+localparam int MIN_X_SPEED = 8; // exists also in movecollision - change accordingly
+localparam int FIXED_SPEED_MULTIPLIER = 64; // exists also in movecollision - change accordingly
 
 //// change for signalTap					
 logic signed [10:0] X_diff;
@@ -124,15 +128,62 @@ begin
 //					Xspeed_VEC_out_test1 = {(`NUM_BALLS+1){11'b0}};
 //					Xspeed_VEC_out_test2 = {(`NUM_BALLS+1){11'b0}};
 					
-					////Xspeed_VEC_calc[Balls_col_ID[0]] = ( ( ( Xspeed_0_int - Xspeed_1_int ) * Y_diff_int*Y_diff_int - ( Yspeed_0_int - Yspeed_1_int ) * Y_diff_int*X_diff_int ) >>> 10 ) + Xspeed_1_int; // u0x
+					
+					
+					//calc ints of speed
 					Xspeed0_out_int = ( ( ( Xspeed_0 - Xspeed_1 ) * Y_diff*Y_diff - ( Yspeed_0 - Yspeed_1 ) * Y_diff*X_diff ) >>> 10 ) + Xspeed_1; // u0x
+					Yspeed0_out_int = ( ( ( Yspeed_0 - Yspeed_1 ) * X_diff*X_diff - ( Xspeed_0 - Xspeed_1 ) * Y_diff*X_diff ) >>> 10 ) + Yspeed_1; // u0y
+					Xspeed1_out_int = ( ( ( Xspeed_0 - Xspeed_1 ) * X_diff*X_diff + ( Yspeed_0 - Yspeed_1 ) * Y_diff*X_diff ) >>> 10 ) + Xspeed_1; // u1x
+					Yspeed1_out_int = ( ( ( Yspeed_0 - Yspeed_1 ) * Y_diff*Y_diff + ( Xspeed_0 - Xspeed_1 ) * Y_diff*X_diff ) >>> 10 ) + Yspeed_1; // u1y	
+					
+					// Xspeed0 boost
+					if ( Xspeed0_out_int > 0 )
+						begin
+							Xspeed0_out_int = Xspeed0_out_int + MIN_X_SPEED;
+						end
+					else if ( Xspeed0_out_int < 0 )
+						begin
+							Xspeed0_out_int = Xspeed0_out_int - MIN_X_SPEED;
+						end
+					
+					// Yspeed0 boost
+					if ( Yspeed0_out_int > 0 )
+						begin
+							Yspeed0_out_int = Yspeed0_out_int + MIN_Y_SPEED;
+						end
+					else if ( Yspeed0_out_int < 0 )
+						begin
+							Yspeed0_out_int = Yspeed0_out_int - MIN_Y_SPEED;
+						end
+					
+					// Xspeed1 boost
+					if ( Xspeed1_out_int > 0 )
+						begin
+							Xspeed1_out_int = Xspeed1_out_int + MIN_X_SPEED;
+						end
+					else if ( Xspeed1_out_int < 0 )
+						begin
+							Xspeed1_out_int = Xspeed1_out_int - MIN_X_SPEED;
+						end
+					
+					// Yspeed1 boost
+					if ( Yspeed1_out_int > 0 )
+						begin
+							Yspeed1_out_int = Yspeed1_out_int + MIN_Y_SPEED;
+						end
+					else if ( Yspeed1_out_int < 0 )
+						begin
+							Yspeed1_out_int = Yspeed1_out_int - MIN_Y_SPEED;
+						end
+					
 					Xspeed_VEC_out[Balls_col_ID[0]] = Xspeed0_out_int [10:0];
-					
-					////Yspeed_VEC_calc[Balls_col_ID[0]] = ( ( ( Yspeed_0_int - Yspeed_1_int ) * X_diff_int*X_diff_int - ( Xspeed_0_int - Xspeed_1_int ) * Y_diff_int*X_diff_int ) >>> 10 ) + Yspeed_1_int;	    // u0y
-					Yspeed0_out_int = ( ( ( Yspeed_0 - Yspeed_1 ) * X_diff*X_diff - ( Xspeed_0 - Xspeed_1 ) * Y_diff*X_diff ) >>> 10 ) + Yspeed_1;	    // u0y
 					Yspeed_VEC_out[Balls_col_ID[0]] = Yspeed0_out_int [10:0];
-					
-					
+					Xspeed_VEC_out[Balls_col_ID[1]] = Xspeed1_out_int [10:0];
+					Yspeed_VEC_out[Balls_col_ID[1]] = Yspeed1_out_int [10:0];
+
+			////OLDER_VERSION - SignalTap:
+					////Xspeed_VEC_calc[Balls_col_ID[0]] = ( ( ( Xspeed_0_int - Xspeed_1_int ) * Y_diff_int*Y_diff_int - ( Yspeed_0_int - Yspeed_1_int ) * Y_diff_int*X_diff_int ) >>> 10 ) + Xspeed_1_int; // u0x
+					////Yspeed_VEC_calc[Balls_col_ID[0]] = ( ( ( Yspeed_0_int - Yspeed_1_int ) * X_diff_int*X_diff_int - ( Xspeed_0_int - Xspeed_1_int ) * Y_diff_int*X_diff_int ) >>> 10 ) + Yspeed_1_int;	    // u0y
 					// Balls_col_ID[1] is the ball with the higher ID
 					
 					// DEBUG u1x ( Xspeed_VEC_out[Balls_col_ID[1]] )
@@ -147,8 +198,6 @@ begin
 //					calc_final_11bit = calc_final_int [10:0];
 					
 					//needed:
-					Xspeed1_out_int = (((((Xspeed_0 - Xspeed_1 )*X_diff*X_diff) + (( Yspeed_0 - Yspeed_1 )*Y_diff*X_diff))>>>10) + Xspeed_1); // u1x
-					Xspeed_VEC_out[Balls_col_ID[1]] = Xspeed1_out_int [10:0];
 					
 //					Xspeed_VEC_out_test0[Balls_col_ID[1]] = calc_final_int [10:0];
 //					Xspeed_VEC_out_test1[Balls_col_ID[1]] = Xspeed1_out_int [10:0];
@@ -156,8 +205,6 @@ begin
 					
 					
 					////Yspeed_VEC_calc[Balls_col_ID[1]] = ( ( ( Yspeed_0_int - Yspeed_1_int ) * Y_diff_int*Y_diff_int + ( Xspeed_0_int - Xspeed_1_int ) * Y_diff_int*X_diff_int ) >>> 10 ) + Yspeed_1_int;	// u1y	
-					Yspeed1_out_int = ( ( ( Yspeed_0 - Yspeed_1 ) * Y_diff*Y_diff + ( Xspeed_0 - Xspeed_1 ) * Y_diff*X_diff ) >>> 10 ) + Yspeed_1;	// u1y	
-					Yspeed_VEC_out[Balls_col_ID[1]] = Yspeed1_out_int [10:0];
 					////Xspeed_VEC_out[Balls_col_ID[0]] = Xspeed_VEC_calc[Balls_col_ID[0]][10:0];
 					////Yspeed_VEC_out[Balls_col_ID[0]] = Yspeed_VEC_calc[Balls_col_ID[0]][10:0];
 					////Xspeed_VEC_out[Balls_col_ID[1]] = Xspeed_VEC_calc[Balls_col_ID[1]][10:0];

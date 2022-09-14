@@ -10,6 +10,7 @@
 					input logic	[10:0] offsetX,// offset from top left  position 
 					input logic	[10:0] offsetY, 
 					input	logic	InsideRectangle, //input that the pixel is within a bracket 
+					input	logic	enableCross, //input that the pixel is within a bracket 
  
 					output	logic	drawingRequest, //output that the pixel should be dispalyed 
 					output	logic	[7:0] RGBout  //rgb value from the bitmap 
@@ -39,9 +40,10 @@ begin
 	if(!resetN) begin 
 		RGBout <=	8'h00; 
 	end 
-	else begin 
- 
-		if (InsideRectangle == 1'b1 ) 
+	else 
+	begin
+		RGBout <= TRANSPARENT_ENCODING; // default
+		if ( enableCross == 1'b1 && InsideRectangle == 1'b1 ) 
 		begin // inside an external bracket
 			if ( object_colors[offsetY][offsetX] == 2'b01 )
 				begin
@@ -51,17 +53,12 @@ begin
 				begin
 					RGBout <= 8'h00; // BLACK
 				end
-			else
-				begin
-					RGBout <= TRANSPARENT_ENCODING; // default
-				end
 		end  	 
-		 
 	end 
 end 
  
 //////////--------------------------------------------------------------------------------------------------------------= 
 // decide if to draw the pixel or not 
-assign drawingRequest = (RGBout != 2'b11 ) ? 1'b1 : 1'b0 ; // get optional transparent command from the bitmpap   
+assign drawingRequest = ( (enableCross == 1'b1) && (RGBout != TRANSPARENT_ENCODING) ) ? 1'b1 : 1'b0 ; // get optional transparent command from the bitmpap   
  
 endmodule 

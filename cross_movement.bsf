@@ -1,0 +1,268 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 360 384)
+	(text "cross_movement" (rect 5 0 76 12)(font "Arial" ))
+	(text "inst" (rect 8 352 20 364)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 27 31 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 27 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 48 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "startOfFrame" (rect 0 0 55 12)(font "Arial" ))
+		(text "startOfFrame" (rect 21 59 76 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "angleUp" (rect 0 0 31 12)(font "Arial" ))
+		(text "angleUp" (rect 21 75 52 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "angleDown" (rect 0 0 42 12)(font "Arial" ))
+		(text "angleDown" (rect 21 91 63 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "angleLeft" (rect 0 0 36 12)(font "Arial" ))
+		(text "angleLeft" (rect 21 107 57 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "angleRight" (rect 0 0 41 12)(font "Arial" ))
+		(text "angleRight" (rect 21 123 62 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "speedUp" (rect 0 0 35 12)(font "Arial" ))
+		(text "speedUp" (rect 21 139 56 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "speedDown" (rect 0 0 46 12)(font "Arial" ))
+		(text "speedDown" (rect 21 155 67 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "releaseBall" (rect 0 0 41 12)(font "Arial" ))
+		(text "releaseBall" (rect 21 171 62 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "WhiteBall_inGame" (rect 0 0 73 12)(font "Arial" ))
+		(text "WhiteBall_inGame" (rect 21 187 94 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "WhiteBall_topLeftX[10..0]" (rect 0 0 100 12)(font "Arial" ))
+		(text "WhiteBall_topLeftX[10..0]" (rect 21 203 121 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "WhiteBall_topLeftY[10..0]" (rect 0 0 101 12)(font "Arial" ))
+		(text "WhiteBall_topLeftY[10..0]" (rect 21 219 122 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "WhiteBall_Xspeed_in[10..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "WhiteBall_Xspeed_in[10..0]" (rect 21 235 128 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "WhiteBall_Yspeed_in[10..0]" (rect 0 0 108 12)(font "Arial" ))
+		(text "WhiteBall_Yspeed_in[10..0]" (rect 21 251 129 263)(font "Arial" ))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 344 32)
+		(output)
+		(text "topLeftX[10..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "topLeftX[10..0]" (rect 266 27 323 39)(font "Arial" ))
+		(line (pt 344 32)(pt 328 32)(line_width 3))
+	)
+	(port
+		(pt 344 48)
+		(output)
+		(text "topLeftY[10..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "topLeftY[10..0]" (rect 264 43 323 55)(font "Arial" ))
+		(line (pt 344 48)(pt 328 48)(line_width 3))
+	)
+	(port
+		(pt 344 64)
+		(output)
+		(text "enableCross" (rect 0 0 49 12)(font "Arial" ))
+		(text "enableCross" (rect 274 59 323 71)(font "Arial" ))
+		(line (pt 344 64)(pt 328 64)(line_width 1))
+	)
+	(port
+		(pt 344 80)
+		(output)
+		(text "chargeWhiteBall" (rect 0 0 63 12)(font "Arial" ))
+		(text "chargeWhiteBall" (rect 260 75 323 87)(font "Arial" ))
+		(line (pt 344 80)(pt 328 80)(line_width 1))
+	)
+	(port
+		(pt 344 96)
+		(output)
+		(text "WhiteBall_Xspeed_OUT[10..0]" (rect 0 0 121 12)(font "Arial" ))
+		(text "WhiteBall_Xspeed_OUT[10..0]" (rect 202 91 323 103)(font "Arial" ))
+		(line (pt 344 96)(pt 328 96)(line_width 3))
+	)
+	(port
+		(pt 344 112)
+		(output)
+		(text "WhiteBall_Yspeed_OUT[10..0]" (rect 0 0 122 12)(font "Arial" ))
+		(text "WhiteBall_Yspeed_OUT[10..0]" (rect 201 107 323 119)(font "Arial" ))
+		(line (pt 344 112)(pt 328 112)(line_width 3))
+	)
+	(port
+		(pt 344 128)
+		(output)
+		(text "Sin_Prod_abs[31..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "Sin_Prod_abs[31..0]" (rect 243 123 323 135)(font "Arial" ))
+		(line (pt 344 128)(pt 328 128)(line_width 3))
+	)
+	(port
+		(pt 344 144)
+		(output)
+		(text "Cos_Prod_abs[31..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "Cos_Prod_abs[31..0]" (rect 239 139 323 151)(font "Arial" ))
+		(line (pt 344 144)(pt 328 144)(line_width 3))
+	)
+	(port
+		(pt 344 160)
+		(output)
+		(text "Sin_Prod_Fixed[31..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "Sin_Prod_Fixed[31..0]" (rect 236 155 323 167)(font "Arial" ))
+		(line (pt 344 160)(pt 328 160)(line_width 3))
+	)
+	(port
+		(pt 344 176)
+		(output)
+		(text "Cos_Prod_Fixed[31..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "Cos_Prod_Fixed[31..0]" (rect 231 171 323 183)(font "Arial" ))
+		(line (pt 344 176)(pt 328 176)(line_width 3))
+	)
+	(port
+		(pt 344 192)
+		(output)
+		(text "WhiteBall_centerX_int[31..0]" (rect 0 0 110 12)(font "Arial" ))
+		(text "WhiteBall_centerX_int[31..0]" (rect 213 187 323 199)(font "Arial" ))
+		(line (pt 344 192)(pt 328 192)(line_width 3))
+	)
+	(port
+		(pt 344 208)
+		(output)
+		(text "WhiteBall_centerY_int[31..0]" (rect 0 0 112 12)(font "Arial" ))
+		(text "WhiteBall_centerY_int[31..0]" (rect 211 203 323 215)(font "Arial" ))
+		(line (pt 344 208)(pt 328 208)(line_width 3))
+	)
+	(port
+		(pt 344 224)
+		(output)
+		(text "Cross_topLeftX_int[31..0]" (rect 0 0 102 12)(font "Arial" ))
+		(text "Cross_topLeftX_int[31..0]" (rect 221 219 323 231)(font "Arial" ))
+		(line (pt 344 224)(pt 328 224)(line_width 3))
+	)
+	(port
+		(pt 344 240)
+		(output)
+		(text "Cross_topLeftY_int[31..0]" (rect 0 0 103 12)(font "Arial" ))
+		(text "Cross_topLeftY_int[31..0]" (rect 220 235 323 247)(font "Arial" ))
+		(line (pt 344 240)(pt 328 240)(line_width 3))
+	)
+	(port
+		(pt 344 256)
+		(output)
+		(text "XShotSpeed_int[31..0]" (rect 0 0 86 12)(font "Arial" ))
+		(text "XShotSpeed_int[31..0]" (rect 237 251 323 263)(font "Arial" ))
+		(line (pt 344 256)(pt 328 256)(line_width 3))
+	)
+	(port
+		(pt 344 272)
+		(output)
+		(text "YShotSpeed_int[31..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "YShotSpeed_int[31..0]" (rect 236 267 323 279)(font "Arial" ))
+		(line (pt 344 272)(pt 328 272)(line_width 3))
+	)
+	(port
+		(pt 344 288)
+		(output)
+		(text "WhiteBall_Xspeed_OUT_int[31..0]" (rect 0 0 135 12)(font "Arial" ))
+		(text "WhiteBall_Xspeed_OUT_int[31..0]" (rect 188 283 323 295)(font "Arial" ))
+		(line (pt 344 288)(pt 328 288)(line_width 3))
+	)
+	(port
+		(pt 344 304)
+		(output)
+		(text "WhiteBall_Yspeed_OUT_int[31..0]" (rect 0 0 136 12)(font "Arial" ))
+		(text "WhiteBall_Yspeed_OUT_int[31..0]" (rect 187 299 323 311)(font "Arial" ))
+		(line (pt 344 304)(pt 328 304)(line_width 3))
+	)
+	(port
+		(pt 344 320)
+		(output)
+		(text "Speed_strength_int[31..0]" (rect 0 0 100 12)(font "Arial" ))
+		(text "Speed_strength_int[31..0]" (rect 223 315 323 327)(font "Arial" ))
+		(line (pt 344 320)(pt 328 320)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 328 352)(line_width 1))
+	)
+)

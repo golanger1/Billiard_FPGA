@@ -22,7 +22,10 @@ module	objects_mux	(
 					input		logic	[7:0] Hole_1_RGB,
 					input		logic Hole_2_DrawingRequest, // inner hit hole
 					input		logic	[7:0] Hole_2_RGB,
-			  
+					
+			// cross (aim)
+					input		logic	CrossDrawingRequest, // two set of inputs per unit
+					input		logic	[7:0] CrossRGB, 			  
 			  
 		  ////////////////////////
 		  // background 
@@ -40,8 +43,11 @@ begin
 	end
 	
 	else begin 
+
+		if ( CrossDrawingRequest == 1'b1 )   
+			RGBOut <= CrossRGB;  //first priority 
 		
-		if ( BallDrawingRequest == 1'b1 )   
+		else if ( BallDrawingRequest == 1'b1 )   
 			RGBOut <= BallRGB;  //first priority 
 		 
 		 else if ( Hole_2_DrawingRequest == 1'b1 )   

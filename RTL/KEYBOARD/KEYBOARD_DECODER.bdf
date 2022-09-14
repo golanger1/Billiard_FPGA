@@ -23,7 +23,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 64 248 240 264)
+	(rect -264 272 -88 288)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "resetN" (rect 9 0 42 12)(font "Arial" ))
 	(pt 176 8)
@@ -39,7 +39,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 64 264 232 280)
+	(rect -264 288 -96 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "PS2_CLK" (rect 5 0 52 12)(font "Arial" ))
 	(pt 168 8)
@@ -55,7 +55,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 64 280 232 296)
+	(rect -264 304 -96 320)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "PS2_DAT" (rect 5 0 49 17)(font "Intel Clear" ))
 	(pt 168 8)
@@ -71,7 +71,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 64 232 232 248)
+	(rect -264 256 -96 272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CLOCK_50" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
@@ -87,7 +87,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 400 968 576 984)
+	(rect 400 1760 576 1776)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "keyPad[3..0]" (rect 90 0 153 12)(font "Arial" ))
 	(pt 0 8)
@@ -103,7 +103,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 400 984 576 1000)
+	(rect 400 1776 576 1792)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "keyPadValid" (rect 90 0 151 12)(font "Arial" ))
 	(pt 0 8)
@@ -119,7 +119,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1040 880 1246 896)
+	(rect 1112 1520 1318 1536)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "key_ENTER_is_pressed" (rect 90 0 200 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -199,7 +199,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1040 848 1216 864)
+	(rect 1112 1488 1288 1504)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "KeyEnterLatch" (rect 90 0 163 12)(font "Arial" ))
 	(pt 0 8)
@@ -215,7 +215,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1040 864 1237 880)
+	(rect 1112 1504 1309 1520)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "KeyEnterRisingEdge" (rect 90 0 191 12)(font "Arial" ))
 	(pt 0 8)
@@ -357,6 +357,102 @@ agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 1112 832 1288 848)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "KeyPlusLatch" (rect 90 0 156 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1112 848 1300 864)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "KeyPlusRisingEdge" (rect 90 0 182 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1104 864 1300 880)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "key_Plus_is_pressed" (rect 90 0 190 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1104 1056 1280 1072)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "KeyMinusLatch" (rect 90 0 163 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1104 1072 1299 1088)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "KeyMinusRisingEdge" (rect 90 0 189 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1096 1088 1299 1104)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "key_Minus_is_pressed" (rect 90 0 197 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 776 24 1016 168)
 	(text "singleKeyDecoder" (rect 5 0 94 12)(font "Arial" ))
@@ -428,7 +524,7 @@ agreement for further details.
 	(annotation_block (parameter)(rect 1016 -16 1238 22))
 )
 (symbol
-	(rect 704 824 944 968)
+	(rect 776 1464 1016 1608)
 	(text "singleKeyDecoder" (rect 5 0 94 12)(font "Arial" ))
 	(text "inst3" (rect 8 128 30 145)(font "Intel Clear" ))
 	(port
@@ -495,10 +591,10 @@ agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 224 128))
 	)
-	(annotation_block (parameter)(rect 944 784 1166 822))
+	(annotation_block (parameter)(rect 1016 1424 1238 1462))
 )
 (symbol
-	(rect 304 208 496 336)
+	(rect -24 232 168 360)
 	(text "KBDINTF" (rect 5 0 59 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
@@ -555,7 +651,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 128 944 328 1088)
+	(rect 128 1736 328 1880)
 	(text "keyPad_decoder" (rect 5 0 87 12)(font "Arial" ))
 	(text "inst4" (rect 8 128 30 145)(font "Intel Clear" ))
 	(port
@@ -821,39 +917,145 @@ agreement for further details.
 	)
 	(annotation_block (parameter)(rect 1072 544 1294 582))
 )
-(connector
-	(text "clk" (rect 255 224 269 241)(font "Intel Clear" ))
-	(pt 232 240)
-	(pt 304 240)
+(symbol
+	(rect 784 808 1024 952)
+	(text "singleKeyDecoder" (rect 5 0 94 12)(font "Arial" ))
+	(text "inst7" (rect 8 128 30 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "keyCode[8..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "keyCode[8..0]" (rect 21 59 91 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "make" (rect 0 0 27 12)(font "Arial" ))
+		(text "make" (rect 21 75 48 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "brakee" (rect 0 0 33 12)(font "Arial" ))
+		(text "brakee" (rect 21 91 54 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "keyLatch" (rect 0 0 46 12)(font "Arial" ))
+		(text "keyLatch" (rect 181 27 227 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "keyRisingEdgePulse" (rect 0 0 101 12)(font "Arial" ))
+		(text "keyRisingEdgePulse" (rect 134 43 235 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "keyIsPressed" (rect 0 0 68 12)(font "Arial" ))
+		(text "keyIsPressed" (rect 162 59 230 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64))
+	)
+	(parameter
+		"KEY_VALUE"
+		"001111001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 224 128))
+	)
+	(annotation_block (parameter)(rect 1024 768 1246 806))
 )
-(connector
-	(text "resetN" (rect 250 240 280 257)(font "Intel Clear" ))
-	(pt 240 256)
-	(pt 304 256)
-)
-(connector
-	(pt 232 272)
-	(pt 304 272)
-)
-(connector
-	(pt 232 288)
-	(pt 304 288)
-)
-(connector
-	(text "keyCode[8..0]" (rect 504 224 570 241)(font "Intel Clear" ))
-	(pt 496 240)
-	(pt 576 240)
-	(bus)
-)
-(connector
-	(text "make" (rect 514 240 541 257)(font "Intel Clear" ))
-	(pt 496 256)
-	(pt 576 256)
-)
-(connector
-	(text "brake" (rect 515 256 542 273)(font "Intel Clear" ))
-	(pt 496 272)
-	(pt 576 272)
+(symbol
+	(rect 776 1032 1016 1176)
+	(text "singleKeyDecoder" (rect 5 0 94 12)(font "Arial" ))
+	(text "inst8" (rect 8 128 30 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "resetN" (rect 0 0 33 12)(font "Arial" ))
+		(text "resetN" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "keyCode[8..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "keyCode[8..0]" (rect 21 59 91 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "make" (rect 0 0 27 12)(font "Arial" ))
+		(text "make" (rect 21 75 48 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "brakee" (rect 0 0 33 12)(font "Arial" ))
+		(text "brakee" (rect 21 91 54 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "keyLatch" (rect 0 0 46 12)(font "Arial" ))
+		(text "keyLatch" (rect 181 27 227 39)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "keyRisingEdgePulse" (rect 0 0 101 12)(font "Arial" ))
+		(text "keyRisingEdgePulse" (rect 134 43 235 55)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "keyIsPressed" (rect 0 0 68 12)(font "Arial" ))
+		(text "keyIsPressed" (rect 162 59 230 71)(font "Arial" ))
+		(line (pt 240 64)(pt 224 64))
+	)
+	(parameter
+		"KEY_VALUE"
+		"001111011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 224 128))
+	)
+	(annotation_block (parameter)(rect 1016 992 1238 1030))
 )
 (connector
 	(text "make" (rect 706 88 733 105)(font "Intel Clear" ))
@@ -972,84 +1174,8 @@ agreement for further details.
 	(pt 832 616)
 )
 (connector
-	(text "make" (rect 634 888 661 905)(font "Intel Clear" ))
-	(pt 592 904)
-	(pt 704 904)
-)
-(connector
-	(text "brake" (rect 635 904 662 921)(font "Intel Clear" ))
-	(pt 592 920)
-	(pt 704 920)
-)
-(connector
-	(text "keyCode[8..0]" (rect 608 872 674 889)(font "Intel Clear" ))
-	(pt 592 888)
-	(pt 704 888)
-	(bus)
-)
-(connector
-	(text "resetN" (rect 642 856 672 873)(font "Intel Clear" ))
-	(pt 624 872)
-	(pt 704 872)
-)
-(connector
-	(pt 944 856)
-	(pt 1040 856)
-)
-(connector
-	(pt 944 872)
-	(pt 1040 872)
-)
-(connector
-	(text "clk" (rect 647 832 661 849)(font "Intel Clear" ))
-	(pt 624 856)
-	(pt 704 856)
-)
-(connector
 	(pt 1072 648)
 	(pt 1152 648)
-)
-(connector
-	(text "clk" (rect 79 960 93 977)(font "Intel Clear" ))
-	(pt 56 976)
-	(pt 128 976)
-)
-(connector
-	(text "resetN" (rect 74 976 104 993)(font "Intel Clear" ))
-	(pt 64 992)
-	(pt 128 992)
-)
-(connector
-	(text "keyCode[8..0]" (rect 56 992 122 1009)(font "Intel Clear" ))
-	(pt 48 1008)
-	(pt 128 1008)
-	(bus)
-)
-(connector
-	(text "make" (rect 66 1008 93 1025)(font "Intel Clear" ))
-	(pt 48 1024)
-	(pt 128 1024)
-)
-(connector
-	(text "brake" (rect 67 1024 94 1041)(font "Intel Clear" ))
-	(pt 48 1040)
-	(pt 128 1040)
-)
-(connector
-	(text "keypadValid" (rect 330 976 390 993)(font "Intel Clear" ))
-	(pt 328 992)
-	(pt 400 992)
-)
-(connector
-	(text "keyPad[3..0]" (rect 330 960 390 977)(font "Intel Clear" ))
-	(pt 328 976)
-	(pt 400 976)
-	(bus)
-)
-(connector
-	(text "<<__$DEF_ALIAS383>>" (rect 960 872 1072 889)(font "Intel Clear" )(invisible))
-	(pt 944 888)
-	(pt 1040 888)
 )
 (connector
 	(pt 1072 616)
@@ -1091,11 +1217,199 @@ agreement for further details.
 	(pt 1016 72)
 	(pt 1104 72)
 )
+(connector
+	(text "clk" (rect -73 248 -59 265)(font "Intel Clear" ))
+	(pt -96 264)
+	(pt -24 264)
+)
+(connector
+	(text "resetN" (rect -78 264 -48 281)(font "Intel Clear" ))
+	(pt -88 280)
+	(pt -24 280)
+)
+(connector
+	(pt -96 296)
+	(pt -24 296)
+)
+(connector
+	(pt -96 312)
+	(pt -24 312)
+)
+(connector
+	(text "keyCode[8..0]" (rect 176 248 242 265)(font "Intel Clear" ))
+	(pt 168 264)
+	(pt 248 264)
+	(bus)
+)
+(connector
+	(text "make" (rect 186 264 213 281)(font "Intel Clear" ))
+	(pt 168 280)
+	(pt 248 280)
+)
+(connector
+	(text "brake" (rect 187 280 214 297)(font "Intel Clear" ))
+	(pt 168 296)
+	(pt 248 296)
+)
+(connector
+	(text "clk" (rect 79 1752 93 1769)(font "Intel Clear" ))
+	(pt 56 1768)
+	(pt 128 1768)
+)
+(connector
+	(text "resetN" (rect 74 1768 104 1785)(font "Intel Clear" ))
+	(pt 64 1784)
+	(pt 128 1784)
+)
+(connector
+	(text "keyCode[8..0]" (rect 56 1784 122 1801)(font "Intel Clear" ))
+	(pt 48 1800)
+	(pt 128 1800)
+	(bus)
+)
+(connector
+	(text "make" (rect 66 1800 93 1817)(font "Intel Clear" ))
+	(pt 48 1816)
+	(pt 128 1816)
+)
+(connector
+	(text "brake" (rect 67 1816 94 1833)(font "Intel Clear" ))
+	(pt 48 1832)
+	(pt 128 1832)
+)
+(connector
+	(text "keypadValid" (rect 330 1768 390 1785)(font "Intel Clear" ))
+	(pt 328 1784)
+	(pt 400 1784)
+)
+(connector
+	(text "keyPad[3..0]" (rect 330 1752 390 1769)(font "Intel Clear" ))
+	(pt 328 1768)
+	(pt 400 1768)
+	(bus)
+)
+(connector
+	(text "make" (rect 706 1528 733 1545)(font "Intel Clear" ))
+	(pt 664 1544)
+	(pt 776 1544)
+)
+(connector
+	(text "brake" (rect 707 1544 734 1561)(font "Intel Clear" ))
+	(pt 664 1560)
+	(pt 776 1560)
+)
+(connector
+	(text "keyCode[8..0]" (rect 680 1512 746 1529)(font "Intel Clear" ))
+	(pt 664 1528)
+	(pt 776 1528)
+	(bus)
+)
+(connector
+	(text "resetN" (rect 714 1496 744 1513)(font "Intel Clear" ))
+	(pt 696 1512)
+	(pt 776 1512)
+)
+(connector
+	(pt 1016 1496)
+	(pt 1112 1496)
+)
+(connector
+	(pt 1016 1512)
+	(pt 1112 1512)
+)
+(connector
+	(text "clk" (rect 719 1472 733 1489)(font "Intel Clear" ))
+	(pt 696 1496)
+	(pt 776 1496)
+)
+(connector
+	(text "<<__$DEF_ALIAS383>>" (rect 1032 1512 1144 1529)(font "Intel Clear" )(invisible))
+	(pt 1016 1528)
+	(pt 1112 1528)
+)
+(connector
+	(text "make" (rect 714 872 741 889)(font "Intel Clear" ))
+	(pt 672 888)
+	(pt 784 888)
+)
+(connector
+	(text "brake" (rect 715 888 742 905)(font "Intel Clear" ))
+	(pt 672 904)
+	(pt 784 904)
+)
+(connector
+	(text "resetN" (rect 746 840 776 857)(font "Intel Clear" ))
+	(pt 736 856)
+	(pt 784 856)
+)
+(connector
+	(text "keyCode[8..0]" (rect 688 856 754 873)(font "Intel Clear" ))
+	(pt 672 872)
+	(pt 784 872)
+	(bus)
+)
+(connector
+	(text "clk" (rect 751 824 765 841)(font "Intel Clear" ))
+	(pt 736 840)
+	(pt 784 840)
+)
+(connector
+	(pt 1024 872)
+	(pt 1104 872)
+)
+(connector
+	(pt 1024 840)
+	(pt 1112 840)
+)
+(connector
+	(pt 1024 856)
+	(pt 1112 856)
+)
+(connector
+	(text "clk" (rect 743 1048 757 1065)(font "Intel Clear" ))
+	(pt 728 1064)
+	(pt 776 1064)
+)
+(connector
+	(text "resetN" (rect 738 1064 768 1081)(font "Intel Clear" ))
+	(pt 728 1080)
+	(pt 776 1080)
+)
+(connector
+	(text "keyCode[8..0]" (rect 680 1080 746 1097)(font "Intel Clear" ))
+	(pt 664 1096)
+	(pt 776 1096)
+	(bus)
+)
+(connector
+	(text "make" (rect 706 1096 733 1113)(font "Intel Clear" ))
+	(pt 664 1112)
+	(pt 776 1112)
+)
+(connector
+	(text "brake" (rect 707 1112 734 1129)(font "Intel Clear" ))
+	(pt 664 1128)
+	(pt 776 1128)
+)
+(connector
+	(pt 1016 1096)
+	(pt 1096 1096)
+)
+(connector
+	(pt 1016 1064)
+	(pt 1104 1064)
+)
+(connector
+	(pt 1016 1080)
+	(pt 1104 1080)
+)
 (junction (pt 1048 432))
 (junction (pt 1048 448))
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021 " (rect 80 0 443 19)(font "Intel Clear" (font_size 8)))
-(text "KEY ENTER EXT.9'h15A" (rect 712 800 851 819)(font "Intel Clear" (font_size 8)))
-(text "KEY_'2' = 9'h072" (rect 752 -8 853 11)(font "Intel Clear" (font_size 8)))
-(text "KEY_'4' = 9'h06B" (rect 760 176 861 195)(font "Intel Clear" (font_size 8)))
-(text "KEY_'6' = 9'h074" (rect 768 368 869 387)(font "Intel Clear" (font_size 8)))
-(text "KEY_'8' = 9'h075" (rect 808 552 909 571)(font "Intel Clear" (font_size 8)))
+(text "KEY_'+' = 9'h079        " (rect 760 776 889 795)(font "Intel Clear" (font_size 8)))
+(text "KEY_'-' = 9'h07B          " (rect 752 1000 885 1019)(font "Intel Clear" (font_size 8)))
+(text "KEY ENTER EXT.9'h15A         " (rect 784 1440 955 1459)(font "Intel Clear" (font_size 8)))
+(text "KEY_'8' = 9'h075        " (rect 808 552 937 571)(font "Intel Clear" (font_size 8)))
+(text "KEY_'6' = 9'h074         " (rect 768 368 901 387)(font "Intel Clear" (font_size 8)))
+(text "KEY_'4' = 9'h06B          " (rect 760 176 896 195)(font "Intel Clear" (font_size 8)))
+(text "KEY_'2' = 9'h072       " (rect 752 -8 878 11)(font "Intel Clear" (font_size 8)))
