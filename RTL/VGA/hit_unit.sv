@@ -1,9 +1,9 @@
+`define NUM_BALLS 3 
 
 // game controller dudy Febriary 2020
 // (c) Technion IIT, Department of Electrical Engineering 2021 
 //updated --Eyal Lev 2021
 
-`define NUM_BALLS 3 
 `define NUM_BALL_FLAGS 2 // +1 for real num of flags is [NUM_BALL_FLAGS:0]
 `define NUM_FLAGS_BITS 1 // array of 2.. // +1 : max num of bits to represent all flags ( log(NUM_BALL_FLAGS+1) ) 
 
@@ -29,6 +29,7 @@ module	hit_unit	(
 //			output logic out_collision_BallBall, // critical code, generating A single pulse in a frame 
 			output logic [`NUM_BALLS:0] balls_in_game, ///***IMPORTANT! - do we need to change to assign???*** or keep synchronic??
 			output logic [`NUM_BALLS:0] balls_collide,
+			output logic [`NUM_BALLS:0] ballhole_collide,
 			output logic [`NUM_BALLS:0] ballwall_collide,
 			output logic [1:0] collided_wall,
 			//output logic signed [1:0] Balls_col_X_Speed_OUT [10:0], // ***check here what is signed and what is unsigned***
@@ -64,7 +65,7 @@ assign oneVec = {(`NUM_BALLS+1){1'b1}};
 logic collision_BallWall;
 logic collision_BallHole;
 logic collision_BallBall;
-assign collision = collision_BallWall || collision_BallHole || collision_BallBall;
+assign collision = collision_BallWall || collision_BallBall;
 assign collision_BallWall = ( (Table_DR != 2'b00) && (Balls_DR_VEC != zeroVec) ); 
 assign collision_BallHole = ( (Hole_DR) && (Balls_DR_VEC != zeroVec) );
 assign collision_BallBall = ( (Balls_DR_VEC != zeroVec) && ( (^Balls_DR_VEC) == 1'b0 ) ); 
@@ -118,6 +119,7 @@ begin
 		//out_collision_BallBall <= 1'b0 ; 
 		balls_in_game <= oneVec ;
 		balls_collide <= zeroVec ;
+		ballhole_collide <= zeroVec;
 		ballwall_collide <= zeroVec;
 		collided_wall <= 2'b00;
 		Balls_col_ID <= {2{4'b0000}};
@@ -131,6 +133,7 @@ begin
 		//out_collision_BallHole <= 1'b0 ; //defaults
 		//out_collision_BallBall <= 1'b0 ;	//defaults
 		//balls_collide = zeroVec ;
+		ballhole_collide <= zeroVec;
 		ballwall_collide <= zeroVec ;
 		collided_wall <= 2'b00;
 		Balls_col_ID <= {2{4'b0000}};  ///***IMPORTANT! - do we need to change to assign???*** or keep synchronic??
@@ -177,6 +180,7 @@ begin
 				holesFlag	<= 1'b1; // to enter only once 
 				//out_collision_BallHole <= 1'b1; 
 				balls_in_game <= (balls_in_game) & (~Balls_DR_VEC) ;
+				ballhole_collide <= Balls_DR_VEC;
 			end
 
 		if ( collision_BallBall ) //  && (ballsFlag == 1'b0)

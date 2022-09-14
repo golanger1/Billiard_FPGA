@@ -1,5 +1,9 @@
 Assembler report for Lab1Demo
+<<<<<<< HEAD
 Wed Sep 14 19:23:42 2022
+=======
+Wed Sep 14 20:06:37 2022
+>>>>>>> game_state_machine
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -39,7 +43,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Assembler Status      ; Successful - Wed Sep 14 19:23:42 2022 ;
+=======
+; Assembler Status      ; Successful - Wed Sep 14 20:06:37 2022 ;
+>>>>>>> game_state_machine
 ; Revision Name         ; Lab1Demo                              ;
 ; Top-level Entity Name ; TOP_VGA_DEMO_KBD                      ;
 ; Family                ; Cyclone V                             ;
@@ -73,6 +81,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------------------------------------------+
 ; Assembler Device Options: C:/Users/omerm/OneDrive/Documents/Lab_1A/Billiard_FPGA/output_files/Lab1Demo.sof ;
 +----------------+-------------------------------------------------------------------------------------------+
@@ -81,6 +90,16 @@ agreement for further details.
 ; JTAG usercode  ; 0x015C60C3                                                                                ;
 ; Checksum       ; 0x015C60C3                                                                                ;
 +----------------+-------------------------------------------------------------------------------------------+
+=======
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Golan/Documents/Lab_1a/Project/Billiard_FPGA/output_files/Lab1Demo.sof ;
++----------------+------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                  ;
++----------------+------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0107A714                                                                               ;
+; Checksum       ; 0x0107A714                                                                               ;
++----------------+------------------------------------------------------------------------------------------+
+>>>>>>> game_state_machine
 
 
 +--------------------+
@@ -89,6 +108,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Sep 14 19:23:35 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1Demo -c Lab1Demo
 Info (115030): Assembler is generating device programming files
@@ -97,5 +117,15 @@ Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Processing ended: Wed Sep 14 19:23:42 2022
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
+=======
+    Info: Processing started: Wed Sep 14 20:06:28 2022
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1Demo -c Lab1Demo
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Wed Sep 14 20:06:37 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
+>>>>>>> game_state_machine
 
 

@@ -104,16 +104,23 @@ agreement for further details.
 	(port
 		(pt 280 96)
 		(output)
-		(text "collided_wall[1..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "collided_wall[1..0]" (rect 195 91 259 103)(font "Arial" ))
+		(text "ballwall_collide[2..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "ballwall_collide[2..0]" (rect 186 91 259 103)(font "Arial" ))
 		(line (pt 280 96)(pt 264 96)(line_width 3))
 	)
 	(port
 		(pt 280 112)
 		(output)
-		(text "Balls_col_ID[1..0][3..0]" (rect 0 0 88 12)(font "Arial" ))
-		(text "Balls_col_ID[1..0][3..0]" (rect 171 107 259 119)(font "Arial" ))
+		(text "collided_wall[1..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "collided_wall[1..0]" (rect 195 107 259 119)(font "Arial" ))
 		(line (pt 280 112)(pt 264 112)(line_width 3))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "Balls_col_ID[1..0][3..0]" (rect 0 0 88 12)(font "Arial" ))
+		(text "Balls_col_ID[1..0][3..0]" (rect 171 123 259 135)(font "Arial" ))
+		(line (pt 280 128)(pt 264 128)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 264 160)(line_width 1))

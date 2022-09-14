@@ -35,7 +35,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect 360 912 536 928)
+	(rect 400 872 576 888)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "AUD_ADCDAT" (rect 9 0 83 12)(font "Arial" ))
 	(pt 176 8)
@@ -115,7 +115,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 1048 960 1224 976)
+	(rect 1096 960 1272 976)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "HEX0[6..0]" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
@@ -227,7 +227,7 @@ agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 928 912 1104 928)
+	(rect 976 912 1152 928)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "AUDOUT[7..0]" (rect 90 0 161 12)(font "Arial" ))
 	(pt 0 8)
@@ -243,7 +243,7 @@ agreement for further details.
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
 )
 (symbol
-	(rect 848 936 1032 1016)
+	(rect 896 936 1080 1016)
 	(text "SEG7" (rect 5 0 33 12)(font "Arial" ))
 	(text "inst10" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
@@ -382,7 +382,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 584 888 808 1016)
+	(rect 632 888 856 1016)
 	(text "AUDIO" (rect 5 0 45 19)(font "Intel Clear" (font_size 8)))
 	(text "inst18" (rect 8 107 36 124)(font "Intel Clear" ))
 	(port
@@ -3385,24 +3385,6 @@ agreement for further details.
 	(pt 848 1368)
 )
 (connector
-	(text "keyPad[3..0]" (rect 756 1240 816 1257)(font "Intel Clear" ))
-	(pt 848 1256)
-	(pt 744 1256)
-	(bus)
-)
-(connector
-	(text "keyPad[3..0]" (rect 756 1304 816 1321)(font "Intel Clear" ))
-	(pt 848 1320)
-	(pt 744 1320)
-	(bus)
-)
-(connector
-	(text "keyPad[3..0]" (rect 756 1368 816 1385)(font "Intel Clear" ))
-	(pt 848 1384)
-	(pt 744 1384)
-	(bus)
-)
-(connector
 	(text "scr_stg_dgts_DR" (rect 1138 1160 1217 1177)(font "Intel Clear" ))
 	(pt 1128 1176)
 	(pt 1232 1176)
@@ -3411,6 +3393,263 @@ agreement for further details.
 	(text "scr_stg_dgts_RGB[7..0]" (rect 1131 1176 1240 1193)(font "Intel Clear" ))
 	(pt 1128 1192)
 	(pt 1232 1192)
+	(bus)
+)
+(connector
+	(text "clk" (rect 1008 504 1022 521)(font "Intel Clear" ))
+	(pt 960 520)
+	(pt 1080 520)
+)
+(connector
+	(text "resetN" (rect 1000 520 1033 532)(font "Arial" ))
+	(pt 960 536)
+	(pt 1080 536)
+)
+(connector
+	(text "startOfFrame" (rect 976 536 1039 553)(font "Intel Clear" ))
+	(pt 960 552)
+	(pt 1080 552)
+)
+(connector
+	(text "boardersDrawReq[1..0]" (rect 976 552 1084 569)(font "Intel Clear" ))
+	(pt 960 568)
+	(pt 1080 568)
+	(bus)
+)
+(connector
+	(text "HHoleDR" (rect 969 584 1012 601)(font "Intel Clear" ))
+	(pt 960 600)
+	(pt 1080 600)
+)
+(connector
+	(text "Hole_ID[2..0]" (rect 961 600 1022 617)(font "Intel Clear" ))
+	(pt 960 616)
+	(pt 1080 616)
+	(bus)
+)
+(connector
+	(text "hitBallDR_VEC[(NUM_BALLS)..0]" (rect 968 568 1126 585)(font "Intel Clear" ))
+	(pt 1080 584)
+	(pt 960 584)
+	(bus)
+)
+(connector
+	(text "collision" (rect 1376 504 1414 521)(font "Intel Clear" ))
+	(pt 1448 520)
+	(pt 1360 520)
+)
+(connector
+	(text "balls_in_game[NUM_BALLS..0]" (rect 1375 520 1524 537)(font "Intel Clear" ))
+	(pt 1360 536)
+	(pt 1424 536)
+	(bus)
+)
+(connector
+	(text "balls_collide[NUM_BALLS..0]" (rect 1383 536 1523 553)(font "Intel Clear" ))
+	(pt 1360 552)
+	(pt 1424 552)
+	(bus)
+)
+(connector
+	(text "winPulse" (rect 791 664 834 681)(font "Intel Clear" ))
+	(pt 776 680)
+	(pt 896 680)
+)
+(connector
+	(text "losePulse" (rect 791 680 838 697)(font "Intel Clear" ))
+	(pt 776 696)
+	(pt 896 696)
+)
+(connector
+	(text "collided_wall[1..0]" (rect 1389 584 1477 601)(font "Intel Clear" ))
+	(pt 1360 600)
+	(pt 1432 600)
+	(bus)
+)
+(connector
+	(text "ballwall_collide[NUM_BALLS..0]" (rect 1390 568 1546 585)(font "Intel Clear" ))
+	(pt 1360 584)
+	(pt 1424 584)
+	(bus)
+)
+(connector
+	(text "BallsColID[1..0][3..0]" (rect 1368 600 1465 617)(font "Intel Clear" ))
+	(pt 1360 616)
+	(pt 1432 616)
+	(bus)
+)
+(connector
+	(text "ballhole_collide[NUM_BALLS..0]" (rect 1366 552 1522 569)(font "Intel Clear" ))
+	(pt 1360 568)
+	(pt 1424 568)
+	(bus)
+)
+(connector
+	(text "ballhole_collide[NUM_BALLS..0]" (rect 358 728 514 745)(font "Intel Clear" ))
+	(pt 528 744)
+	(pt 352 744)
+	(bus)
+)
+(connector
+	(text "balls_in_game[NUM_BALLS..0]" (rect 367 712 516 729)(font "Intel Clear" ))
+	(pt 528 728)
+	(pt 352 728)
+	(bus)
+)
+(connector
+	(text "clk" (rect 400 664 414 681)(font "Intel Clear" ))
+	(pt 528 680)
+	(pt 352 680)
+)
+(connector
+	(text "resetN" (rect 392 680 425 692)(font "Arial" ))
+	(pt 528 696)
+	(pt 352 696)
+)
+(connector
+	(text "startOfFrame" (rect 368 696 431 713)(font "Intel Clear" ))
+	(pt 528 712)
+	(pt 352 712)
+)
+(connector
+	(text "Hole_ID[2..0]" (rect 353 744 414 761)(font "Intel Clear" ))
+	(pt 528 760)
+	(pt 352 760)
+	(bus)
+)
+(connector
+	(pt 880 968)
+	(pt 896 968)
+	(bus)
+)
+(connector
+	(pt 1080 968)
+	(pt 1096 968)
+	(bus)
+)
+(connector
+	(pt 880 968)
+	(pt 880 1040)
+	(bus)
+)
+(connector
+	(text "resetN" (rect 592 936 622 953)(font "Intel Clear" ))
+	(pt 632 952)
+	(pt 584 952)
+)
+(connector
+	(text "clk" (rect 592 920 606 937)(font "Intel Clear" ))
+	(pt 632 936)
+	(pt 584 936)
+)
+(connector
+	(text "keyPad[3..0]" (rect 608 1024 668 1041)(font "Intel Clear" ))
+	(pt 592 1040)
+	(pt 880 1040)
+	(bus)
+)
+(connector
+	(pt 856 920)
+	(pt 976 920)
+	(bus)
+)
+(connector
+	(pt 624 920)
+	(pt 624 880)
+)
+(connector
+	(pt 632 920)
+	(pt 624 920)
+)
+(connector
+	(pt 624 880)
+	(pt 576 880)
+)
+(connector
+	(pt 496 944)
+	(pt 512 944)
+	(bus)
+)
+(connector
+	(pt 512 944)
+	(pt 512 984)
+	(bus)
+)
+(connector
+	(pt 512 984)
+	(pt 632 984)
+	(bus)
+)
+(connector
+	(pt 496 928)
+	(pt 528 928)
+)
+(connector
+	(pt 528 928)
+	(pt 528 968)
+)
+(connector
+	(pt 528 968)
+	(pt 632 968)
+)
+(connector
+	(text "clk" (rect 240 912 254 929)(font "Intel Clear" ))
+	(pt 192 928)
+	(pt 288 928)
+)
+(connector
+	(text "resetN" (rect 232 928 265 940)(font "Arial" ))
+	(pt 192 944)
+	(pt 288 944)
+)
+(connector
+	(text "startOfFrame" (rect 208 944 271 961)(font "Intel Clear" ))
+	(pt 192 960)
+	(pt 288 960)
+)
+(connector
+	(text "winPulse" (rect 207 960 250 977)(font "Intel Clear" ))
+	(pt 192 976)
+	(pt 288 976)
+)
+(connector
+	(text "losePulse" (rect 207 976 254 993)(font "Intel Clear" ))
+	(pt 192 992)
+	(pt 288 992)
+)
+(connector
+	(text "collision" (rect 208 992 246 1009)(font "Intel Clear" ))
+	(pt 288 1008)
+	(pt 192 1008)
+)
+(connector
+	(text "scoreL[3..0]" (rect 741 1304 795 1321)(font "Intel Clear" ))
+	(pt 728 1320)
+	(pt 848 1320)
+	(bus)
+)
+(connector
+	(text "scoreH[3..0]" (rect 741 1240 796 1257)(font "Intel Clear" ))
+	(pt 728 1256)
+	(pt 848 1256)
+	(bus)
+)
+(connector
+	(text "stage[3..0]" (rect 741 1368 790 1385)(font "Intel Clear" ))
+	(pt 728 1384)
+	(pt 848 1384)
+	(bus)
+)
+(connector
+	(text "scoreL[3..0]" (rect 789 728 843 745)(font "Intel Clear" ))
+	(pt 776 744)
+	(pt 896 744)
+	(bus)
+)
+(connector
+	(text "scoreH[3..0]" (rect 789 744 844 761)(font "Intel Clear" ))
+	(pt 776 760)
+	(pt 896 760)
 	(bus)
 )
 (connector
@@ -3769,8 +4008,7 @@ agreement for further details.
 	(pt -384 368)
 )
 (junction (pt 1328 1248))
-(junction (pt 552 1040))
-(text "Output to 7Seg" (rect 912 1024 1002 1043)(font "Intel Clear" (font_size 8)))
+(text "Output to 7Seg" (rect 960 1024 1050 1043)(font "Intel Clear" (font_size 8)))
 (text "// (c) Technion IIT, Department of Electrical Engineering 2021" (rect -568 -72 -209 -53)(font "Intel Clear" (font_size 8)))
 (text "25 MHz Clock genrtaor" (rect 80 -256 214 -237)(font "Intel Clear" (font_size 8)))
 (text "The heyboard interface" (rect -952 -48 -810 -29)(font "Intel Clear" (font_size 8)(bold)))
@@ -3790,7 +4028,7 @@ agreement for further details.
 (rectangle (rect 328 864 1256 1080)(color 0 0 0)(line_width 3))
 (rectangle (rect -960 -32 -304 400)(color 0 0 0)(line_width 3))
 (rectangle (rect 376 -240 1224 304)(color 0 0 0)(line_width 3))
-(rectangle (rect -632 864 296 1080)(color 0 0 0)(line_width 3))
+(rectangle (rect -632 864 160 1080)(color 0 0 0)(line_width 3))
 (rectangle (rect -512 416 288 840)(color 0 0 0)(line_width 3))
 (rectangle (rect -640 1096 1256 2144)(color 0 0 0)(line_width 3))
 (rectangle (rect -288 -32 288 400)(color 0 0 0)(line_width 3))
