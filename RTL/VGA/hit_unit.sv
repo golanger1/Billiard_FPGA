@@ -12,7 +12,8 @@ module	hit_unit	(
 			input	logic	clk,
 			input	logic	resetN,
 			input	logic	startOfFrame,  // short pulse every start of frame 30Hz 
-			//input	logic	WhiteBall_DR,
+			input	logic	cheat,
+			
 			input	logic	[1:0] Table_DR,
 			input	logic	[`NUM_BALLS:0] Balls_DR_VEC,
 			input logic Hole_DR, // small hole
@@ -172,9 +173,18 @@ begin
 				end
 			end
 			
-//		change the section below  to collision between number and smiley
-
-
+		if ( cheat ) // remove the first ball!
+			begin	
+				for (int ballID = 1; ballID < `NUM_BALLS + 1 ; ballID++)
+					begin
+						if( balls_in_game[ballID] == 1'b1)
+							begin
+								balls_in_game[ballID] <= 1'b0; // remove the first ball!
+								break;
+							end
+					end
+			end
+			
 		if ( collision_BallHole  && (holesFlag == 1'b0)) //***EXTRA*** - move ball hole hit reaction to movecollision block
 			begin 
 				holesFlag	<= 1'b1; // to enter only once 
@@ -219,7 +229,6 @@ begin
 							end
 						end
 					end
-	
 			end 
 	// assign balls_collide = collision_BallBall ? Balls_DR_VEC : zeroVec ;		//***EXTRA*** : check if needed
 
@@ -253,7 +262,7 @@ begin
 			end 
 */
 			
-	end 
+	end // big else
 end
 
 endmodule

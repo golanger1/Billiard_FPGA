@@ -3,13 +3,15 @@
 // in accordance to the events arround it.
 
 `define NUM_BALLS 3 
-`define FINAL_STAGE 2 
+`define FINAL_STAGE 4'd4 //4'd6 
 
 module game_controller_SM
 	(
 	input 	logic clk, 
 	input 	logic resetN, 
 	input 	logic startOfFrame,
+	input		logic	cheat,
+
 	
 	input 	logic [`NUM_BALLS:0] balls_in_game,
 	input 	logic [`NUM_BALLS:0] ballhole_collide, // TODO: need to add ballhole output from the hit unit
@@ -30,7 +32,7 @@ module game_controller_SM
 	);
 	
 	// state machine decleration 
-	typedef enum logic [3:0] {s_idle, s_stage_1, s_stage_2, /***s_stage_3, s_stage_4,***/ s_win, s_lose, s_scored} game_states_e ;
+	typedef enum logic [3:0] {s_idle, s_stage_1, s_stage_2, s_stage_3, s_stage_4, /*** s_stage_5, s_stage_6, ***/ s_win, s_lose, s_scored, s_missed} game_states_e ;
 	
 	game_states_e game_ps, game_ns;
 	
@@ -48,6 +50,7 @@ module game_controller_SM
 	logic winPulse_ns, winPulse_ps;
 	logic losePulse_ns, losePulse_ps;
 	logic scoredPulse_ns, scoredPulse_ps;
+	logic [2:0] request_hole_ps, request_hole_ns;
 	
 	logic change_stage_ns, change_stage_ps;
 	logic score_up_ns, score_up_ps;
@@ -61,6 +64,10 @@ module game_controller_SM
 	assign rst_cntN = ( rst_cntN_ps &  resetN );
 	assign oneSecPulse = oneSecPulseOut;
 	assign stage_num = stage_num_ps;
+	assign scoreL = scoreLowLoad_ps;
+	assign scoreH = scoreHighLoad_ps;
+
+	assign request_hole = request_hole_ps;
 	
 	
 	logic [3:0] scoreLowLoad_ns, scoreLowLoad_ps;
@@ -111,7 +118,7 @@ module game_controller_SM
 							
 	);***/
 	
-	two_digits_decimal_up_counter score_counter (
+	/***two_digits_decimal_up_counter score_counter (
 											.clk( clk ), 
 											.resetN( resetN ),
 											.loadN( scoreLoadN_ps ),
@@ -123,7 +130,7 @@ module game_controller_SM
 											.countH( scoreH ),	// output
 											.tc(  )			// output
 											
-	);
+	);***/
 	
 	always @(posedge clk or negedge resetN)
    begin
@@ -133,16 +140,25 @@ module game_controller_SM
 				game_ps <= s_idle;
 				rst_cntN_ps 	<= 1'b1;
 				stage_num_ps 	<= 4'd0;
+				
 				timeLoadN_ps 	<= 1'b1;
 				scoreLoadN_ps 	<= 1'b1;
 				stageLoadN_ps 	<= 1'b1;
+				
 				winPulse_ps		<= 1'b0;
 				losePulse_ps	<= 1'b0;
 				scoredPulse_ps	<= 1'b0;
+				
+				request_hole_ps <= 3'd0;
 				score_up_ps 	<= 1'b0;
 				change_stage_ps <= 1'b1;
+				
 				wonFlag_ps		<= 1'b0;
 				lostFlag_ps		<= 1'b0;
+				
+				scoreHighLoad_ps <= 4'd0;
+				scoreLowLoad_ps  <= 4'd0;
+				
 				//count_seconds_ps <= 1'b0;
 			end
 		
@@ -158,10 +174,14 @@ module game_controller_SM
 				winPulse_ps		<= winPulse_ns;
 				losePulse_ps	<= losePulse_ns;
 				scoredPulse_ps <= scoredPulse_ns;
+				request_hole_ps <= request_hole_ns;
 				score_up_ps 	<= score_up_ns;
 				change_stage_ps <= change_stage_ns;
 				wonFlag_ps		<= wonFlag_ns;
 				lostFlag_ps		<= lostFlag_ns;
+				
+				scoreHighLoad_ps <= scoreHighLoad_ns;
+				scoreLowLoad_ps  <= scoreLowLoad_ns;
 			end
 	end // always sync
 	
@@ -174,20 +194,20 @@ module game_controller_SM
 		stage_num_ns 	= stage_num_ps;
 		rst_cntN_ns 	= rst_cntN_ps;
 		timeLoadN_ns 	= timeLoadN_ps;
-		scoreLoadN_ns	= scoreLoadN_ps;
+		scoreLoadN_ns	= 1'b1;
 		stageLoadN_ns	= stageLoadN_ps;
 		
 		winPulse_ns 	= winPulse_ps;
 		losePulse_ns 	= losePulse_ps;
-		scoredPulse_ns = scoredPulse_ps;
-		request_hole 	= 3'b0;
+		scoredPulse_ns = 1'b0;
+		request_hole_ns = request_hole_ps;
 		
 //		scoreLoadN = 1'b1;
 //		stageLoadN = 1'b1;
 //		timeLoadN = 1'b1;
 		
-		scoreHighLoad_ns 	= 4'd0;
-		scoreLowLoad_ns 	= 4'd0;
+		scoreHighLoad_ns 	= scoreHighLoad_ps;
+		scoreLowLoad_ns 	= scoreLowLoad_ps;
 		seconds_to_load 	=  4'd0;
 		
 		
@@ -204,6 +224,11 @@ module game_controller_SM
 		s_idle: begin
 				rst_cntN_ns = 1'b1;
 				
+				if ( cheat && !lostFlag_ps && !wonFlag_ps )
+					begin
+						change_stage_ns = 1'b1;
+					end
+				
 				if ( change_stage_ps )
 					begin
 						//$cast(game_ns, (stage_num_ps + 4'd1) );
@@ -212,7 +237,22 @@ module game_controller_SM
 					end
 				else if ( ballhole_collide[(`NUM_BALLS):1] != {(`NUM_BALLS){1'b0}} ) // scored!
 					begin
-						game_ns = s_scored;
+						if ( stage_num_ps == 4'd1 || stage_num_ps == 4'd2 )
+							begin
+								game_ns = s_scored;
+								//stage_num_ns = (stage_num_ps + 4'd1);
+							end
+						else //if ( stage_num_ps == 4'd2 )
+							begin
+								if ( curr_Hole_id == request_hole )
+									begin
+										game_ns = s_scored;
+									end
+								else
+									begin
+										game_ns = s_missed;
+									end
+							end
 					end
 				else if ( balls_in_game[(`NUM_BALLS):1] == {(`NUM_BALLS){1'b0}} && balls_in_game[0] == 1'b1 && !wonFlag_ps ) // if only white stayed in game
 					begin
@@ -224,11 +264,7 @@ module game_controller_SM
 						game_ns = s_lose;
 						rst_cntN_ns = 1'b0;
 					end
-				
-				/*if ( scoreLoadN_ps == 1'b0 )
-					begin
-						scoreLoadN_ns = 1'b1;
-					end*/
+					
 				end // idle
 			
 			s_stage_1: begin
@@ -243,16 +279,16 @@ module game_controller_SM
 			/// make stage 2 setup ///
 				
 				stage_num_ns = 4'd2;
-				//s_stage_ns = 4'd2;
+				//request_hole_ns = 3'd3;
 				game_ns = s_idle;
 			end // stage 2
 			
-			/***
+			
 			s_stage_3: begin
 			/// make stage 3 setup ///
 				
 				stage_num_ns = 4'd3;
-				s_stage_ns = 4'd3;
+				request_hole_ns = 3'd2;
 				game_ns = s_idle;
 			end // stage 3
 			
@@ -260,10 +296,26 @@ module game_controller_SM
 			/// make stage 4 setup ///
 				
 				stage_num_ns = 4'd4;
-				s_stage_ns = 4'd4;
+				request_hole_ns = 3'd5;
 				game_ns = s_idle;
 			end // stage 4
-						***/
+			
+			/*** s_stage_5: begin
+			/// make stage 4 setup ///
+				
+				stage_num_ns = 4'd5;
+				request_hole_ns = 3'd6;
+				game_ns = s_idle;
+			end // stage 5
+			
+			s_stage_6: begin
+			/// make stage 4 setup ///
+				
+				stage_num_ns = 4'd6;
+				request_hole_ns = 3'd3;
+				game_ns = s_idle;
+			end // stage 6 ***/
+				
 			s_win: begin
 			
 				if ( winPulse_ps != 1'b1 )		
@@ -279,10 +331,7 @@ module game_controller_SM
 					begin
 						winPulse_ns = 1'b0; 
 						//stage_num_ns = stage_num_ps + 4'd1;
-						if ( `FINAL_STAGE > stage_num_ps )
-							begin
-								change_stage_ns = 1'b1;
-							end
+						
 						game_ns = s_idle;
 					end
 					
@@ -310,13 +359,43 @@ module game_controller_SM
 			
 			
 			s_scored: begin
-				/*scoreHighLoad_ns = scoreH + 4'd1;
-				scoreLowLoad_ns = scoreL;
-				scoreLoadN_ns = 1'b0;*/
+				scoreHighLoad_ns = scoreHighLoad_ps + 4'd1;
+				scoreLowLoad_ns = scoreLowLoad_ps;
+				scoreLoadN_ns = 1'b0;
 				scoredPulse_ns = 1'b1;
-				score_up_ns = 1'b1;
+				//score_up_ns = 1'b1;
+				if ( `FINAL_STAGE > stage_num_ps ) //// TODO: need to move to score!
+					begin
+						change_stage_ns = 1'b1;
+					end
 				game_ns = s_idle;
 				end // scored
+				
+			s_missed: begin
+				scoreLoadN_ns = 1'b0;
+
+				if ( scoreLowLoad_ps >= 4'd5)
+					begin	
+						scoreHighLoad_ns = scoreHighLoad_ps;
+						scoreLowLoad_ns = scoreLowLoad_ps - 4'd5;
+					end
+				else 
+					begin	
+						if ( scoreHighLoad_ps >= 4'd1 )
+							begin
+								scoreHighLoad_ns = scoreHighLoad_ps - 4'd1;
+								scoreLowLoad_ns = 4'd10 - ( 4'd5 - scoreLowLoad_ps );
+							end
+						else 
+							begin
+								scoreHighLoad_ns = 4'd0;
+								scoreLowLoad_ns = 4'd0;
+							end
+					end
+					
+				game_ns = s_idle;
+					
+			end // missed
 						
 		endcase
 		

@@ -23,7 +23,7 @@
 
 localparam logic [7:0] TRANSPARENT_ENCODING = 8'hff ;// RGB value in the bitmap representing a transparent pixel
 localparam logic HOLE_ENCODING = 1'b0 ;// RGB value in the bitmap representing a transparent pixel
-localparam logic [7:0] REQUEST_COLOR = 8'h77;
+localparam logic [7:0] REQUEST_COLOR = 8'hBF;
 
 
 logic[0:63][0:63][0:0] object_colors = {
