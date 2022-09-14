@@ -69,8 +69,8 @@ agreement for further details.
 	(port
 		(pt 0 128)
 		(input)
-		(text "oneSecPulse" (rect 0 0 50 12)(font "Arial" ))
-		(text "oneSecPulse" (rect 21 123 71 135)(font "Arial" ))
+		(text "scoredPulse" (rect 0 0 48 12)(font "Arial" ))
+		(text "scoredPulse" (rect 21 123 69 135)(font "Arial" ))
 		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port

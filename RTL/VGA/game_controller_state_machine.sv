@@ -20,6 +20,7 @@ module game_controller_SM
 	
 	output 	logic winPulse,
 	output 	logic losePulse,	
+	output 	logic scoredPulse,
 	
 	output 	logic [2:0] request_hole,
 	output 	logic [3:0] scoreL,
@@ -43,6 +44,7 @@ module game_controller_SM
 	
 	logic winPulse_ns, winPulse_ps;
 	logic losePulse_ns, losePulse_ps;
+	logic scoredPulse_ns, scoredPulse_ps;
 	
 	logic change_stage_ns, change_stage_ps;
 	logic score_up_ns, score_up_ps;
@@ -133,6 +135,7 @@ module game_controller_SM
 				stageLoadN_ps 	<= 1'b1;
 				winPulse_ps		<= 1'b0;
 				losePulse_ps	<= 1'b0;
+				scoredPulse_ps	<= 1'b0;
 				score_up_ps 	<= 1'b0;
 				change_stage_ps <= 1'b1;
 				wonFlag_ps		<= 1'b0;
@@ -151,6 +154,7 @@ module game_controller_SM
 				stageLoadN_ps 	<= stageLoadN_ns;
 				winPulse_ps		<= winPulse_ns;
 				losePulse_ps	<= losePulse_ns;
+				scoredPulse_ps <= scoredPulse_ns;
 				score_up_ps 	<= score_up_ns;
 				change_stage_ps <= change_stage_ns;
 				wonFlag_ps		<= wonFlag_ns;
@@ -172,6 +176,7 @@ module game_controller_SM
 		
 		winPulse_ns 	= winPulse_ps;
 		losePulse_ns 	= losePulse_ps;
+		scoredPulse_ns = scoredPulse_ps;
 		request_hole 	= 3'b0;
 		
 //		scoreLoadN = 1'b1;
@@ -199,7 +204,8 @@ module game_controller_SM
 				if ( change_stage_ps )
 					begin
 						stage_num_ns = stage_num_ps + 4'd1;
-						//change_stage_ns = 1'b0;
+						$cast(game_ns, stage_num_ns);
+						change_stage_ns = 1'b0;
 					end
 				else if ( ballhole_collide[(`NUM_BALLS):1] != {(`NUM_BALLS){1'b0}} ) // scored!
 					begin
@@ -216,10 +222,10 @@ module game_controller_SM
 						rst_cntN_ns = 1'b0;
 					end
 				
-				if ( scoreLoadN_ps )
+				/*if ( scoreLoadN_ps == 1'b0 )
 					begin
-						scoreLoadN_ns = 1'b0;
-					end
+						scoreLoadN_ns = 1'b1;
+					end*/
 				end // idle
 			
 			s_stage_1: begin
@@ -273,6 +279,7 @@ module game_controller_SM
 						change_stage_ns = 1'b1;
 						game_ns = s_idle;
 					end
+					
 				end // win
 				
 			
@@ -292,35 +299,18 @@ module game_controller_SM
 						losePulse_ns = 1'b0;
 						game_ns = s_idle;
 					end
+					
 				end	// lose
 			
 			
 			s_scored: begin
-				scoreHighLoad_ns = scoreH + 4'd1;
-				scoreLowLoad_ns = scoreL + 4'd0;
-				scoreLoadN_ns = 1'b0;
+				/*scoreHighLoad_ns = scoreH + 4'd1;
+				scoreLowLoad_ns = scoreL;
+				scoreLoadN_ns = 1'b0;*/
+				scoredPulse_ns = 1'b1;
+				score_up_ns = 1'b1;
 				game_ns = s_idle;
-				
-//				if ( winPulse == 1'b1 ) // if won
-//					begin
-//						game_ns = s_win;
-//						rst_cntN_ns = 1'b0;
-//					end
-//				else if ( losePulse == 1'b1 ) // if lose
-//					begin
-//						game_ns = s_lose;
-//						rst_cntN_ns = 1'b0;
-//					end
-//				else if ( collisionPulse == 1'b1 ) // if collision
-//					begin
-//						rst_cntN_ns = 1'b0;
-//					end
-//				else if ( oneSecPulse == 1'b1 ) // if one second passed
-//					begin
-//						game_ns = s_idle;
-//						rst_cntN_ns = 1'b0;
-//					end
-				end // collide
+				end // scored
 						
 		endcase
 		
