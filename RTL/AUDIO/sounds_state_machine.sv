@@ -77,7 +77,8 @@ module Sounds_SM
 	// set all default values 
 		sound_ns = sound_ps; 
 		freq_ns = freq_ps;
-		enable_sound_ns = enable_sound_ps;
+		//enable_sound_ns = enable_sound_ps;
+		enable_sound_ns = 1'b0;
 		turbo_ns = 1'b0;
 		time_counter_ns = time_counter_ps;
 		
@@ -90,25 +91,25 @@ module Sounds_SM
 				
 				if ( losePulse == 1'b1 )
 					begin
-						enable_sound_ns = 1'b1;
+						//enable_sound_ns = 1'b1;
 						sound_ns = s_lose;
 						rst_cntN_ns = 1'b0;
 					end
 				else if ( scoredPulse == 1'b1 )
 					begin
-						enable_sound_ns = 1'b1;
+						//enable_sound_ns = 1'b1;
 						sound_ns = s_scored;
 						rst_cntN_ns = 1'b0;
 					end
 				else if ( winPulse == 1'b1 )
 					begin
-						enable_sound_ns = 1'b1;
+						//enable_sound_ns = 1'b1;
 						sound_ns = s_win;
 						rst_cntN_ns = 1'b0;
 					end
 				else if ( collisionPulse == 1'b1 )
 					begin
-						enable_sound_ns = 1'b1;
+						//enable_sound_ns = 1'b1;
 						sound_ns = s_collision;
 						rst_cntN_ns = 1'b0;
 					end
@@ -126,7 +127,7 @@ module Sounds_SM
 					begin
 						turbo_ns = 1'b0;
 						rst_cntN_ns = 1'b0;
-						freq_ns = 4'd3;
+						freq_ns = 4'd2;
 					end
 				if ( oneSecPulse == 1'b1 && time_counter_ps != 2'b11 ) // if one second passed
 					begin

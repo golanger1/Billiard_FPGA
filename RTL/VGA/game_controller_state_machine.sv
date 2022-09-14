@@ -3,6 +3,7 @@
 // in accordance to the events arround it.
 
 `define NUM_BALLS 2 
+`define FINAL_STAGE 2 
 
 module game_controller_SM
 	(
@@ -29,7 +30,9 @@ module game_controller_SM
 	);
 	
 	// state machine decleration 
-	enum logic [3:0] {s_idle, s_stage_1, s_stage_2, /***s_stage_3, s_stage_4,***/ s_win, s_lose, s_scored} game_ps, game_ns/***, s_stage_ps, s_stage_ns***/ ;
+	typedef enum logic [3:0] {s_idle, s_stage_1, s_stage_2, /***s_stage_3, s_stage_4,***/ s_win, s_lose, s_scored} game_states_e ;
+	
+	game_states_e game_ps, game_ns;
 	
 	logic oneSecPulseOut;
 	logic rst_cntN;
@@ -145,7 +148,7 @@ module game_controller_SM
 		
 		else 		// Synchronic logic FSM
 			begin
-				game_ps <= game_ns;
+				game_ps 			<= game_ns;
 				stage_num_ps 	<= stage_num_ns;
 				rst_cntN_ps 	<= rst_cntN_ns;
 				//count_seconds_ps <= count_seconds_ns;
@@ -203,8 +206,8 @@ module game_controller_SM
 				
 				if ( change_stage_ps )
 					begin
-						stage_num_ns = stage_num_ps + 4'd1;
-						$cast(game_ns, stage_num_ns);
+						//$cast(game_ns, (stage_num_ps + 4'd1) );
+						game_ns = game_states_e'( (stage_num_ps + 4'd1) );
 						change_stage_ns = 1'b0;
 					end
 				else if ( ballhole_collide[(`NUM_BALLS):1] != {(`NUM_BALLS){1'b0}} ) // scored!
@@ -276,7 +279,10 @@ module game_controller_SM
 					begin
 						winPulse_ns = 1'b0; 
 						//stage_num_ns = stage_num_ps + 4'd1;
-						change_stage_ns = 1'b1;
+						if ( `FINAL_STAGE > stage_num_ps )
+							begin
+								change_stage_ns = 1'b1;
+							end
 						game_ns = s_idle;
 					end
 					
