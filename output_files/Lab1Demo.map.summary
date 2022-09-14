@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Tue Sep 13 13:19:11 2022
+=======
+Analysis & Synthesis Status : Successful - Tue Sep 13 17:20:40 2022
+>>>>>>> unite_holes_bitmaps
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : Lab1Demo
 Top-level Entity Name : TOP_VGA_DEMO_KBD
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
+<<<<<<< HEAD
 Total registers : 2598
+=======
+Total registers : 1509
+>>>>>>> unite_holes_bitmaps
 Total pins : 62
 Total virtual pins : 0
 Total block memory bits : 3,014,784

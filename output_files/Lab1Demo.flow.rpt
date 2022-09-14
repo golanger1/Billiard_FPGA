@@ -1,5 +1,9 @@
 Flow report for Lab1Demo
+<<<<<<< HEAD
 Tue Sep 13 13:22:21 2022
+=======
+Tue Sep 13 17:22:26 2022
+>>>>>>> unite_holes_bitmaps
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,15 +45,24 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                     ; Successful - Tue Sep 13 13:21:53 2022       ;
+=======
+; Flow Status                     ; Successful - Tue Sep 13 17:22:12 2022       ;
+>>>>>>> unite_holes_bitmaps
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Lab1Demo                                    ;
 ; Top-level Entity Name           ; TOP_VGA_DEMO_KBD                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
+<<<<<<< HEAD
 ; Logic utilization (in ALMs)     ; 2,851 / 41,910 ( 7 % )                      ;
 ; Total registers                 ; 2784                                        ;
+=======
+; Logic utilization (in ALMs)     ; 2,394 / 41,910 ( 6 % )                      ;
+; Total registers                 ; 1677                                        ;
+>>>>>>> unite_holes_bitmaps
 ; Total pins                      ; 62 / 499 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 3,014,784 / 5,662,720 ( 53 % )              ;
@@ -68,12 +81,17 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 09/13/2022 13:18:32 ;
+=======
+; Start date & time ; 09/13/2022 17:20:10 ;
+>>>>>>> unite_holes_bitmaps
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab1Demo            ;
 +-------------------+---------------------+
 
 
+<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Flow Non-Default Global Settings                                                                                                                                                                                                                                                        ;
 +-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+------------------+
@@ -141,6 +159,47 @@ agreement for further details.
 ; TOP_LEVEL_ENTITY                    ; TOP_VGA_DEMO_KBD                                                                                                                                                                            ; Lab1Demo      ; --               ; --               ;
 ; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                                                                                                                                    ; --            ; --               ; --               ;
 +-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+------------------+------------------+
+=======
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+---------------+------------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name      ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 104156970079097.166307881009780        ; --            ; --               ; --         ;
+; ENABLE_SIGNALTAP                    ; On                                     ; --            ; --               ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --               ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --               ; --         ;
+; MISC_FILE                           ; RTL/VGA/valX.bsf                       ; --            ; --               ; --         ;
+; MISC_FILE                           ; RTL/VGA/valX_inst.v                    ; --            ; --               ; --         ;
+; MISC_FILE                           ; RTL/VGA/valX_bb.v                      ; --            ; --               ; --         ;
+; MISC_FILE                           ; RTL/numberPosition.bsf                 ; --            ; --               ; --         ;
+; MISC_FILE                           ; RTL/numberPosition_bb.v                ; --            ; --               ; --         ;
+; MISC_FILE                           ; clock_divider.cmp                      ; --            ; --               ; --         ;
+; MISC_FILE                           ; clock_divider_sim/clock_divider.vo     ; --            ; --               ; --         ;
+; MISC_FILE                           ; X_loca.bsf                             ; --            ; --               ; --         ;
+; MISC_FILE                           ; X_loca_bb.v                            ; --            ; --               ; --         ;
+; MISC_FILE                           ; X_location.bsf                         ; --            ; --               ; --         ;
+; MISC_FILE                           ; X_location_bb.v                        ; --            ; --               ; --         ;
+; MISC_FILE                           ; Y_location.bsf                         ; --            ; --               ; --         ;
+; MISC_FILE                           ; Y_location_bb.v                        ; --            ; --               ; --         ;
+; MISC_FILE                           ; Number_position.bsf                    ; --            ; --               ; --         ;
+; MISC_FILE                           ; Number_position_bb.v                   ; --            ; --               ; --         ;
+; MISC_FILE                           ; matrix_top_XY.bsf                      ; --            ; --               ; --         ;
+; MISC_FILE                           ; matrix_top_XY_bb.v                     ; --            ; --               ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --               ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; TOP_VGA_DEMO_KBD ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; TOP_VGA_DEMO_KBD ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; TOP_VGA_DEMO_KBD ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --               ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --               ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --               ; --         ;
+; SMART_RECOMPILE                     ; On                                     ; Off           ; --               ; --         ;
+; SPD_FILE                            ; clock_divider.spd                      ; --            ; --               ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --               ; --         ;
+; TOP_LEVEL_ENTITY                    ; TOP_VGA_DEMO_KBD                       ; Lab1Demo      ; --               ; --         ;
+; USE_SIGNALTAP_FILE                  ; stp1.stp                               ; --            ; --               ; --         ;
++-------------------------------------+----------------------------------------+---------------+------------------+------------+
+>>>>>>> unite_holes_bitmaps
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -148,11 +207,19 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis      ; 00:00:38     ; 1.0                     ; 5005 MB             ; 00:01:09                           ;
 ; Fitter                    ; 00:02:25     ; 1.3                     ; 6758 MB             ; 00:07:08                           ;
 ; Assembler                 ; 00:00:12     ; 1.0                     ; 4930 MB             ; 00:00:12                           ;
 ; TimeQuest Timing Analyzer ; 00:00:27     ; 2.3                     ; 5349 MB             ; 00:00:57                           ;
 ; Total                     ; 00:03:42     ; --                      ; --                  ; 00:09:26                           ;
+=======
+; Analysis & Synthesis      ; 00:00:29     ; 1.0                     ; 4961 MB             ; 00:00:51                           ;
+; Fitter                    ; 00:01:20     ; 1.3                     ; 6787 MB             ; 00:03:28                           ;
+; Assembler                 ; 00:00:08     ; 1.0                     ; 4871 MB             ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 2.2                     ; 5267 MB             ; 00:00:26                           ;
+; Total                     ; 00:02:10     ; --                      ; --                  ; 00:04:53                           ;
+>>>>>>> unite_holes_bitmaps
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
