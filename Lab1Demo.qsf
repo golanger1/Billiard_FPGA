@@ -254,7 +254,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/SinTable_cross.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/cross_movement.sv
 set_global_assignment -name BDF_FILE RTL/VGA/Cross_Block.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/hit_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/hit_unit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/holes_hitUnitedBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/holes_graphicUnitedBitMap.sv
 set_global_assignment -name SYSTEMVERILOG_FILE RTL/VGA/game_controller_state_machine.sv

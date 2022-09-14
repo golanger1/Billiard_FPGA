@@ -2,7 +2,7 @@
 // Implements the Sounds State Machine module, that controls the sounds in the project, 
 // in accordance to the events arround it.
 
-`define NUM_BALLS 2 
+`define NUM_BALLS 3 
 `define FINAL_STAGE 2 
 
 module game_controller_SM

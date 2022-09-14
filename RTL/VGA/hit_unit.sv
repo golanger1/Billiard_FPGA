@@ -1,9 +1,9 @@
-`define NUM_BALLS 3 
 
 // game controller dudy Febriary 2020
 // (c) Technion IIT, Department of Electrical Engineering 2021 
 //updated --Eyal Lev 2021
 
+`define NUM_BALLS 3 
 `define NUM_BALL_FLAGS 2 // +1 for real num of flags is [NUM_BALL_FLAGS:0]
 `define NUM_FLAGS_BITS 1 // array of 2.. // +1 : max num of bits to represent all flags ( log(NUM_BALL_FLAGS+1) ) 
 
