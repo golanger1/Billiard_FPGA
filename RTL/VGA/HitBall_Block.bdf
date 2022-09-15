@@ -292,7 +292,7 @@ agreement for further details.
 	(input)
 	(rect -56 544 176 560)
 	(text "INPUT" (rect 189 0 217 10)(font "Arial" (font_size 6)))
-	(text "WB_Yspeed_charge[10..0]" (rect 5 0 138 12)(font "Arial" ))
+	(text "WB_Yspeed_charge[10..0]" (rect 5 0 137 12)(font "Arial" ))
 	(pt 232 8)
 	(drawing
 		(line (pt 148 12)(pt 173 12))

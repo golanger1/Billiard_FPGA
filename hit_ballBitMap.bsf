@@ -41,29 +41,29 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "offsetX[3..0][10..0]" (rect 0 0 73 12)(font "Arial" ))
-		(text "offsetX[3..0][10..0]" (rect 21 59 94 71)(font "Arial" ))
+		(text "offsetX[6..0][10..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "offsetX[6..0][10..0]" (rect 21 59 94 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "offsetY[3..0][10..0]" (rect 0 0 74 12)(font "Arial" ))
-		(text "offsetY[3..0][10..0]" (rect 21 75 95 87)(font "Arial" ))
+		(text "offsetY[6..0][10..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "offsetY[6..0][10..0]" (rect 21 75 95 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "InsideRectangle[3..0]" (rect 0 0 82 12)(font "Arial" ))
-		(text "InsideRectangle[3..0]" (rect 21 91 103 103)(font "Arial" ))
+		(text "InsideRectangle[6..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "InsideRectangle[6..0]" (rect 21 91 103 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "balls_in_game[3..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "balls_in_game[3..0]" (rect 21 107 97 119)(font "Arial" ))
+		(text "balls_in_game[6..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "balls_in_game[6..0]" (rect 21 107 97 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
@@ -76,8 +76,8 @@ agreement for further details.
 	(port
 		(pt 272 48)
 		(output)
-		(text "hitBall_DR_VEC[3..0]" (rect 0 0 90 12)(font "Arial" ))
-		(text "hitBall_DR_VEC[3..0]" (rect 161 43 251 55)(font "Arial" ))
+		(text "hitBall_DR_VEC[6..0]" (rect 0 0 90 12)(font "Arial" ))
+		(text "hitBall_DR_VEC[6..0]" (rect 161 43 251 55)(font "Arial" ))
 		(line (pt 272 48)(pt 256 48)(line_width 3))
 	)
 	(port

@@ -29,8 +29,8 @@ module	objects_mux	(
 			  
 		  ////////////////////////
 		  // background 
-					input    logic HartDrawingRequest, // TODO: remove hearts!
-					input		logic	[7:0] hartRGB,   
+					//input    logic HartDrawingRequest, // TODO: remove hearts!
+					//input		logic	[7:0] hartRGB,   
 					input		logic	[7:0] backGroundRGB, 
 			  
 				   output	logic	[7:0] RGBOut
@@ -56,8 +56,6 @@ begin
 		 else if ( Hole_1_DrawingRequest == 1'b1 )   
 			RGBOut <= Hole_1_RGB;  //3rd priority
 		 
-		//else if ( HartDrawingRequest == 1'b1)
-		//	RGBOut <= hartRGB;
 		else 
 			RGBOut <= backGroundRGB ; // last priority 
 		end ; 

@@ -55,15 +55,15 @@ agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "balls_in_game[3..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "balls_in_game[3..0]" (rect 21 91 97 103)(font "Arial" ))
+		(text "balls_in_game[6..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "balls_in_game[6..0]" (rect 21 91 97 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "ballhole_collide[3..0]" (rect 0 0 75 12)(font "Arial" ))
-		(text "ballhole_collide[3..0]" (rect 21 107 96 119)(font "Arial" ))
+		(text "ballhole_collide[6..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "ballhole_collide[6..0]" (rect 21 107 96 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port

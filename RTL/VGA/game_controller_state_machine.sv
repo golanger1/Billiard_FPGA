@@ -2,8 +2,8 @@
 // Implements the Sounds State Machine module, that controls the sounds in the project, 
 // in accordance to the events arround it.
 
-`define NUM_BALLS 3 
-`define FINAL_STAGE 4'd4 //4'd6 
+`define NUM_BALLS 6 
+`define FINAL_STAGE 4'd6 //4'd4 
 
 module game_controller_SM
 	(
@@ -32,7 +32,7 @@ module game_controller_SM
 	);
 	
 	// state machine decleration 
-	typedef enum logic [3:0] {s_idle, s_stage_1, s_stage_2, s_stage_3, s_stage_4, /*** s_stage_5, s_stage_6, ***/ s_win, s_lose, s_scored, s_missed} game_states_e ;
+	typedef enum logic [3:0] {s_idle, s_stage_1, s_stage_2, s_stage_3, s_stage_4, s_stage_5, s_stage_6, /***  ***/ s_win, s_lose, s_scored, s_missed} game_states_e ;
 	
 	game_states_e game_ps, game_ns;
 	
@@ -76,10 +76,6 @@ module game_controller_SM
 	logic [3:0] seconds_to_load;
 	
 	logic [3:0] timeCounter;
-	
-//	logic scoreLoadN;
-//	logic stageLoadN;
-//	logic timeLoadN;
 
 	logic finished_counting;
 	
@@ -202,10 +198,6 @@ module game_controller_SM
 		scoredPulse_ns = 1'b0;
 		request_hole_ns = request_hole_ps;
 		
-//		scoreLoadN = 1'b1;
-//		stageLoadN = 1'b1;
-//		timeLoadN = 1'b1;
-		
 		scoreHighLoad_ns 	= scoreHighLoad_ps;
 		scoreLowLoad_ns 	= scoreLowLoad_ps;
 		seconds_to_load 	=  4'd0;
@@ -300,8 +292,8 @@ module game_controller_SM
 				game_ns = s_idle;
 			end // stage 4
 			
-			/*** s_stage_5: begin
-			/// make stage 4 setup ///
+			s_stage_5: begin
+			/// make stage 5 setup ///
 				
 				stage_num_ns = 4'd5;
 				request_hole_ns = 3'd6;
@@ -309,12 +301,12 @@ module game_controller_SM
 			end // stage 5
 			
 			s_stage_6: begin
-			/// make stage 4 setup ///
+			/// make stage 6 setup ///
 				
 				stage_num_ns = 4'd6;
 				request_hole_ns = 3'd3;
 				game_ns = s_idle;
-			end // stage 6 ***/
+			end // stage 6 
 				
 			s_win: begin
 			
